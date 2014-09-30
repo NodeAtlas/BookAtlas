@@ -42,7 +42,7 @@
 	"aboutNodeAtlas": {
 		"title": "NodeAtlas",
 		"content": "<iframe class=\"scrollable\" src=\"http://haeresis.github.io/NodeAtlas/\"></iframe>",
-		"beforePanel": "<h2 id=\"projets-sur-github\">Projets sur Github</h2><ul><li><a class=\"external\" href=\"https://github.com/Haeresis/NodeAtlas/\" title=\"NodeAtlas\">NodeAtlas</a></li><li><a class=\"external\" href=\"https://github.com/Haeresis/ResumeAtlas/\" title=\"ResumeAtlas\">ResumeAtlas</a></li><li><a class=\"external\" href=\"https://github.com/Haeresis/BlogAtlas/\" title=\"BlogAtlas\">BlogAtlas</a></li></ul><p><a class=\"external\" href=\"https://github.com/Haeresis/\" title=\"Liste complète\">Liste complète</a></p>"
+		"beforePanel": "<h2 id=\"projets-sur-github\">Projets sur Github</h2><ul><li><a class=\"external\" href=\"https://github.com/Haeresis/NodeAtlas/\" title=\"NodeAtlas\">NodeAtlas</a></li><li><a class=\"external\" href=\"https://github.com/Haeresis/ResumeAtlas/\" title=\"ResumeAtlas\">ResumeAtlas</a></li><li><a class=\"external\" href=\"https://github.com/Haeresis/BookAtlas/\" title=\"BookAtlas\">BookAtlas</a></li><li><a class=\"external\" href=\"https://github.com/Haeresis/BlogAtlas/\" title=\"BlogAtlas\">BlogAtlas</a></li></ul><p><a class=\"external\" href=\"https://github.com/Haeresis/\" title=\"Liste complète\">Liste complète</a></p>"
 	},
 	"aboutBlog": {
 		"title": "Blog",
