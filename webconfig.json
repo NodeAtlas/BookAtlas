@@ -1,0 +1,78 @@
+{
+	"httpPort": 7777,
+	"autoGenerate": false,
+ 	"commonVariation": "common.json",
+ 	"commonController": "common.js",
+ 	"controllersRelativePath": "controllers/",
+ 	"pageNotFound": "/page-inexistante/",
+ 	"languageCode": "fr-fr",
+	"urlRewriting": {
+		"/page-inexistante/": {
+			"template": "error.htm",
+			"variation": "error.json",
+			"statusCode": 404
+		},
+		"/bepo/": {
+			"template": "bepo.htm",
+			"variation": "bepo.json"
+		},
+		"/offres/": {
+			"template": "offers.htm",
+			"variation": "offers.json"
+		},
+		"/portfolio/": {
+			"template": "book.htm",
+			"variation": "book.json"
+		},
+		"/bienvenue/": {
+			"template": "website.htm",
+			"variation": "website.json"
+		},
+		"/blog/": {
+			"template": "blog.htm",
+			"variation": "blog.json"
+		},
+		"/metiers/": {
+			"template": "front-end.htm",
+			"variation": "front-end.json"
+		},
+		"/en-cours-haut/": {
+			"template": "unknown-top.htm",
+			"variation": "unknown-top.json"
+		},
+		"/en-cours-bas/": {
+			"template": "unknown-bottom.htm",
+			"variation": "unknown-bottom.json"
+		},
+		"/communautes/": {
+			"template": "websites.htm",
+			"variation": "websites.json"
+		},
+		"/competences/": {
+			"template": "skills.htm",
+			"variation": "skills.json"
+		},
+		"/me-contacter/": {
+			"template": "contact-me.htm",
+			"variation": "contact-me.json"
+		},
+		"/a-propos/": {
+			"template": "about-me.htm",
+			"variation": "about-me.json"
+		},
+		"/node-atlas/": {
+			"template": "nodeatlas.htm",
+			"variation": "nodeatlas.json"
+		},
+		"/hobbies/": {
+			"template": "games.htm",
+			"variation": "games.json"
+		},
+		"/": {
+			"template": "index.htm",
+			"variation": "index.json"
+		}
+	},
+	"_minified": "",
+	"_needModulePath": true
+}

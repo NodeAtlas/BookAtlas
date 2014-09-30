@@ -1,0 +1,232 @@
+{
+	"placename": "Annecy, Haute-Savoie, France",
+	"indexFollow": "noindex, nofollow",
+	"javascriptDisable": "Votre JavaScript est désactivé aussi toutes les fonctionalités de ce site ne seront pas disponibles.",
+	"permalink": "Permalien :",
+	"skipLink": {
+		"title": "Accès aux sections",
+		"items": [{
+			"content": "Allez en corps de page",
+			"title": "Allez en corps de page",
+			"href": "#content"
+		}, {
+			"content": "Allez au menu de navigation",
+			"title": "Allez au menu de navigation",
+			"href": "#menu"
+		}, {
+			"content": "Allez au crédits",
+			"title": "Allez au au crédits",
+			"href": "#footer"
+		}]
+	},
+	"logo": {
+		"content": "<span class=\"first\">Bruno Lesieur</span> <span class=\"second\">Haeresis</span>",
+		"title": "Bruno Lesieur, Haeresis",
+		"href": "./"
+	},
+	"aboutSite": {
+		"title": "Bienvenue",
+		"intro": "<p>Présentation rapide de mon portail</p><p><strong>Cliquez sur un onglet pour l'ouvrir</strong></p>",
+		"content": "<h2 id=\"présentation\">Présentation</h2><p>Bienvenue sur le portail d'un développeur web sur Annecy et réalisé dans les règles de l'art. Ici exit l'empilement de « table » à n'en plus finir, les balises et attributs qui usurpent le travail du CSS ou encore les morceaux de JavaScript en plein milieu de la sémantique. Nos amis s'appellent HTML5, CSS3, jQuery, AJAX, Node.js, Websocket, PHP, .NET, LINQ et j'en passe ! Ils oeuvrent pour deux choses communes :</p><ul><li>Être au service du référencement et de l'ergonomie pour que le contenu soit trouvable et accessible quel que soit la plateforme d'affichage ou les mécanismes d'animations.</li><li>Être au service de la maintenabilité et de la lisibilité pour garder un site actualisable et aux normes du web dans un souci de productivité, sécurité et d'efficacité.</li></ul><h2 id=\"visite-guidé\">Visite guidé</h2><p>Ce portail présente avant tous les projets dans lesquels je me suis investi hors de mon cadre professionnel en tant qu'autodidacte. Ce sont eux qui m'ont permis d'acquérir des connaissances sur le web ancestral et d'apprendre des erreurs à ne plus commettre.</p><p>Ce portail présente également celui que je suis devenu après 5 ans d'études supérieures et plus de 5 ans d'expériences professionnelles m'ayant donné les clés de l'ergonomie, du référencement, des bonnes pratiques, de la gestion de projet et du développement web.</p><p>Vous trouverez de quoi me suivre moi et mes projets dans « À propos » ainsi que tout ce qu'il faut savoir sur mes développements dans les autres sections.</p><h2 id=\"technos-utilisées\">Technos utilisées</h2><p><a class=\"external\" href=\"http://www.w3.org/TR/html5/\" title=\"HTML5\" target=\"_blank\">HTML5</a>, <a class=\"external\" href=\"http://www.w3.org/Style/CSS/current-work/\" title=\"CSS3\" target=\"_blank\">CSS3</a>, <a class=\"external\" href=\"http://www.ecma-international.org/publications/standards/Ecma-262.htm\" title=\"JavaScript\" target=\"_blank\">JavaScript</a>, <a class=\"external\" href=\"http://jquery.com/\" title=\"jQuery\" target=\"_blank\">jQuery</a>, <a class=\"external\" href=\"http://nodejs.org/\" title=\"Node.js\" target=\"_blank\">Node.js</a>, <a class=\"external\" href=\"http://www.w3.org/TR/XMLHttpRequest/\" title=\"Cross Domain\" target=\"_blank\">Cross Domain</a>, <a class=\"external\" href=\"http://api.jquery.com/jquery.ajax/\" title=\"AJAX\" target=\"_blank\">AJAX</a>, <a class=\"external\" href=\"http://socket.io/\" title=\"Websocket\" target=\"_blank\">Websocket</a>, <a class=\"external\" href=\"http://www.json.org/\" title=\"JSON\" target=\"_blank\">JSON</a>, <a class=\"external\" href=\"http://threejs.org/\" title=\"Canvas\" target=\"_blank\">Canvas</a>, <a class=\"external\" href=\"http://dev.mysql.com/doc/refman/5.0/fr/\" title=\"SQL\" target=\"_blank\">SQL</a>, <a class=\"external\" href=\"http://www.mongodb.org/\" title=\"NoSQL\" target=\"_blank\">NoSQL</a>, <a class=\"external\" href=\"http://www.php.net/manual/en/index.php\" title=\"PHP\" target=\"_blank\">PHP</a>, <a class=\"external\" href=\"http://www.microsoft.com/net\" title=\".NET\" target=\"_blank\">.NET</a> </p><h2 id=\"un-problème-technique\">Un problème technique ?</h2><p>Si vous rencontrez un quelconque problème contactez-moi via mon adresse email <a href=\"javascript:;\" class=\"link generate-email\">en la générant en cliquant ici</a>.</p>"
+	},
+	"aboutOffers": {
+		"title": "Offres",
+		"intro": "<p>Besoin d'un site ?</p>",
+		"content": "Ce blog est majoritairement consacré au JavaScript que ce soit côté Front-end ou côté Back-end. Côté Front, on parle d'astuces et réflexions autour des bonnes pratiques HTML5, CSS3, et JavaScript. Côté serveur, on parle de Node.js. Le site traite également de tous types d'articles touchant de près ou de loin à la webosphère."
+	},
+	"aboutBook": {
+		"title": "Portfolio",
+		"intro": "<p>Pour une présentation rapide du site, c'est par ici !</p><p><strong>Cliquez sur un onglet pour l'ouvrir</strong></p>",
+		"content": "Ce blog est majoritairement consacré au JavaScript que ce soit côté Front-end ou côté Back-end. Côté Front, on parle d'astuces et réflexions autour des bonnes pratiques HTML5, CSS3, et JavaScript. Côté serveur, on parle de Node.js. Le site traite également de tous types d'articles touchant de près ou de loin à la webosphère."
+	},
+	"aboutNodeAtlas": {
+		"title": "NodeAtlas",
+		"content": "<iframe class=\"scrollable\" src=\"http://haeresis.github.io/NodeAtlas/\"></iframe>",
+		"beforePanel": "<h2 id=\"projets-sur-github\">Projets sur Github</h2><ul><li><a class=\"external\" href=\"https://github.com/Haeresis/NodeAtlas/\" title=\"NodeAtlas\">NodeAtlas</a></li><li><a class=\"external\" href=\"https://github.com/Haeresis/ResumeAtlas/\" title=\"ResumeAtlas\">ResumeAtlas</a></li><li><a class=\"external\" href=\"https://github.com/Haeresis/BlogAtlas/\" title=\"BlogAtlas\">BlogAtlas</a></li></ul><p><a class=\"external\" href=\"https://github.com/Haeresis/\" title=\"Liste complète\">Liste complète</a></p>"
+	},
+	"aboutBlog": {
+		"title": "Blog",
+		"intro": "<p>Pour une présentation rapide du site, c'est par ici !</p><p><strong>Cliquez sur un onglet pour l'ouvrir</strong></p>",
+		"content": "Ce blog est majoritairement consacré au JavaScript que ce soit côté Front-end ou côté Back-end. Côté Front, on parle d'astuces et réflexions autour des bonnes pratiques HTML5, CSS3, et JavaScript. Côté serveur, on parle de Node.js. Le site traite également de tous types d'articles touchant de près ou de loin à la webosphère."
+	},
+	"aboutWebsite": {
+		"title": "Communautés",
+		"intro": "<p>Pour une présentation rapide du site, c'est par ici !</p><p><strong>Cliquez sur un onglet pour l'ouvrir</strong></p>",
+		"content": "Ce blog est majoritairement consacré au JavaScript que ce soit côté Front-end ou côté Back-end. Côté Front, on parle d'astuces et réflexions autour des bonnes pratiques HTML5, CSS3, et JavaScript. Côté serveur, on parle de Node.js. Le site traite également de tous types d'articles touchant de près ou de loin à la webosphère."
+	},
+	"aboutSkills": {
+		"title": "Compétences",
+		"intro": "<p>Mes techniques et technos préférés</p>",
+		"content": "<h2>À savoir</h2><p>La les mots-clés ci-dessous vous permettent de connaître les aspects de chaque technologie mise en oeuvre sur mes projets ou au quotidien.</p><p>Il faut garder à l'esprit que plus une compétence/technique est basse dans cette liste, plus ma veille technologique sur l'évolution de cette technique est espacée dans le temps. Ainsi je suis totalement à jour sur l'aspect Frond-End des sites Internet d'aujourd'hui ainsi qu'en JavaScript et opérationnel pour travailler sur les autres points cités.</p><h2>Client-side</h2><h3>HTML5 / xHTML - Sémantique</h3><ul><li><strong>Rendu dynamique :</strong> EJS, Markdown, Moteur de template PHP, ASP.NET</li><li><strong>Interopérabilité :</strong> DocType, Classes CSS conditionnelles, Commentaires conditionnelles IE, Jeu de caractères, Hack CSS</li><li><strong>Référencement :</strong> Balises sémantiques, Microdata, Sitemap, Flux XML, Lien canonique, Géolocalisation</li><li><strong>iFrame :</strong> Cross-domain, Autosize</li><li><strong>Canvas :</strong> Police, Animation</li></ul><h3>CSS3 / CSS2.1 - Design</h3><ul><li><strong>Guide de style :</strong> Typographie, Couleurs, Iconographie, Grille, Médias, Intéractions</li><li><strong>Positionnements :</strong> Block, Inline, Float, Relatif, Absolute, Fixed, Table, Flex, Grid</li><li><strong>Sélecteurs :</strong> +/~, :before/:after, :first-child/:last-child, :nth-child, :focus/:hover/:active/:visited</li><li><strong>Polices embarquées :</strong> @font-face (.eot/.ttf/.woff/.svg), Icônes</li><li><strong>Animation :</strong> CSS Sprite, Base64, Propriété transform, Propriété transition</li><li><strong>Portabilité :</strong> Responsive Web Design, Media Queries, Meta viewport, Propriété box-sizing, CSS conditionnelles</li><li><strong>Philosophie :</strong> HTML5-driven (Site originaux/sites vitrinnes/Sites performants, Standard W3C), CSS-driven (Back-office/Application web, Framework CSS), TABLE-driven (Habillage email, Style inline/Vieux attributs)</li></ul><h3>JavaScript - Développement / Animation</h3><ul><li><strong>Interface riche :</strong> Support HTML5 (vieux navigateurs), Manipulation CSS/DOM, Animation, Expression régulières, Fallback/Polyfill, Scripts/Plugins, Prototype, Publics/Privates self-made</li><li><strong>Cross-domain :</strong> cookie/session, postMessage Transport/hash Transport/window.name Transport, JSONP, xmlHttpRequest2, XDoc, Contrat P3P</li><li><strong>Actions asynchrones :</strong> AJAX, Socket.IO, JSON/XML, Callback</li></ul><h2>Référencement / Performances</h2><ul><li><strong>SEO :</strong> Ré-écriture d'url, Redirections serveur, AJAX/escaped_fragment, pushState/replaceState, Réseaux sociaux</li><li><strong>Compression :</strong> gzip/deflate, file minified/obfuscated, CSS sprite, Base64, Image compression (Lossy/Lossless)</li><li><strong>Chargement :</strong> Prioriser ressources (ordre de placement, ordre d'appel), Différer ressources (attribut defer / yepnope), Paralléliser ressources (async, yepnope), éviter phénomène de FOUC</li><li><strong>Outils :</strong> Validator HTML W3C, Validator CSS, Page Speed Insight, GTMetrix, Google Analytics, jsHint</li></ul><h2>Server-side</h2><h3>Node.js</h3><ul><li><strong>Usage :</strong> npm, packages, require/exports/module, ExpressJs, middleware, EJS, Socket.IO, commander, jsdom, JSON, mongoose</li><li><strong>Architecture MVC2 :</strong> Model/View/Controller/Rewriting, NodeAtlas</li><li><strong>NoSql :</strong> MongoDB, Redis</li><li><strong>IDE :</strong> Sublim Text 3, Cloud9</li></ul><h3>PHP</h3><ul><li><strong>Usage :</strong> POO, Namespace, webconfig.xml, .htaccess</li><li><strong>Architecture MVC2 :</strong> Model/View/Controller/Rewriting, HaeresisFramework</li><strong>IDE :</strong> NetBean, Eclipse</li></ul><h3>ASP / C#</h3><ul><li><strong>Usage :</strong> LifeCycle, ViewState, POO, LINQ, Héritage, Polymorphisme, Interface, Générique, Scriptlet, Web.config, UpdatePanel</li><li><strong>Architecture 3 Tiers avec UrlRewriting :</strong> User Interface/BussinessObject/DataAccess, .NET</li><strong>IDE :</strong> Visual Studio</li></ul><h3>SQL</h3><ul><li><strong>Usage :</strong> Clé primaire, Index, Clés étrangères (Update/Deleti, Cascade/Restrict), Jointure (Inner/Outer left/right), Recherche (Like/Regexp), Procédures Stockées</li><li><strong>Variantes :</strong> MySQL, SQL Server</li><strong>IDE :</strong> phpMyAdmin, SQL Server Management Studio</li></ul><h2>Framework / Librairie / API / CMS</h2><ul><li><strong>CSS :</strong> Reset/Normalize, Bootstrap/KNACSS/SemanticUI, LESS/SASS</li><li><strong>JavaScript :</strong> jQuery, Modernizr, jQuery UI, Owl Carousel, Angular.js, Responsive.js, Relocate.js, Intro.js, Impress.js, ckEditor, Google Maps, Knockout, etc.</li><li><strong>ASP.NET C#.NET :</strong> Linq</li><li><strong>PHP :</strong> MediaWiki, PHPBB3, Drupal, WordPress, Joomla!</li><li><strong>Autre :</strong> Trello, Harvest</li><li><strong>Versionning / mise en prod :</strong> TortoiseGIT, Tortoise SVN, Filezilla, Interface OVH</li></ul><h2>Web server</h2><ul><li><strong>Node.js :</strong> node-atlas, forever, bouncy</li><li><strong>Apache dans wamp :</strong> mod_rewrite, Virtual Directory, changement de port</li><li><strong>Apache OVH :</strong> Administration web, DNS, Email</li><li><strong>ISS6 et 7 :</strong> Pool, Integrated/Classic Mode, Rewrite Module, Virtual Directory, Application</li><li><strong>IIS8 et Node.js :</strong> iisnode, Websocket, Application Request Routing</li><li><strong>Autre :</strong> Trello, Harvest</li><li><strong>Versionning / mise en prod :</strong> TortoiseGIT, Tortoise SVN, Filezilla, Interface OVH</li></ul><h2>Outils - Conception / Debug</h2><ul><li><strong>Code :</strong> Sublim Text, Chrome/Firefox/IE/Opera/Safari (Developer Tools/Firebug/Firebug Lite)</li><li><strong>Media :</strong> Photoshop CS, Paint .NET, Audition CS, Audacity</li><li><strong>Gestion :</strong> Trello, Harvest</li><li><strong>Clavier :</strong> Bépo</li><li><strong>Autre :</strong> Trello, Harvest</li><li><strong>Versionning / mise en prod :</strong> TortoiseGIT, Tortoise SVN, Filezilla, Interface OVH</li></ul>",
+		"beforePanel": "<h2>En un coup d'oeil</h2><ul><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Responsive Web Design</li><li>Web Standard & Performance Quality</li><li>Node.js</li><li>Gestion de projet</li></p>"
+	},
+	"contactMe": {
+		"title": "Contact",
+		"intro": "<p>Tour d'horizon de mes technos et technos</p>",
+		"content": ""
+	},
+	"aboutMe": {
+		"title": "À propos",
+		"intro": "<p>En savoir plus sur moi et mes réseaux</p>",
+		"content": "<h2 id=\"description\">Description</h2><p>Développeur web spécialisé JavaScript sur Annecy, je vis chaque jour ma passion nageant parmi les techniques actuelles et d'avenir en matière de Front-end et de Node.js. C'est pourquoi tous les jours au petit déjeuner (mais pas seulement), je prépare de quoi satisfaire ma faim de Responsive Web Design, de performances web, de respect des standards, de bonnes pratiques, de POC HTML5/CSS3, d'accessibilité web, de factorisation, d'automatisation, de partage, de casse-tête en tout genre et ce à travers des projets et prototypes toujours plus appétissants. Dernier gros plat en date ? Du JavaScript côté serveur avec NodeAtlas !</p><h2 id=\"mon-curriculum-vitae\"><ins class=\"float sign linkedin icon ui\"></ins>Mon Curriculum Vitae</h2><p><a href=\"https://www.linkedin.com/in/brunolesieur\" class=\"external\" title=\"Consultez mon CV à jour\">Consultez mon CV à jour</a> et mes avancées professionnelles en rejoignant le réseau LinkedIn. Vous pouvez également voir <a href=\"http://bruno.lesieur.name/\" class=\"external\" title=\"CV version web et papier\">mon CV version web et papier</a>.</p><h2 id=\"mes-passions-et-mes-envies\"><ins class=\"float sign google plus icon ui\"></ins>Mes passions et mes envies</h2><p>Encerclez <a href=\"https://plus.google.com/u/0/+BrunoLesieur/\" class=\"external\" title=\"+Bruno Lesieur\">+Bruno Lesieur</a> sur le réseau social Google+ pour en savoir plus sur qui je suis, ce qui me fait vibrer et partager avec moi.</p><h2 id=\"mes-travaux-et-la-webosphère\"><ins class=\"float sign twitter icon ui\"></ins>Mes travaux et la Webosphère</h2><p>Suivez moi et suivez l'actualité de mes projets et les actus web, PCs, mobiles, sociales et mes coups de coeur avec <a href=\"https://twitter.com/HaeresisDotFr/\" class=\"external\" title=\"+Bruno Lesieur\">@HaeresisDotFr</a>.</p><h2 id=\"me-contacter-par-email\">Me contacter par Email</h2><p>Si vous souhaitez me contacter par email, vous pouvez le faire via mon adresse personnelle <a href=\"javascript:;\" class=\"link generate-email\">en la générant en cliquant ici</a>.</p>",
+		"afterPanel": "<h2 id=\"mes-réseaux\">Mes réseaux</h2><ul><li><a class=\"external\" href=\"https://plus.google.com/u/0/+BrunoLesieur/\" title=\"Google+\">Google+</a></li><li><a class=\"external\" href=\"https://twitter.com/HaeresisDotFr/\" title=\"Twitter\">Twitter</a></li><li><a class=\"external\" href=\"http://www.pinterest.com/haeresis/\" title=\"Pinterest\">Pinterest</a></li><li><a class=\"external\" href=\"https://www.linkedin.com/in/brunolesieur/\" title=\"LinkedIn\">LinkedIn</a></li><li><a class=\"external\" href=\"http://www.viadeo.com/fr/profile/bruno.lesieur1\" title=\"Viadeo\">Viadeo</a></li><li><a class=\"external\" href=\"https://disqus.com/HaeresisDotFr/\" title=\"Disqus\">Disqus</a></li><li><a class=\"external\" href=\"https://github.com/Haeresis/\" title=\"GitHub\">GitHub</a></li><li><a class=\"external\" href=\"https://bitbucket.org/Haeresis/\" title=\"Bitbucket\">Bitbucket</a></li><li><a class=\"external\" href=\"http://stackoverflow.com/users/2412797/haeresis/\" title=\"StackOverflow\">StackOverflow</a></li></ul>"
+	},
+	"aboutGames": {
+		"title": "Hobbies",
+		"intro": "<p>En savoir plus sur moi et mes réseaux</p>",
+		"content": "Ce blog est majoritairement consacré au JavaScript que ce soit côté Front-end ou côté Back-end. Côté Front, on parle d'astuces et réflexions autour des bonnes pratiques HTML5, CSS3, et JavaScript. Côté serveur, on parle de Node.js. Le site traite également de tous types d'articles touchant de près ou de loin à la webosphère."
+	},
+	"aboutFrontend": {
+		"title": "Métiers",
+		"intro": "<p>I love JavaScript</p>",
+		"beforePanel": "<h2 id=\"autres-métiers\">Autres métiers</h2> <ul> <li>Développeur Node.js</li> <li>Développeur PHP</li> <li>Développeur C#</li> </ul>",
+		"content": "<h2 id=\"quest-ce-que-le-front-end\">Qu’est-ce que le Front-end</h2> <p>Je suis développeur Front-end. La partie cliente (ou Front-end) d’un site web fait le pont entre l’utilisateur et le serveur web. C’est la page web visible à l’écran et également les éléments la constituant avec lesquels vous interagissez :</p> <ul> <li>le design graphique,</li> <li>les médias affichés,</li> <li>les animations,</li> <li>la saisie de formulaire,</li> <li>le contrôle des erreurs,</li> <li>les mises à jour après chargement de page…</li> </ul> <h2 id=\"naissance-dun-métier\">Naissance d’un métier</h2> <h3 id=\"les-balbutiements\">Les balbutiements</h3> <p>La réalisation de la partie Front-end était initialement faite :</p> <ul> <li>soit par le Webdesigner qui touchait sa bille sur FrontPage ou Dreamweaver,</li> <li>soit par le Développeur Back-end qui avait (web exige) des notions en rendu HTML.</li> </ul> <p>Dans les deux cas, la connaissance des standards n’était pas de mise et le chargé Front-end ou Client-side bricolait du mieux possible en empilant des <><tablsampe></samp> et en vérifiant que cela fonctionnait dans IE6.</p><div class=\"se-section-delimiter\"></div><h3 id=\"les-intégrateurs-web\">Les Intégrateurs Web</h3><p>Puis l’essor de CSS et des multiples navigateurs ont fait naître une spécialité parmi les métiers du web : celle d’Intégrateur Web ou Intégrateur HTML/CSS. Il convenait à cette personne —généralement un développeur Back-end à cheval sur le Webdesign (ou inversement)— de créer une structure aux normes du W3C, indexable dans les moteurs de recherche et maintenable (le design d’un site pouvant changer du tout au tout) avec du JavaScript récupéré de-ci de-là sur EditeurJavascript.</p><p>Nous en sommes alors au stade des développeurs Back-End qui ont de fortes proportions aux développements et mécanismes Front-End.</p><div class=\"se-section-delimiter\"></div><h3 id=\"les-développeurs-front-end\">Les Développeurs Front-end</h3><p>Pour finir, avec l’arrivée :</p><ul> <li>de technologies comme HTML5 et CSS3,</li> <li>des librairies comme jQuery,</li> <li>des requêtes asynchrones,</li> <li>des recommandations en performances web, <br> <ul><li>sur tous les navigateurs,</li> <li>toutes les versions de navigateur,</li> <li>tous les périphériques (Responsive Design),</li></ul></li> <li>les bonnes pratiques pour le référencement naturel…</li> </ul><p>l’intégration web est devenue une affaire de spécialistes. La nécessité absolue d’avoir des connaissances sur l’architecture complète et les fonctionnements d’un site Internet ainsi que la connaissance poussée du JavaScript pour réaliser des interfaces riches font qu’à présent les experts actuels sont des développeurs Front-end qui ont de fortes proportions au développement et mécanismes Back-end.</p><div class=\"se-section-delimiter\"></div><h2 id=\"des-compétences-de-professionnels\">Des compétences de professionnels</h2><p>C’est donc avec l’essor d’Internet que les développeurs Client-side sont devenus indispensables :</p><ul> <li><strong>Référencement et SEO</strong> : le développeur Front-end transforme un visuel en balise sémantique HTML5 créant une structure « avec du sens » permettant une meilleure compréhension des moteurs de recherche ainsi qu’une meilleure hierarchisation de l’information au sein des pages pour une visibilité accrue.</li> <li><strong>Ergonomie visuelle</strong> : le développeur Front-end s’occupe de l’habillage visuel du site d’après des maquettes et guide de style ainsi que de l’animation des éléments grâce au CSS3.</li> <li><strong>Ergonomie fonctionnelle</strong> : le développeur Front-end s’occupe des animations au passage/clique de la souris, des interactions avec le clavier, ou même au rapatriement de nouvelles informations après chargement grâce à AJAX.</li> <li><strong>Interopérabilité et accessibilité</strong> : Il est indispensable que le développeur Front-end respecte les normes du W3C ainsi que les préconisations d’accessibilités du projet OpQuaSt et reste en veille des techniques de demain comme le Responsive Web Design. Respecter cela est le meilleur moyen d’assurer : le bon fonctionnement, la maintenabilité et l’évolutivité du site sur le maximum de périphériques et de navigateurs.</li> </ul><p>Au final la Qualité Globale d’un site web passe avant tout par le travail du développeur Front-End qui veille à l’ergonomie du site pour l’utilisateur ainsi qu’à la compatibilité du site sur le terminal utilisé et ceci dans un souci de rapidité d’exécution et de performance au chargement.</p>"
+	},
+	"aboutBepo": {
+		"title": "Bépo",
+		"intro": "<p>Pour une présentation rapide du site, c'est par ici !</p><p><strong>Cliquez sur un onglet pour l'ouvrir</strong></p>",
+		"content": "Ce blog est majoritairement consacré au JavaScript que ce soit côté Front-end ou côté Back-end. Côté Front, on parle d'astuces et réflexions autour des bonnes pratiques HTML5, CSS3, et JavaScript. Côté serveur, on parle de Node.js. Le site traite également de tous types d'articles touchant de près ou de loin à la webosphère."
+	},
+	"aboutAuthor": {
+		"title": "À propos de l'auteur",
+		"image": {
+			"src": "./media/images/bw-author.png",
+			"alt": "Bruno Lesieur",
+			"width": 96,
+			"height": 96
+		},
+		"content": "Bonjour, je suis Bruno Lesieur, architecte web basé sur Annecy. Intégrateur HTML5, CSS3 et JavaScript ou encore développeur Front-End ; appelez moi comme vous le voulez mais sachez que je suis très friand de performance web, de Responsive Web Design, d'accessibilité web, de bonnes pratiques, de techniques et d'outils de gestion web, de factorisation et d'automatisation, de partage et casse-tête en tout genre ainsi que de boissons gazeuses."
+	},
+	"mainMenu": {
+		"title": {
+			"content": "Accueil",
+			"title": "Accueil du site",
+			"href": "./"
+		},
+		"section": [{
+			"content": "Catégories",
+			"title": "Tous les billets par catégories",
+			"href": "./categories/",
+			"class": "category"
+		}, {
+			"content": "Archives",
+			"title": "Tous les billets par année",
+			"href": "./archives/",
+			"class": "archive"
+		}, {
+			"content": "À propos",
+			"title": "À propos du site et de l'auteur",
+			"href": "http://www.haeresis.fr/",
+			"class": "about"
+		}, {
+			"content": "RSS",
+			"title": "Suivre le flux RSS",
+			"href": "./rss.xml",
+			"class": "about"
+		}]
+	},
+	"url": {
+		"bepo": "bepo",
+		"offers": "offres",
+		"book": "portfolio",
+		"website": "bienvenue",
+		"blog": "blog",
+		"front-end": "metiers",
+		"unknown-top": "en-cours-haut",
+		"unknown-bottom": "en-cours-bas",
+		"websites": "communautes",
+		"skills": "competences",
+		"contact-me": "me-contacter",
+		"about-me": "a-propos",
+		"nodeatlas": "node-atlas",
+		"games": "hobbies"
+	},
+	"error404": {
+		"title": "Erreur 404",
+		"content": "Cette page n'existe pas."
+	},
+	"copyright": "©2012-2014 <a href=\"http://www.lesieur.name/\" title=\"Site de Bruno Lesieur, Développeur web spécialiste Front-End / Node.js\">Lesieur.name</a>",
+	"engine": "Site développé en <a href=\"http://nodejs.org/\" title=\"node.js, le moteur JavaScript côté serveur\">node.js</a> avec <a href=\"https://haeresis.github.io/NodeAtlas/\" title=\"Le Framework node.js NodeAtlas\">NodeAtlas</a>",
+	"listDate": {
+		"startingYear": "2012",
+		"titleYear": "Année",
+		"titleMonth": "Mois",
+		"linkYear": {
+			"href": "./archives/%year%",
+			"title": "Archives de l'année %year%"
+		},
+		"linkMonth": {
+			"href": "./archives/%year%/%month%/",
+			"title": "Archives du mois de %month% de l'année %year%"
+		}
+	},
+	"dates": {
+		"toHour": "à",
+		"toDate": "Le",
+		"unitHours": "h",
+		"months": [
+			"Janvier",
+			"Février",
+			"Mars",
+			"Avril",
+			"Mai",
+			"Juin",
+			"Juillet",
+			"Août",
+			"Septembre",
+			"Octobre",
+			"Novembre",
+			"Décembre"
+		]
+	},
+	"comments": {
+		"title": "Nombre de commentaires",
+		"commentSimple": "commentaire<ins data-ins=\"s\"></ins>",
+		"commentMultiple": "commentaire<ins data-ins=\"s\">s</ins>",
+		"commentSentence": "Aller aux commentaires"
+	},
+	"categories": {
+		"title": "Toutes les categories",
+		"title2": "Catégorisé dans",
+		"link": {
+			"title": "Tous les articles de la categorie",
+			"href": "./categories/%urn%/"
+		}
+	},
+	"summary": {
+		"title": "Dans cette article"
+	},
+	"archives": {
+		"title": "Toutes les dates",
+		"startingYear": 2012,
+		"startingMonth": 11,
+		"linkYear": {
+			"title": "Tous les articles de l'année %year%",
+			"href": "./archives/%year%/"
+		}, 
+		"linkMonth": {
+			"title": "Tous les articles du mois de %month% de l'année %year%",
+			"href": "./archives/%year%/%month%/"
+		}
+	},
+	"articles": {
+		"updateArticle": "Modifier l'article",
+		"uploadAvatar": {
+			"button": "Uploader Avatar",
+			"alt": "Avatar"
+		},
+		"readMore": {
+			"href": "./%urn%/",
+			"content": "Lire la suite"
+		}
+	},
+	"rss": {
+		"title": "Quelques #ID et beaucoup de .CLASS",
+		"description" : "Ce blog est une compilation d'articles sur le développement JavaScript Front-end jQuery, Back-end Node.js ou développement web en général.",
+		"feedUrl": "rss.xml",
+		"author": "Bruno Lesieur",
+		"copyright": "2012-2014",
+		"language": "fr",
+		"url": "%urn%/"
+	}
+}
