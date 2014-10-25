@@ -1,0 +1,22 @@
+{
+	"javascript": {
+		"files": {
+			"javascript/common.min.js": [
+				"javascript/modernizr.js",
+				"javascript/jquery.js",
+				"javascript/prettify.js",
+				"javascript/prettify/run_prettify.js",
+				"javascript/common.js"
+			]
+		}
+	},
+	"stylesheets": {
+		"files": {
+			"stylesheets/common.min.css": [
+				"stylesheets/common.css",
+				"stylesheets/common-sm.css",
+				"stylesheets/common-md.css"
+			]
+		}
+	}
+}

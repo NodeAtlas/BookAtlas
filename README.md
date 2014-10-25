@@ -33,6 +33,11 @@ et utilisez la commande :
 \> node </path/to/>node-atlas/node-atlas.js --run
 ```
 
+ou lancez `app.na` en double cliquant dessus :
+- en expliquant à votre OS que les fichiers `.na` sont lancé par défaut par `node`,
+- en ayant installé `node-atlas` via `npm install -g node-atlas`
+- en étant sur que votre variable d'environnement `NODE_PATH` pointe bien sur le dossier des `node_modules` globaux.
+
 Le site sera accessible ici :
 
 - *http://localhost:7777/*
