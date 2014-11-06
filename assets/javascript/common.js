@@ -34,7 +34,15 @@ var website = website || {},
     "use strict";
 
     var privates = {},
-        socket = io.connect();
+        optionsSocket;
+
+    if ($body.data('hostname') !== 'localhost') {
+        optionsSocket = {
+          resource: $body.data('subpath') + (($body.data('subpath')) ? '/': '') + 'socket.io'
+        }
+    }
+
+    publics.socket = io.connect(($body.data('hostname') === 'localhost') ? undefined : $body.data('hostname'), optionsSocket);
 
     privates.generateEmail = function () {
         $(".generate-email").click(function () {
@@ -49,8 +57,8 @@ var website = website || {},
     };
 
     privates.loadSections = function(callback) {
-        socket.emit("load-sections");
-        socket.on("load-sections", function (data) {
+        publics.socket.emit("load-sections");
+        publics.socket.on("load-sections", function (data) {
             var targetTop = ".top.sections.ui > .ui.return > a",
                 targetBottom = ".bottom.sections.ui > .ui.return > a",
                 $section;
