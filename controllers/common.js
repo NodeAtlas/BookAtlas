@@ -8,6 +8,7 @@ var website = {};
 		var modulePath = (NA.webconfig._needModulePath) ? NA.nodeModulesPath : '';
 		
 		NA.modules.fs = require('fs');
+		NA.modules.connect = require(modulePath + 'connect');
 		NA.modules.socketio = require(modulePath + 'socket.io');
 		NA.modules.cookie = require(modulePath + 'cookie');
 
