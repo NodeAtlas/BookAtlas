@@ -8,6 +8,5 @@
  	"bundles": "bundles.json",
  	"languageCode": "fr-fr",
 	"routes": "routes.json",
-	"_minified": "",
-	"_needModulePath": true
+	"_minified": ""
 }

@@ -5,11 +5,9 @@ var website = {};
 	"use strict";
 
 	publics.loadModules = function (NA) {
-		var modulePath = (NA.webconfig._needModulePath) ? NA.nodeModulesPath : '';
-		
 		NA.modules.fs = require('fs');
-		NA.modules.socketio = require(modulePath + 'socket.io');
-		NA.modules.cookie = require(modulePath + 'cookie');
+		NA.modules.socketio = require('socket.io');
+		NA.modules.cookie = require('cookie');
 
 		return NA;
 	};
@@ -73,8 +71,7 @@ var website = {};
 	var privates = {};
 
 	publics.setConfigurations = function (NA, callback) {
-		var mongoose = NA.modules.mongoose,
-			socketio = NA.modules.socketio,
+		var socketio = NA.modules.socketio,
 			connect = NA.modules.connect;
 
 		privates.socketIoInitialisation(socketio, NA, function (socketio) {
@@ -127,38 +124,7 @@ var website = {};
 
 }(website));
 
-// PreRender
-(function (publics) {
-	"use strict";
-
-	publics.preRender = function (params, mainCallback) {
-		var variation = params.variation;
-
-		// Ici on modifie les variables de variations.
-		//console.log(params.variation);
-
-		mainCallback(variation);
-	};
-
-}(website));
-
-// Render
-(function (publics) {
-	"use strict";
-
-	publics.render = function (params, mainCallback) {
-		var data = params.data;
-
-		// Ici on peut manipuler le DOM côté serveur avant retour client.
-		//console.log(params.data);
-
-		mainCallback(data);
-	};
-
-}(website));
 
 
 exports.loadModules = website.loadModules;
 exports.setConfigurations = website.setConfigurations;
-exports.preRender = website.preRender;
-exports.render = website.render;
