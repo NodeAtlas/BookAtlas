@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>EditAtlas</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700">
+		
+		<% if (webconfig._minified) { %>
+		<link rel="stylesheet" type="text/css" href="stylesheets/common.min.css" />
+		<% } else { %>
+		<link rel="stylesheet" type="text/css" href="stylesheets/edit-atlas.css" />
+		<link rel="stylesheet" type="text/css" href="stylesheets/common.css" />
+		<% } %>
+	</head>
+	<body data-hostname='<%= webconfig.urlWithoutFileName %>' data-subpath='<%= webconfig.urlRelativeSubPath.slice(1) %>'>
+		<div class="layout">

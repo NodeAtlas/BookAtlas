@@ -1,0 +1,25 @@
+<div class="popup-edit-atlas">
+	<section class="popup-content">
+		<div class="close"><input type="button" class="next-variation-change" value="<%-: common.editableArea.close | editAttr: ['common.editableArea.close', fc, 'value'] %>"></div>
+		<h1><%-: common.editableArea.title | editText: ['common.editableArea.title', fc] %></h1>
+		<div class="templates">
+			<div class="template html">
+				<hr>
+				<label><span class="info"></span> <%-: common.editableArea.htmlInfo | editText: ['common.editableArea.htmlInfo', fc] %></label>
+				<textarea cols="30" rows="10"></textarea>
+				<span class="source"><em><%-: common.editableArea.sourceInfo | editText: ['common.editableArea.sourceInfo', fc] %></em></span>
+			</div>
+			<div class="template text">
+				<hr>
+				<label><span class="info"></span></label>
+				<input type="text">
+				<span class="source"><em><%-: common.editableArea.sourceInfo | editText: ['common.editableArea.sourceInfo', fc] %></em></span>
+			</div>
+			<div class="insert"></div>
+		</div>
+		<div class="submit">
+			<label><input type="button" class="next-variation-change" value="<%-: common.editableArea.next | editAttr: ['common.editableArea.next', fc, 'value'] %>"></label>
+			<label><input type="button" class="update-variation-change" value="<%-: common.editableArea.submit | editAttr: ['common.editableArea.submit', fc, 'value'] %>"></label>
+		</div>
+	</section>
+</div>

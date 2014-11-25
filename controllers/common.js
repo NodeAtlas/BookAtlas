@@ -1,28 +1,31 @@
 var website = {};
 
-// Loading modules for this website.
+website.components = {};
+
 (function (publics) {
 	"use strict";
 
+	website.components.socketio = require('../components/controllers/socket-io');
+
 	publics.loadModules = function (NA) {
-		NA.modules.fs = require('fs');
-		NA.modules.socketio = require('socket.io');
 		NA.modules.cookie = require('cookie');
+		NA.modules.socketio = require('socket.io');
 
 		return NA;
 	};
 
-}(website));
+	publics.setConfigurations = function (NA, next) {
+		var socketio = NA.modules.socketio;
 
+		website.components.socketio.initialisation(socketio, NA, function (socketio, NA) {
+			website.components.socketio.events(socketio, NA, function (params) {
+				website.asynchrones(params);
+				next(NA);
+			});
+		});
+	};
 
-
-// Asynchrone
-(function (publics) {
-	"use strict";
-
-	var privates = {};
-
-	publics.asynchrone = function (params) {
+	publics.asynchrones = function (params) {
 		var socketio = params.socketio,
 			NA = params.NA,
 			ejs = NA.modules.ejs,
@@ -58,68 +61,6 @@ var website = {};
 				socket.emit('load-sections', data);
 			});
 		});
-	};
-
-}(website));
-
-
-
-// Set configuration for this website.
-(function (publics) {
-	"use strict";
-
-	var privates = {};
-
-	publics.setConfigurations = function (NA, callback) {
-		var socketio = NA.modules.socketio,
-			connect = NA.modules.connect;
-
-		privates.socketIoInitialisation(socketio, NA, function (socketio) {
-
-			privates.socketIoEvents(socketio, NA);
-
-			callback(NA);					
-		});
-
-	};			
-
-	privates.socketIoInitialisation = function (socketio, NA, callback) {
-		var optionIo = (NA.webconfig.urlRelativeSubPath) ? { path: NA.webconfig.urlRelativeSubPath + '/socket.io' } : undefined,
-			socketio = socketio(NA.server, optionIo),
-			cookie = NA.modules.cookie,
-			cookieParser = NA.modules.cookieParser;
-
-		socketio.use(function(socket, next) {
-			var handshakeData = socket.request;
-
-			if (!handshakeData.headers.cookie) {
-                return next(new Error('Cookie de session requis.'));
-            }
-
-            handshakeData.cookie = cookie.parse(handshakeData.headers.cookie);
-            handshakeData.cookie = cookieParser.signedCookies(handshakeData.cookie, NA.webconfig.session.secret);
-    		handshakeData.sessionID = handshakeData.cookie[NA.webconfig.session.key];
-
-			NA.sessionStore.load(handshakeData.sessionID, function (error, session) {
-                if (error || !session) {
-                	return next(new Error('Aucune session récupérée.'));
-                } else {
-                    handshakeData.session = session;           			
-                    next();
-                }
-            });
-		});
-
-    	callback(socketio);
-	};
-
-	privates.socketIoEvents = function (socketio, NA) {
-		var params = {};
-
-		params.socketio = socketio;
-		params.NA = NA;
-
-		website.asynchrone(params);
 	};
 
 }(website));
