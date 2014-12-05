@@ -4,6 +4,8 @@ Version : 0.12.1 (Beta)
 
 NodeAtlas Version minimale : 0.24.x
 
+**For an international version of this README.md, [see below](#international-version).**
+
 
 
 ## Avant-propos ##
@@ -47,3 +49,51 @@ Le site sera accessible ici :
 ## Exemple en ligne ##
 
 Vous pouvez voir fonctionner ce repository à l'adresse : [http://www.lesieur.name/](http://www.lesieur.name/).
+
+
+-----
+
+
+## International Version ##
+
+### Overview ###
+
+BookAtlas is an example of Node.js website running with [NodeAtlas](http://haeresis.github.io/NodeAtlas/).
+
+It used as inspiration to create your own website!
+
+To better understand the JavaScript site architecture, [you can read this article](http://blog.lesieur.name/structurer-le-javascript-de-son-site-avec-ou-sans-framework/) (Fr).
+
+
+
+### Run the website in local server ###
+
+To rotate the site locally, you should install, [NodeAtlas](http://haeresis.github.io/NodeAtlas/) on your development machine.
+
+Then you move into the folder:
+
+
+```
+\> cd </path/to/blog>
+```
+
+and use the command:
+
+```
+\> node </path/to/>node-atlas/node-atlas.js --run
+```
+
+or run `app.na` by double clicking and:
+- explaining your OS that `.na` files are run by default with `node`,
+- Having installed `node-atlas` via `npm install -g node-atlas`
+- Being on your environment variable `NODE_PATH` is pointing to the global `node_modules` folder.
+
+The website will be to:
+
+- *http://localhost:7777/*
+
+
+
+### Online Example ###
+
+You can see this repository running at: [http://www.lesieur.name/](http://www.lesieur.name/) (Fr).
