@@ -68,7 +68,7 @@ To better understand the JavaScript site architecture, [you can read this articl
 
 ### Run the website in local server ###
 
-To rotate the site locally, you should install, [NodeAtlas](http://haeresis.github.io/NodeAtlas/) on your development machine.
+To run the website in local, you must install [NodeAtlas](http://haeresis.github.io/NodeAtlas/) on your development machine.
 
 Then you move into the folder:
 
