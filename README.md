@@ -1,8 +1,8 @@
 # BookAtlas #
 
-Version : 0.12.1 (Beta)
+Version : 0.13.0 (Beta)
 
-NodeAtlas Version minimale : 0.24.x
+NodeAtlas Version minimale : 0.31.x
 
 **For an international version of this README.md, [see below](#international-version).**
 
@@ -32,7 +32,7 @@ Déplacez vous ensuite dans le dossier :
 et utilisez la commande :
 
 ```
-\> node </path/to/>node-atlas/node-atlas.js --run
+\> node </path/to/>node-atlas/node-atlas.js --browse
 ```
 
 ou lancez `server.na` en double cliquant dessus :
@@ -80,7 +80,7 @@ Then you move into the folder:
 and use the command:
 
 ```
-\> node </path/to/>node-atlas/node-atlas.js --run
+\> node </path/to/>node-atlas/node-atlas.js --browse
 ```
 
 or run `app.na` by double clicking and:
