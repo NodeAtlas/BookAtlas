@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--[if lte 8]><html lang="fr" class="old-ie"><![endif]-->
+<!--[if IE 9]><html lang="fr" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="fr" class=""><!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Bruno Lesieur (Haeresis), int&#xE9;grateur web et d&#xE9;veloppeur node.js sur Annecy</title>
+
+		<base href="../">
+		
+		<meta name="description" content="Ce portail web est d&#xE9;di&#xE9; &#xE0; la pr&#xE9;sentation de mes projets et comp&#xE9;tences, mais pas que ! Besoin d&apos;un d&#xE9;veloppeur HTML, CSS, JavaScript pour une int&#xE9;gration web ou bien vous ne savez pas &#xE0; quoi sert un d&#xE9;veloppeur Front-end ou Node.js, vous &#xEA;tes au bon endroit.">
+		<meta name="geo.placename" content="Annecy, Haute-Savoie, France">
+		
+		<meta name="robots" content="noindex, nofollow">
+		
+		<!--[if IE]><meta name="viewport" content="width=device-width, user-scalable=no" /><![endif]-->
+		<!--[if !IE]><!--><meta name="viewport" content="initial-scale=1.0, user-scalable=no"><!--<![endif]-->
+
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700">
+
+		
+		<link rel="stylesheet" type="text/css" href="stylesheets/common.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/common-sm.css" media="screen and (min-width: 768px)">
+		<link rel="stylesheet" type="text/css" href="stylesheets/common-md.css" media="screen and (min-width: 1200px)">
+		
+	</head>
+	<body data-hostname="http://localhost:7777/" data-subpath="">
+		<noscript>
+			<p>Votre JavaScript est d&#xE9;sactiv&#xE9; aussi toutes les fonctionalit&#xE9;s de ce site ne seront pas disponibles.</p>
+		</noscript>
+
+		<div class="permalink ui">
+			Permalien : <span>http://localhost:7777/hobbies/</span>
+		</div>
+
+		<div class="skiplink ui">
+			<span>Acc&#xE8;s aux sections</span>
+			<ul>
+								
+				<li>
+					<a href="http://localhost:7777/hobbies/#content" title="Allez en corps de page">Allez en corps de page</a>
+				</li>
+								
+				<li>
+					<a href="http://localhost:7777/hobbies/#menu" title="Allez au menu de navigation">Allez au menu de navigation</a>
+				</li>
+								
+				<li>
+					<a href="http://localhost:7777/hobbies/#footer" title="Allez au au cr&#xE9;dits">Allez au cr&#xE9;dits</a>
+				</li>
+												
+			</ul>
+		</div>
+
+		<div class="main ui to top">
+
+		<ul class="top sections ui">
+		<li class="ui return">
+			<a href="javascript:;" title="Retour">Retour</a>
+		</li>
+
+		</ul>
+
+	<ul class="bottom sections ui">
+		<li class="ui return">
+			<a href="javascript:;" title="Retour">Retour</a>
+		</li>
+
+				<li class="small section ui open" data-url="hobbies">
+			<section class="about games content">
+				<h1>
+					<ins class="collapse icon gamepad"></ins>
+					<span>Hobbies</span>
+				</h1>
+
+				<div class="intro ui">
+					<!--<p><h2>Présentation</h2><p>Bienvenue sur le portail d'un développeur web sur Annecy et réalisé dans les règles de l'art. Ici exit l'empilement de « table » à n'en plus finir, les balises et attributs qui usurpent le travail du CSS ou encore les morceaux de JavaScript en plein milieu de la sémantique. Nos amis s'appellent HTML5, CSS3, jQuery, AJAX, Node.js, Websocket, PHP, .NET, LINQ et j'en passe ! Ils oeuvrent pour deux choses communes :</p><ul><li>Être au service du référencement et de l'ergonomie pour que le contenu soit trouvable et accessible quel que soit la plateforme d'affichage ou les mécanismes d'animations.</li><li>Être au service de la maintenabilité et de la lisibilité pour garder un site actualisable et aux normes du web dans un souci de productivité, sécurité et d'efficacité.</li></ul><h2>Visite guidé</h2><p>Ce portail présente avant tous les projets dans lesquels je me suis investi hors de mon cadre professionnel en tant qu'autodidacte. Ce sont eux qui m'ont permis d'acquérir des connaissances sur le web ancestral et d'apprendre des erreurs à ne plus commettre.</p><p>Ce portail présente également celui que je suis devenu après 5 ans d'études supérieures et plus de 5 ans d'expériences professionnelles m'ayant donné les clés de l'ergonomie, du référencement, des bonnes pratiques, de la gestion de projet et du développement web.</p><p>Vous trouverez de quoi me suivre moi et mes projets dans « À propos » ainsi que tout ce qu'il faut savoir sur mes développements dans les autres sections.</p><h2>Technos utilisées</h2><p><a class="external" href="http://www.w3.org/TR/html5/" title="HTML5" target="_blank">HTML5</a>, <a class="external" href="http://www.w3.org/Style/CSS/current-work/" title="CSS3" target="_blank">CSS3</a>, <a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-262.htm" title="JavaScript" target="_blank">JavaScript</a>, <a class="external" href="http://jquery.com/" title="jQuery" target="_blank">jQuery</a>, <a class="external" href="http://nodejs.org/" title="Node.js" target="_blank">Node.js</a>, <a class="external" href="http://www.w3.org/TR/XMLHttpRequest/" title="Cross Domain" target="_blank">Cross Domain</a>, <a class="external" href="http://api.jquery.com/jquery.ajax/" title="AJAX" target="_blank">AJAX</a>, <a class="external" href="http://socket.io/" title="Websocket" target="_blank">Websocket</a>, <a class="external" href="http://www.json.org/" title="JSON" target="_blank">JSON</a>, <a class="external" href="http://threejs.org/" title="Canvas" target="_blank">Canvas</a>, <a class="external" href="http://dev.mysql.com/doc/refman/5.0/fr/" title="SQL" target="_blank">SQL</a>, <a class="external" href="http://www.mongodb.org/" title="NoSQL" target="_blank">NoSQL</a>, <a class="external" href="http://www.php.net/manual/en/index.php" title="PHP" target="_blank">PHP</a>, <a class="external" href="http://www.microsoft.com/net" title=".NET" target="_blank">.NET</a> </p><h2>Un problème technique ?</h2><p>Si vous rencontrez un quelconque problème contactez-moi via mon adresse email <a href="javascript:;" class="link generate-email">en la générant en cliquant ici</a>.</p></p>-->
+				</div>
+
+				<nav class="ui return">
+					<a href="javascript:;" title="Menu">Menu</a>
+				</nav>
+			</section>
+		</li>
+
+		</ul>
+
+	<div class="presentation ui">
+				<header id="header" class="header ui" role="banner">
+			<h1>
+				<a href="./" title="Bruno Lesieur, Haeresis">
+					<span class="first">Bruno Lesieur</span> <span class="second">Haeresis</span>
+				</a>
+			</h1>
+		</header>
+		
+		
+
+		<footer id="footer" class="footer ui">
+			<div><strong>Site en construction : en attendant rdv sur <a href="http://www.haeresis.fr/" title="Site de Bruno Lesieur, D&#xE9;veloppeur web sp&#xE9;cialiste Front-End">Haeresis.fr</a></strong></div>
+			<div class="copyright">&#xA9;2012-2014 <a href="http://www.lesieur.name/" title="Site de Bruno Lesieur, D&#xE9;veloppeur web sp&#xE9;cialiste Front-End / Node.js">Lesieur.name</a> - Site d&#xE9;velopp&#xE9; en <a href="http://nodejs.org/" title="node.js, le moteur JavaScript c&#xF4;t&#xE9; serveur">node.js</a> avec <a href="https://haeresis.github.io/NodeAtlas/" title="Le Framework node.js NodeAtlas">NodeAtlas</a></div>
+		</footer>	
+	</div>
+
+		</div>
+
+		
+		<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+		<script type="text/javascript" src="javascript/modernizr.js"></script>
+		<script type="text/javascript" src="javascript/jquery.js"></script>
+		<script type="text/javascript" src="javascript/prettify.js"></script>
+		<script type="text/javascript" src="javascript/prettify/run_prettify.js"></script>
+		<script type="text/javascript" src="javascript/common.js"></script>
+		
+	</body>
+</html>

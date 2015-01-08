@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--[if lte 8]><html lang="fr" class="old-ie"><![endif]-->
+<!--[if IE 9]><html lang="fr" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="fr" class=""><!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Bruno Lesieur (Haeresis), int&#xE9;grateur web et d&#xE9;veloppeur node.js sur Annecy</title>
+
+		<base href="../">
+		
+		<meta name="description" content="Ce portail web est d&#xE9;di&#xE9; &#xE0; la pr&#xE9;sentation de mes projets et comp&#xE9;tences, mais pas que ! Besoin d&apos;un d&#xE9;veloppeur HTML, CSS, JavaScript pour une int&#xE9;gration web ou bien vous ne savez pas &#xE0; quoi sert un d&#xE9;veloppeur Front-end ou Node.js, vous &#xEA;tes au bon endroit.">
+		<meta name="geo.placename" content="Annecy, Haute-Savoie, France">
+		
+		<meta name="robots" content="noindex, nofollow">
+		
+		<!--[if IE]><meta name="viewport" content="width=device-width, user-scalable=no" /><![endif]-->
+		<!--[if !IE]><!--><meta name="viewport" content="initial-scale=1.0, user-scalable=no"><!--<![endif]-->
+
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700">
+
+		
+		<link rel="stylesheet" type="text/css" href="stylesheets/common.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/common-sm.css" media="screen and (min-width: 768px)">
+		<link rel="stylesheet" type="text/css" href="stylesheets/common-md.css" media="screen and (min-width: 1200px)">
+		
+	</head>
+	<body data-hostname="http://localhost:7777/" data-subpath="">
+		<noscript>
+			<p>Votre JavaScript est d&#xE9;sactiv&#xE9; aussi toutes les fonctionalit&#xE9;s de ce site ne seront pas disponibles.</p>
+		</noscript>
+
+		<div class="permalink ui">
+			Permalien : <span>http://localhost:7777/bienvenue/</span>
+		</div>
+
+		<div class="skiplink ui">
+			<span>Acc&#xE8;s aux sections</span>
+			<ul>
+								
+				<li>
+					<a href="http://localhost:7777/bienvenue/#content" title="Allez en corps de page">Allez en corps de page</a>
+				</li>
+								
+				<li>
+					<a href="http://localhost:7777/bienvenue/#menu" title="Allez au menu de navigation">Allez au menu de navigation</a>
+				</li>
+								
+				<li>
+					<a href="http://localhost:7777/bienvenue/#footer" title="Allez au au cr&#xE9;dits">Allez au cr&#xE9;dits</a>
+				</li>
+												
+			</ul>
+		</div>
+
+		<div class="main ui to bottom">
+
+		<ul class="top sections ui">
+		<li class="ui return">
+			<a href="javascript:;" title="Retour">Retour</a>
+		</li>
+
+				<li class="huge section ui open" data-url="bienvenue">
+			<section class="about website content">
+				<h1>
+					<ins class="collapse icon home"></ins>
+					<span>Bienvenue</span>
+				</h1>
+
+				<div class="vertical scrollable ui">
+					<div class="intro ui">
+						<p>Pr&#xE9;sentation rapide de mon portail</p><p><strong>Cliquez sur un onglet pour l&apos;ouvrir</strong></p>
+					</div>
+
+					<div class="complete ui">
+						<h2>Pr&#xE9;sentation</h2><p>Bienvenue sur le portail d&apos;un d&#xE9;veloppeur web sur Annecy et r&#xE9;alis&#xE9; dans les r&#xE8;gles de l&apos;art. Ici exit l&apos;empilement de &#xAB; table &#xBB; &#xE0; n&apos;en plus finir, les balises et attributs qui usurpent le travail du CSS ou encore les morceaux de JavaScript en plein milieu de la s&#xE9;mantique. Nos amis s&apos;appellent HTML5, CSS3, jQuery, AJAX, Node.js, Websocket, PHP, .NET, LINQ et j&apos;en passe ! Ils oeuvrent pour deux choses communes :</p><ul><li>&#xCA;tre au service du r&#xE9;f&#xE9;rencement et de l&apos;ergonomie pour que le contenu soit trouvable et accessible quel que soit la plateforme d&apos;affichage ou les m&#xE9;canismes d&apos;animations.</li><li>&#xCA;tre au service de la maintenabilit&#xE9; et de la lisibilit&#xE9; pour garder un site actualisable et aux normes du web dans un souci de productivit&#xE9;, s&#xE9;curit&#xE9; et d&apos;efficacit&#xE9;.</li></ul><h2>Visite guid&#xE9;</h2><p>Ce portail pr&#xE9;sente avant tous les projets dans lesquels je me suis investi hors de mon cadre professionnel en tant qu&apos;autodidacte. Ce sont eux qui m&apos;ont permis d&apos;acqu&#xE9;rir des connaissances sur le web ancestral et d&apos;apprendre des erreurs &#xE0; ne plus commettre.</p><p>Ce portail pr&#xE9;sente &#xE9;galement celui que je suis devenu apr&#xE8;s 5 ans d&apos;&#xE9;tudes sup&#xE9;rieures et plus de 5 ans d&apos;exp&#xE9;riences professionnelles m&apos;ayant donn&#xE9; les cl&#xE9;s de l&apos;ergonomie, du r&#xE9;f&#xE9;rencement, des bonnes pratiques, de la gestion de projet et du d&#xE9;veloppement web.</p><p>Vous trouverez de quoi me suivre moi et mes projets dans &#xAB;&#xA0;&#xC0; propos&#xA0;&#xBB; ainsi que tout ce qu&apos;il faut savoir sur mes d&#xE9;veloppements dans les autres sections.</p><h2>Technos utilis&#xE9;es</h2><p><a class="external" href="http://www.w3.org/TR/html5/" title="HTML5" target="_blank">HTML5</a>, <a class="external" href="http://www.w3.org/Style/CSS/current-work/" title="CSS3" target="_blank">CSS3</a>, <a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-262.htm" title="JavaScript" target="_blank">JavaScript</a>, <a class="external" href="http://jquery.com/" title="jQuery" target="_blank">jQuery</a>, <a class="external" href="http://nodejs.org/" title="Node.js" target="_blank">Node.js</a>, <a class="external" href="http://www.w3.org/TR/XMLHttpRequest/" title="Cross Domain" target="_blank">Cross Domain</a>, <a class="external" href="http://api.jquery.com/jquery.ajax/" title="AJAX" target="_blank">AJAX</a>, <a class="external" href="http://socket.io/" title="Websocket" target="_blank">Websocket</a>, <a class="external" href="http://www.json.org/" title="JSON" target="_blank">JSON</a>, <a class="external" href="http://threejs.org/" title="Canvas" target="_blank">Canvas</a>, <a class="external" href="http://dev.mysql.com/doc/refman/5.0/fr/" title="SQL" target="_blank">SQL</a>, <a class="external" href="http://www.mongodb.org/" title="NoSQL" target="_blank">NoSQL</a>, <a class="external" href="http://www.php.net/manual/en/index.php" title="PHP" target="_blank">PHP</a>, <a class="external" href="http://www.microsoft.com/net" title=".NET" target="_blank">.NET</a> </p><h2>Un probl&#xE8;me technique&#xA0;?</h2><p>Si vous rencontrez un quelconque probl&#xE8;me contactez-moi via mon adresse email <a href="javascript:;" class="link generate-email">en la g&#xE9;n&#xE9;rant en cliquant ici</a>.</p>
+					</div>
+
+					<nav class="ui return">
+						<a href="javascript:;" title="Menu">Menu</a>
+					</nav>
+				</div>
+			</section>
+		</li>
+
+		</ul>
+
+	<ul class="bottom sections ui">
+		<li class="ui return">
+			<a href="javascript:;" title="Retour">Retour</a>
+		</li>
+
+		</ul>
+
+	<div class="presentation ui">
+				<header id="header" class="header ui" role="banner">
+			<h1>
+				<a href="./" title="Bruno Lesieur, Haeresis">
+					<span class="first">Bruno Lesieur</span> <span class="second">Haeresis</span>
+				</a>
+			</h1>
+		</header>
+		
+		
+
+		<footer id="footer" class="footer ui">
+			<div><strong>Site en construction : en attendant rdv sur <a href="http://www.haeresis.fr/" title="Site de Bruno Lesieur, D&#xE9;veloppeur web sp&#xE9;cialiste Front-End">Haeresis.fr</a></strong></div>
+			<div class="copyright">&#xA9;2012-2014 <a href="http://www.lesieur.name/" title="Site de Bruno Lesieur, D&#xE9;veloppeur web sp&#xE9;cialiste Front-End / Node.js">Lesieur.name</a> - Site d&#xE9;velopp&#xE9; en <a href="http://nodejs.org/" title="node.js, le moteur JavaScript c&#xF4;t&#xE9; serveur">node.js</a> avec <a href="https://haeresis.github.io/NodeAtlas/" title="Le Framework node.js NodeAtlas">NodeAtlas</a></div>
+		</footer>	
+	</div>
+
+		</div>
+
+		
+		<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+		<script type="text/javascript" src="javascript/modernizr.js"></script>
+		<script type="text/javascript" src="javascript/jquery.js"></script>
+		<script type="text/javascript" src="javascript/prettify.js"></script>
+		<script type="text/javascript" src="javascript/prettify/run_prettify.js"></script>
+		<script type="text/javascript" src="javascript/common.js"></script>
+		
+	</body>
+</html>

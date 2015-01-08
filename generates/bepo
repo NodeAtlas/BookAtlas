@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--[if lte 8]><html lang="fr" class="old-ie"><![endif]-->
+<!--[if IE 9]><html lang="fr" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="fr" class=""><!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Bruno Lesieur (Haeresis), int&#xE9;grateur web et d&#xE9;veloppeur node.js sur Annecy</title>
+
+		<base href="../">
+		
+		<meta name="description" content="Ce portail web est d&#xE9;di&#xE9; &#xE0; la pr&#xE9;sentation de mes projets et comp&#xE9;tences, mais pas que ! Besoin d&apos;un d&#xE9;veloppeur HTML, CSS, JavaScript pour une int&#xE9;gration web ou bien vous ne savez pas &#xE0; quoi sert un d&#xE9;veloppeur Front-end ou Node.js, vous &#xEA;tes au bon endroit.">
+		<meta name="geo.placename" content="Annecy, Haute-Savoie, France">
+		
+		<meta name="robots" content="noindex, nofollow">
+		
+		<!--[if IE]><meta name="viewport" content="width=device-width, user-scalable=no" /><![endif]-->
+		<!--[if !IE]><!--><meta name="viewport" content="initial-scale=1.0, user-scalable=no"><!--<![endif]-->
+
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700">
+
+		
+		<link rel="stylesheet" type="text/css" href="stylesheets/common.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/common-sm.css" media="screen and (min-width: 768px)">
+		<link rel="stylesheet" type="text/css" href="stylesheets/common-md.css" media="screen and (min-width: 1200px)">
+		
+	</head>
+	<body data-hostname="http://localhost:7777/" data-subpath="">
+		<noscript>
+			<p>Votre JavaScript est d&#xE9;sactiv&#xE9; aussi toutes les fonctionalit&#xE9;s de ce site ne seront pas disponibles.</p>
+		</noscript>
+
+		<div class="permalink ui">
+			Permalien : <span>http://localhost:7777/bepo/</span>
+		</div>
+
+		<div class="skiplink ui">
+			<span>Acc&#xE8;s aux sections</span>
+			<ul>
+								
+				<li>
+					<a href="http://localhost:7777/bepo/#content" title="Allez en corps de page">Allez en corps de page</a>
+				</li>
+								
+				<li>
+					<a href="http://localhost:7777/bepo/#menu" title="Allez au menu de navigation">Allez au menu de navigation</a>
+				</li>
+								
+				<li>
+					<a href="http://localhost:7777/bepo/#footer" title="Allez au au cr&#xE9;dits">Allez au cr&#xE9;dits</a>
+				</li>
+												
+			</ul>
+		</div>
+
+		<div class="main ui to bottom">
+
+		<ul class="top sections ui">
+		<li class="ui return">
+			<a href="javascript:;" title="Retour">Retour</a>
+		</li>
+
+				<li class="small section ui open" data-url="bepo">
+			<section class="about bepo content">
+				<h1>
+					<ins class="collapse icon keyboard"></ins>
+					<span>B&#xE9;po</span>
+				</h1>
+
+				<div class="vertical scrollable ui">
+					<div class="after panel ui">
+						<h2>Je veux apprendre&#xA0;!</h2><ul><li><a href="http://bepo.fr/wiki/Accueil" title="B&#xE9;po">Tout savoir sur le B&#xE9;po</a></li><li><a href="http://www.typematrix.com/shop/" title="Available in AZERTY, QWERTY, DVORAK, BLANK, or B&#xC9;PO">Obtenir un clavier</a></li><li><a href="http://klavaro.sourceforge.net/fr/" title="Klavaro">Logiciel de dactylographie</a></li></ul>
+					</div>
+				
+					<div class="complete ui">
+						<h2>Qu&#x2019;est-ce que la disposition B&#xE9;po ?</h2> <p>Le <a href="http://bepo.fr/wiki/Accueil">site officiel</a> vous dira tout cela bien mieux que moi mais pour r&#xE9;sumer : la disposition B&#xE9;po est une autre mani&#xE8;re d&#x2019;agencer l&#x2019;ordre des touches de votre clavier de mani&#xE8;re &#xE0; rendre le chemin parcouru par les doigts le plus court possible lors de la saisie d&#x2019;une phrase en fran&#xE7;ais. Les touches de ponctuation fran&#xE7;aise et les accents sont &#xE9;galement plus accessibles et rang&#xE9;s intelligemment. La disposition s&#x2019;av&#xE8;re &#xE9;galement tr&#xE8;s v&#xE9;loce pour le d&#xE9;veloppement et agr&#xE9;able &#xE0; la r&#xE9;daction anglaise. Ainsi, les 4 premi&#xE8;res touches sont les b, &#xE9;, p et o.</p> <p><img src="http://download.tuxfamily.org/dvorak/wiki/images/Carte-bepo-complete.png" alt="La disposition des touches en B&#xE9;po" title=""></p> <h2>Rapidit&#xE9;, accessibilit&#xE9;, confort et apprentissage</h2> <p>Il existe <a href="http://typematrix.com/bepo/">des claviers B&#xE9;po tr&#xE8;s utile</a>, surtout lors de l&#x2019;apprentissage. Cependant, je conseille d&#x2019;en profiter pour apprendre &#xE0; &#xE9;crire &#xE0; 10 doigts et sans les yeux. Quitte &#xE0; devoir r&#xE9;-apprendre &#xE0; &#xE9;crire, autant le faire bien ! Actuellement, n&#x2019;ayant pas besoin de mes yeux pour &#xE9;crire, je tape en B&#xE9;po sur un clavier Azerty. De plus, avec la combinaison de touche &#xAB; Window + Espace &#xBB; je peux switcher de la disposition B&#xE9;po &#xE0; Azerty en un clin d&#x2019;&#x153;il pour laisser les non B&#xE9;poiste taper sur mon clavier. La disposition s&#x2019;installe sur n&#x2019;importe qu&#x2019;elle OS avec un simple driver.</p> <p><img src="http://download.tuxfamily.org/dvorak/wiki/images/thumb/Stats-lignes-mains-flat.png/360px-Stats-lignes-mains-flat.png" alt="L&#x2019;efficacit&#xE9; B&#xE9;po" title=""></p> <p>Bien que vous allez perdre votre rapidit&#xE9; d&#x2019;&#xE9;criture dans un premier temps, vous reprendrez la main en quelque mois et finirez par d&#xE9;passer votre ancienne rapidit&#xE9; de frappe d&#x2019;ici 6 &#xE0; 9 mois. Tout est fait pour que vous puissiez &#xE9;crire aussi vite que possible et sans effort comme vous pouvez le voir sur l&#x2019;image ci-dessus.</p> <h2>Pourquoi je suis pass&#xE9; en B&#xE9;po ?</h2> <h3>&#xC9;tat des lieux</h3> <p>Quand je me suis mis sur un ordinateur, &#xE0; un tr&#xE8;s jeune age, j&#x2019;ai commenc&#xE9; &#xE0; chercher mes touches avec les yeux sur une disposition Azerty. Curieuse cette disposition ? Pourquoi pas l&#x2019;ordre de l&#x2019;alphabet ? Je la connais par c&#x153;ur celle l&#xE0; ! J&#x2019;ai fini par conna&#xEE;tre par c&#x153;ur les touches sans pour autant pouvoir appuyer dessus sans faire d&#x2019;erreur si je ne les regardait pas. &#xC0; tout casser, je devais &#xE9;crire avec 4 doigts et quitter quelque fois mon clavier des yeux pour voir ce que j&#x2019;avais &#xE9;crit. Cependant je r&#xEA;vais de pouvoir d&#xE9;gager mes yeux de mon clavier pour en faire autre chose pendant que j&#x2019;&#xE9;crivais et surtout &#xE9;crire avec mes 10 doigts pour gagner en rapidit&#xE9;, vous savez, comme les experts en informatique dans les films !</p> <h3>Le B&#xE9;po, m&#xEA;me plus pratique que l&#x2019;Azerty</h3> <p>Je me suis dit que si je devais perdre du temps &#xE0; chercher mes touches avec les doigts et &#xE0; en apprendre la disposition dans l&#x2019;espace par c&#x153;ur (sans utiliser mes yeux) pour une question de confort et de rapidit&#xE9;, autant prendre la disposition la plus rapide et la plus confortable ! Et &#xE9;crire en B&#xE9;po m&#x2019;a beaucoup aid&#xE9; car ce n&#x2019;&#xE9;tait pas ma premi&#xE8;re tentative d&apos;&#xE9;crire &#xE0; 10 doigts et &#xE0; l&apos;aveugle ; j&#x2019;avais d&#xE9;j&#xE0; tent&#xE9; l&#x2019;aventure en Azerty mais &#xAB; Comment s&#x2019;emp&#xEA;cher de jeter un &#x153;il pour s&#x2019;aider &#xE0; aller plus vite ? &#xBB;. La r&#xE9;ponse est simple, faire en sorte que jeter un &#x153;il sur votre clavier ne vous avance pas plus que si vous ne le faisiez pas. Cela est chose faites puisque vous ne connaissez pas la disposition B&#xE9;po.</p> <h2>L&#x2019;apprentissage</h2> <p>J&#x2019;ai donc commenc&#xE9; par des exercises de dactylographie en B&#xE9;po avec le logiciel <a href="http://klavaro.sourceforge.net/fr/">Klavaro</a> plusieurs fois par semaine pour apprendre mes touches. Durant cette phase, je continuais &#xE0; &#xE9;crire en Azerty en dehors de mon logiciel.</p> <p>Quand j&#x2019;ai fini par plus ou moins conna&#xEE;tre les lettres les plus usuelles, je me suis lanc&#xE9; dans le grand bain ! Fini l&#x2019;Azerty ! Je d&#xE9;veloppais, r&#xE9;digeait mes docs, &#xE9;crivais mes mails et mes articles en B&#xE9;po ! Et l&#xE0; je suis devenu une vrai limace. Cependant cet apprentissage &#xE0; concorder avec ma mont&#xE9; en ma&#xEE;trise de l&#x2019;&#xE9;diteur Sublime Text qui via ses divers plugin &#xE0; r&#xE9;ussi &#xE0; masquer mon handicape. En un mois seulement j&#x2019;ai r&#xE9;ussi &#xE0; obtenir une vitesse de production normale avec tous mes outils d&apos;assit&#xE9;. L&#x2019;&#xE9;criture des programmes web m&#x2019;a permis d&#x2019;apprendre le reste de la disposition, notamment au niveau de la ponctuation, souvent utile pour le d&#xE9;veloppement.</p> <p>En environs 6 mois je suis pass&#xE9; &#xE0; une vitesse de frappe de 30 mots mitutes et j&#x2019;en suis actuellement &#xE0; 50 mots minutes. Mon premier palier d&#x2019;objectif n&#x2019;a pas encore &#xE9;t&#xE9; atteint puisque j&#x2019;esp&#xE9;rais en commen&#xE7;ant mon aprentissage atteindre les 60 mots minutes soit 1 mot par seconde. C&#x2019;est encore loin des records de 180 mots minutes mais j&#x2019;arrive, j&#x2019;arrive ! Work in progress&#x2026;</p>
+					</div>
+
+					<nav class="ui return">
+						<a href="javascript:;" title="Menu">Menu</a>
+					</nav>
+				</div>
+			</section>
+		</li>
+
+		</ul>
+
+	<ul class="bottom sections ui">
+		<li class="ui return">
+			<a href="javascript:;" title="Retour">Retour</a>
+		</li>
+
+		</ul>
+
+	<div class="presentation ui">
+				<header id="header" class="header ui" role="banner">
+			<h1>
+				<a href="./" title="Bruno Lesieur, Haeresis">
+					<span class="first">Bruno Lesieur</span> <span class="second">Haeresis</span>
+				</a>
+			</h1>
+		</header>
+		
+		
+
+		<footer id="footer" class="footer ui">
+			<div><strong>Site en construction : en attendant rdv sur <a href="http://www.haeresis.fr/" title="Site de Bruno Lesieur, D&#xE9;veloppeur web sp&#xE9;cialiste Front-End">Haeresis.fr</a></strong></div>
+			<div class="copyright">&#xA9;2012-2014 <a href="http://www.lesieur.name/" title="Site de Bruno Lesieur, D&#xE9;veloppeur web sp&#xE9;cialiste Front-End / Node.js">Lesieur.name</a> - Site d&#xE9;velopp&#xE9; en <a href="http://nodejs.org/" title="node.js, le moteur JavaScript c&#xF4;t&#xE9; serveur">node.js</a> avec <a href="https://haeresis.github.io/NodeAtlas/" title="Le Framework node.js NodeAtlas">NodeAtlas</a></div>
+		</footer>	
+	</div>
+
+		</div>
+
+		
+		<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+		<script type="text/javascript" src="javascript/modernizr.js"></script>
+		<script type="text/javascript" src="javascript/jquery.js"></script>
+		<script type="text/javascript" src="javascript/prettify.js"></script>
+		<script type="text/javascript" src="javascript/prettify/run_prettify.js"></script>
+		<script type="text/javascript" src="javascript/common.js"></script>
+		
+	</body>
+</html>

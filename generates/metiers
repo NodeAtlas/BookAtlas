@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--[if lte 8]><html lang="fr" class="old-ie"><![endif]-->
+<!--[if IE 9]><html lang="fr" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="fr" class=""><!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Bruno Lesieur (Haeresis), int&#xE9;grateur web et d&#xE9;veloppeur node.js sur Annecy</title>
+
+		<base href="../">
+		
+		<meta name="description" content="Ce portail web est d&#xE9;di&#xE9; &#xE0; la pr&#xE9;sentation de mes projets et comp&#xE9;tences, mais pas que ! Besoin d&apos;un d&#xE9;veloppeur HTML, CSS, JavaScript pour une int&#xE9;gration web ou bien vous ne savez pas &#xE0; quoi sert un d&#xE9;veloppeur Front-end ou Node.js, vous &#xEA;tes au bon endroit.">
+		<meta name="geo.placename" content="Annecy, Haute-Savoie, France">
+		
+		<meta name="robots" content="noindex, nofollow">
+		
+		<!--[if IE]><meta name="viewport" content="width=device-width, user-scalable=no" /><![endif]-->
+		<!--[if !IE]><!--><meta name="viewport" content="initial-scale=1.0, user-scalable=no"><!--<![endif]-->
+
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700">
+
+		
+		<link rel="stylesheet" type="text/css" href="stylesheets/common.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/common-sm.css" media="screen and (min-width: 768px)">
+		<link rel="stylesheet" type="text/css" href="stylesheets/common-md.css" media="screen and (min-width: 1200px)">
+		
+	</head>
+	<body data-hostname="http://localhost:7777/" data-subpath="">
+		<noscript>
+			<p>Votre JavaScript est d&#xE9;sactiv&#xE9; aussi toutes les fonctionalit&#xE9;s de ce site ne seront pas disponibles.</p>
+		</noscript>
+
+		<div class="permalink ui">
+			Permalien : <span>http://localhost:7777/metiers/</span>
+		</div>
+
+		<div class="skiplink ui">
+			<span>Acc&#xE8;s aux sections</span>
+			<ul>
+								
+				<li>
+					<a href="http://localhost:7777/metiers/#content" title="Allez en corps de page">Allez en corps de page</a>
+				</li>
+								
+				<li>
+					<a href="http://localhost:7777/metiers/#menu" title="Allez au menu de navigation">Allez au menu de navigation</a>
+				</li>
+								
+				<li>
+					<a href="http://localhost:7777/metiers/#footer" title="Allez au au cr&#xE9;dits">Allez au cr&#xE9;dits</a>
+				</li>
+												
+			</ul>
+		</div>
+
+		<div class="main ui to bottom">
+
+		<ul class="top sections ui">
+		<li class="ui return">
+			<a href="javascript:;" title="Retour">Retour</a>
+		</li>
+
+				<li class="medium section ui open" data-url="metiers">
+			<section class="about front-end content">
+				<h1>
+					<ins class="collapse icon html5"></ins>
+					<span>M&#xE9;tiers</span>
+				</h1>
+
+				<div class="vertical scrollable ui">
+					<div class="intro ui">
+						<p>I love JavaScript</p>
+					</div>
+
+					<div class="before panel ui">
+						<h2>Autres m&#xE9;tiers</h2> <ul> <li>D&#xE9;veloppeur Node.js</li> <li>D&#xE9;veloppeur PHP</li> <li>D&#xE9;veloppeur C#</li> </ul>
+					</div>
+
+					<div class="complete ui">
+						<h2>Qu&#x2019;est-ce que le Front-end</h2> <p>Je suis d&#xE9;veloppeur Front-end. La partie cliente (ou Front-end) d&#x2019;un site web fait le pont entre l&#x2019;utilisateur et le serveur web. C&#x2019;est la page web visible &#xE0; l&#x2019;&#xE9;cran et &#xE9;galement les &#xE9;l&#xE9;ments la constituant avec lesquels vous interagissez :</p> <ul> <li>le design graphique,</li> <li>les m&#xE9;dias affich&#xE9;s,</li> <li>les animations,</li> <li>la saisie de formulaire,</li> <li>le contr&#xF4;le des erreurs,</li> <li>les mises &#xE0; jour apr&#xE8;s chargement de page&#x2026;</li> </ul> <h2>Naissance d&#x2019;un m&#xE9;tier</h2> <h3>Les balbutiements</h3> <p>La r&#xE9;alisation de la partie Front-end &#xE9;tait initialement faite :</p> <ul> <li>soit par le Webdesigner qui touchait sa bille sur FrontPage ou Dreamweaver,</li> <li>soit par le D&#xE9;veloppeur Back-end qui avait (web exige) des notions en rendu HTML.</li> </ul> <p>Dans les deux cas, la connaissance des standards n&#x2019;&#xE9;tait pas de mise et le charg&#xE9; Front-end ou Client-side bricolait du mieux possible en empilant des <samp>&lt;table&gt;</samp> et en v&#xE9;rifiant que cela fonctionnait dans IE6.</p><div></div><h3>Les Int&#xE9;grateurs Web</h3><p>Puis l&#x2019;essor de CSS et des multiples navigateurs ont fait na&#xEE;tre une sp&#xE9;cialit&#xE9; parmi les m&#xE9;tiers du web : celle d&#x2019;Int&#xE9;grateur Web ou Int&#xE9;grateur HTML/CSS. Il convenait &#xE0; cette personne &#x2014;g&#xE9;n&#xE9;ralement un d&#xE9;veloppeur Back-end &#xE0; cheval sur le Webdesign (ou inversement)&#x2014; de cr&#xE9;er une structure aux normes du W3C, indexable dans les moteurs de recherche et maintenable (le design d&#x2019;un site pouvant changer du tout au tout) avec du JavaScript r&#xE9;cup&#xE9;r&#xE9; de-ci de-l&#xE0; sur EditeurJavascript.</p><p>Nous en sommes alors au stade des d&#xE9;veloppeurs Back-End qui ont de fortes proportions aux d&#xE9;veloppements et m&#xE9;canismes Front-End.</p><div></div><h3>Les D&#xE9;veloppeurs Front-end</h3><p>Pour finir, avec l&#x2019;arriv&#xE9;e :</p><ul> <li>de technologies comme HTML5 et CSS3,</li> <li>des librairies comme jQuery,</li> <li>des requ&#xEA;tes asynchrones,</li> <li>des recommandations en performances web, <br> <ul><li>sur tous les navigateurs,</li> <li>toutes les versions de navigateur,</li> <li>tous les p&#xE9;riph&#xE9;riques (Responsive Design),</li></ul></li> <li>les bonnes pratiques pour le r&#xE9;f&#xE9;rencement naturel&#x2026;</li> </ul><p>l&#x2019;int&#xE9;gration web est devenue une affaire de sp&#xE9;cialistes. La n&#xE9;cessit&#xE9; absolue d&#x2019;avoir des connaissances sur l&#x2019;architecture compl&#xE8;te et les fonctionnements d&#x2019;un site Internet ainsi que la connaissance pouss&#xE9;e du JavaScript pour r&#xE9;aliser des interfaces riches font qu&#x2019;&#xE0; pr&#xE9;sent les experts actuels sont des d&#xE9;veloppeurs Front-end qui ont de fortes proportions au d&#xE9;veloppement et m&#xE9;canismes Back-end.</p><div></div><h2>Des comp&#xE9;tences de professionnels</h2><p>C&#x2019;est donc avec l&#x2019;essor d&#x2019;Internet que les d&#xE9;veloppeurs Client-side sont devenus indispensables :</p><ul> <li><strong>R&#xE9;f&#xE9;rencement et SEO</strong> : le d&#xE9;veloppeur Front-end transforme un visuel en balise s&#xE9;mantique HTML5 cr&#xE9;ant une structure &#xAB; avec du sens &#xBB; permettant une meilleure compr&#xE9;hension des moteurs de recherche ainsi qu&#x2019;une meilleure hierarchisation de l&#x2019;information au sein des pages pour une visibilit&#xE9; accrue.</li> <li><strong>Ergonomie visuelle</strong> : le d&#xE9;veloppeur Front-end s&#x2019;occupe de l&#x2019;habillage visuel du site d&#x2019;apr&#xE8;s des maquettes et guide de style ainsi que de l&#x2019;animation des &#xE9;l&#xE9;ments gr&#xE2;ce au CSS3.</li> <li><strong>Ergonomie fonctionnelle</strong> : le d&#xE9;veloppeur Front-end s&#x2019;occupe des animations au passage/clique de la souris, des interactions avec le clavier, ou m&#xEA;me au rapatriement de nouvelles informations apr&#xE8;s chargement gr&#xE2;ce &#xE0; AJAX.</li> <li><strong>Interop&#xE9;rabilit&#xE9; et accessibilit&#xE9;</strong> : Il est indispensable que le d&#xE9;veloppeur Front-end respecte les normes du W3C ainsi que les pr&#xE9;conisations d&#x2019;accessibilit&#xE9;s du projet OpQuaSt et reste en veille des techniques de demain comme le Responsive Web Design. Respecter cela est le meilleur moyen d&#x2019;assurer : le bon fonctionnement, la maintenabilit&#xE9; et l&#x2019;&#xE9;volutivit&#xE9; du site sur le maximum de p&#xE9;riph&#xE9;riques et de navigateurs.</li> </ul><p>Au final la Qualit&#xE9; Globale d&#x2019;un site web passe avant tout par le travail du d&#xE9;veloppeur Front-End qui veille &#xE0; l&#x2019;ergonomie du site pour l&#x2019;utilisateur ainsi qu&#x2019;&#xE0; la compatibilit&#xE9; du site sur le terminal utilis&#xE9; et ceci dans un souci de rapidit&#xE9; d&#x2019;ex&#xE9;cution et de performance au chargement.</p>
+					</div>
+
+					<nav class="ui return">
+						<a href="javascript:;" title="Menu">Menu</a>
+					</nav>
+				</div>
+			</section>
+		</li>
+
+		</ul>
+
+	<ul class="bottom sections ui">
+		<li class="ui return">
+			<a href="javascript:;" title="Retour">Retour</a>
+		</li>
+
+		</ul>
+
+	<div class="presentation ui">
+				<header id="header" class="header ui" role="banner">
+			<h1>
+				<a href="./" title="Bruno Lesieur, Haeresis">
+					<span class="first">Bruno Lesieur</span> <span class="second">Haeresis</span>
+				</a>
+			</h1>
+		</header>
+		
+		
+
+		<footer id="footer" class="footer ui">
+			<div><strong>Site en construction : en attendant rdv sur <a href="http://www.haeresis.fr/" title="Site de Bruno Lesieur, D&#xE9;veloppeur web sp&#xE9;cialiste Front-End">Haeresis.fr</a></strong></div>
+			<div class="copyright">&#xA9;2012-2014 <a href="http://www.lesieur.name/" title="Site de Bruno Lesieur, D&#xE9;veloppeur web sp&#xE9;cialiste Front-End / Node.js">Lesieur.name</a> - Site d&#xE9;velopp&#xE9; en <a href="http://nodejs.org/" title="node.js, le moteur JavaScript c&#xF4;t&#xE9; serveur">node.js</a> avec <a href="https://haeresis.github.io/NodeAtlas/" title="Le Framework node.js NodeAtlas">NodeAtlas</a></div>
+		</footer>	
+	</div>
+
+		</div>
+
+		
+		<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+		<script type="text/javascript" src="javascript/modernizr.js"></script>
+		<script type="text/javascript" src="javascript/jquery.js"></script>
+		<script type="text/javascript" src="javascript/prettify.js"></script>
+		<script type="text/javascript" src="javascript/prettify/run_prettify.js"></script>
+		<script type="text/javascript" src="javascript/common.js"></script>
+		
+	</body>
+</html>
