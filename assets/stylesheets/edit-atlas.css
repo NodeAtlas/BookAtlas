@@ -1,0 +1,106 @@
+.is-editable [data-edit=true][data-edit-targeted=true],
+.is-editable [data-edit=true][data-edit-targeted=true] * {
+	background-color: #E4ECF8;
+	cursor: crosshair;
+}
+.is-editable img[data-edit-attr=true][data-edit-targeted=true] {
+	border: 3px solid #E4ECF8;
+	margin: -3px;
+}
+
+.popup-edit-atlas {
+	display: none;
+}
+.popup-edit-atlas.opened {
+	display: block;
+}
+.popup-edit-atlas {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 0%;
+	height: 0%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+	-webkit-transform: translateY(-50%) translateX(-50%);
+	   -moz-transform: translateY(-50%) translateX(-50%);
+	    -ms-transform: translateY(-50%) translateX(-50%);
+	     -o-transform: translateY(-50%) translateX(-50%);
+	        transform: translateY(-50%) translateX(-50%);
+}
+.popup-edit-atlas .popup-content {
+	padding: 8px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background-color: #fff;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNWWFMmUAAAAbSURBVBhXY/j//z8KBhMLFiywAWHcAgj8nwEA9u0sTVrSYqUAAAAASUVORK5CYII=');
+	-webkit-transform: translateY(-50%) translateX(-50%);
+	   -moz-transform: translateY(-50%) translateX(-50%);
+	    -ms-transform: translateY(-50%) translateX(-50%);
+	     -o-transform: translateY(-50%) translateX(-50%);
+	        transform: translateY(-50%) translateX(-50%);
+	-webkit-box-shadow: 0 0 10px #000;
+	        box-shadow: 0 0 10px #000;
+	-webkit-border-radius: 4px;
+	        border-radius: 4px;
+	cursor: all-scroll;
+}
+.popup-edit-atlas .popup-content .close,
+.popup-edit-atlas .popup-content h1,
+.popup-edit-atlas .popup-content .templates,
+.popup-edit-atlas .popup-content .submit {
+	background-color: #fff;
+	cursor: default;
+}
+@media (min-width: 400px) {
+	.popup-edit-atlas .popup-content {
+		width: 400px;
+	}
+}
+.popup-edit-atlas .popup-content textarea,
+.popup-edit-atlas .popup-content input[type=text] {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	width: 100%;
+}
+
+.popup-edit-atlas .popup-content .submit {
+	text-align: right;
+}
+
+.popup-edit-atlas .next-variation-change {
+	cursor: pointer;
+	border: 0;
+	background-color: transparent;
+}
+.popup-edit-atlas .next-variation-change {
+	color: #48739E;
+	text-decoration: none;
+}
+.popup-edit-atlas .next-variation-change:hover {
+	color: #CC0000;
+}
+.popup-edit-atlas .source,
+.popup-edit-atlas .template {
+	display: none;
+}
+.popup-edit-atlas .source em {
+	font-size: 0.7em;
+}
+.popup-edit-atlas .templates {
+	max-height: 400px;
+	-ms-overflow-y: auto;
+	    overflow-y: auto;
+}
+.popup-edit-atlas h1 {
+	margin-top: 0;
+	margin-bottom: 24px;
+}
+.popup-edit-atlas hr {
+	margin-top: 0.5em;
+}
+.popup-edit-atlas .close {
+	float: right;
+}

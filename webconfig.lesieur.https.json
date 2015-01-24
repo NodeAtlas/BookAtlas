@@ -1,0 +1,14 @@
+{
+	"httpPort": 7775,
+	"httpSecure": "security/www.lesieur.name",
+	"httpHostname": "www.lesieur.name",
+ 	"commonVariation": "common.json",
+ 	"commonController": "common.js",
+ 	"urlPort": 443,
+  	"languageCode": "fr-fr",
+ 	"controllersRelativePath": "controllers/",
+  	"pageNotFound": "/page-inexistante/",
+  	"bundles": "bundles.json",
+	"routes": "routes.json",
+	"_minified": ".min"
+}

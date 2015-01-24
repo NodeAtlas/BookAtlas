@@ -6,10 +6,14 @@ website.components = {};
 	"use strict";
 
 	website.components.socketio = require('../components/controllers/socket-io');
+	website.components.editAtlas = require('../components/controllers/edit-atlas');
+
 
 	publics.loadModules = function (NA) {
 		NA.modules.cookie = require('cookie');
 		NA.modules.socketio = require('socket.io');
+
+		NA.modules.ejs = website.components.editAtlas.setFilters(NA.modules.ejs, NA);
 
 		return NA;
 	};
@@ -32,6 +36,8 @@ website.components = {};
 			fs = NA.modules.fs;
 
 		socketio.sockets.on('connection', function (socket) {
+			website.components.editAtlas.sockets(socket, NA, true);
+
 			socket.on('load-sections', function () {
 		        var data = {},
 		        	currentVariation = {},
@@ -63,9 +69,25 @@ website.components = {};
 		});
 	};
 
+	publics.changeVariation = function (params, mainCallback) {
+		var variation = params.variation,
+			session = params.request.session;
+
+		variation.fs = false;
+		variation.fc = false;
+
+		/*if (session.hasPermissionForEdit) {*/
+			// Le fichier spécifique utilisé pour générer cette vue.
+			variation.fs = variation.currentRouteParameters.variation;
+			// Le fichier commun utilisé pour générer cette vue.
+			variation.fc = variation.webconfig.commonVariation;
+		/*}*/
+
+		mainCallback(variation);
+	};
+
 }(website));
-
-
 
 exports.loadModules = website.loadModules;
 exports.setConfigurations = website.setConfigurations;
+exports.changeVariation = website.changeVariation;

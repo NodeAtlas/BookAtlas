@@ -78,13 +78,19 @@
 /* $Layout */
 /***********/
 
+.sections .section .contact-me h1 span,
 .sections .section .blog h1 span,
 .sections .section .nodeatlas h1 span,
+.sections .section .contact-me h1 ins,
 .sections .section .blog h1 ins,
 .sections .section .nodeatlas h1 ins {
 	display: none;
 }
 
+.main.to .sections .section .contact-me h1 ins,
+.main.to .sections .section .contact-me h1 span,
+.sections .section.open .contact-me h1 ins,
+.sections .section.open .contact-me h1 span,
 .main.to .sections .section .blog h1 ins,
 .main.to .sections .section .blog h1 span,
 .sections .section.open .blog h1 ins,
@@ -104,7 +110,12 @@
 	margin: -24px;
 	opacity: 1;
 }
+.sections .section .contact-me h1 img {
+	margin: 0px;
+	opacity: 1;	
+}
 
+.sections .section.open .contact-me h1 img,
 .sections .section.open .blog h1 img,
 .sections .section.open .nodeatlas h1 img {
 	opacity: 0;
@@ -114,12 +125,15 @@
 /*** Responsive end ***/ }
 
 @media (max-width: 323px), (max-height: 500px) {
+	.sections .section .contact-me h1 span,
+	.sections .section .contact-me h1 ins,
 	.sections .section .blog h1 span,
 	.sections .section .blog h1 ins,
 	.sections .section .nodeatlas h1 span,
 	.sections .section .nodeatlas h1 ins {
 		display: inline;
 	}
+	.sections .section .contact-me h1 img,
 	.sections .section .blog h1 img,
 	.sections .section .nodeatlas h1 img {
 		display: none;

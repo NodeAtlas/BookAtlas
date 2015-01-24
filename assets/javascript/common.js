@@ -167,6 +167,13 @@ var website = website || {},
                 $html.trigger("click");
             });
 
+             $("h1").click(function (event) {
+                if ($(this).parents(".open").length > 0) {                
+                    event.stopPropagation();
+                    $html.trigger("click");
+                }
+            });
+
             $html.click(function () {
                 history.replaceState(null, "", "/");
                 closeSection();
@@ -217,6 +224,8 @@ var website = website || {},
             });
 
             privates.generateEmail();
+
+            publics.editAtlas();
         });
     };
 }(website));
