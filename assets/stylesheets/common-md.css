@@ -1,4 +1,3 @@
-@media (min-width: 1200px) {
 /*------------------------------------*\
     $SUMMARY
 \*------------------------------------*/
@@ -42,87 +41,86 @@
 }
 
 @media (min-width: 992px) { /*** Responsive start ***/
-.top.sections .small.section h1 {
-	margin-top: 12px;
-}
+	.top.sections .small.section h1 {
+		margin-top: 12px;
+	}
 
-.bottom.sections .small.section h1 {
-	margin-top: 10px;
-}
+	.bottom.sections .small.section h1 {
+		margin-top: 10px;
+	}
 
-.sections .section {
-	width: 180px;
-	margin-left: 10px;
-	margin-right: 10px;
-}
+	.sections .section {
+		width: 180px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
 
-.sections .section .intro p {
-	margin-top: 16px;
-}
+	.sections .section .intro p {
+		margin-top: 16px;
+	}
 
-.sections .section h1 span {
-	display: inline;
-}
+	.sections .section h1 span {
+		display: inline;
+	}
 
-.main.to.top .bottom.sections .medium.section {
-	margin-right: -190px;
-	margin-left: -190px;
-}
+	.main.to.top .bottom.sections .medium.section {
+		margin-right: -190px;
+		margin-left: -190px;
+	}
 
-.main.to.bottom .top.sections .medium.section {
-	margin-right: -190px;
-	margin-left: -190px;
-}
-	
-/***********/
-/* $Layout */
-/***********/
+	.main.to.bottom .top.sections .medium.section {
+		margin-right: -190px;
+		margin-left: -190px;
+	}
+		
+	/***********/
+	/* $Layout */
+	/***********/
 
-.sections .section .contact-me h1 span,
-.sections .section .blog h1 span,
-.sections .section .nodeatlas h1 span,
-.sections .section .contact-me h1 ins,
-.sections .section .blog h1 ins,
-.sections .section .nodeatlas h1 ins {
-	display: none;
-}
+	.sections .section .contact-me h1 span,
+	.sections .section .blog h1 span,
+	.sections .section .nodeatlas h1 span,
+	.sections .section .contact-me h1 ins,
+	.sections .section .blog h1 ins,
+	.sections .section .nodeatlas h1 ins {
+		display: none;
+	}
 
-.main.to .sections .section .contact-me h1 ins,
-.main.to .sections .section .contact-me h1 span,
-.sections .section.open .contact-me h1 ins,
-.sections .section.open .contact-me h1 span,
-.main.to .sections .section .blog h1 ins,
-.main.to .sections .section .blog h1 span,
-.sections .section.open .blog h1 ins,
-.sections .section.open .blog h1 span,
-.main.to .sections .section .nodeatlas h1 ins,
-.main.to .sections .section .nodeatlas h1 span,
-.sections .section.open .nodeatlas h1 ins,
-.sections .section.open .nodeatlas h1 span {
-	display: inline;
-}
+	.main.to .sections .section .contact-me h1 ins,
+	.main.to .sections .section .contact-me h1 span,
+	.sections .section.open .contact-me h1 ins,
+	.sections .section.open .contact-me h1 span,
+	.main.to .sections .section .blog h1 ins,
+	.main.to .sections .section .blog h1 span,
+	.sections .section.open .blog h1 ins,
+	.sections .section.open .blog h1 span,
+	.main.to .sections .section .nodeatlas h1 ins,
+	.main.to .sections .section .nodeatlas h1 span,
+	.sections .section.open .nodeatlas h1 ins,
+	.sections .section.open .nodeatlas h1 span {
+		display: inline;
+	}
 
-.sections .section .blog h1 img {
-	margin: 8px;
-	opacity: 1;	
-}
-.sections .section .nodeatlas h1 img {
-	margin: -24px;
-	opacity: 1;
-}
-.sections .section .contact-me h1 img {
-	margin: 0px;
-	opacity: 1;	
-}
+	.sections .section .blog h1 img {
+		margin: 8px;
+		opacity: 1;	
+	}
+	.sections .section .nodeatlas h1 img {
+		margin: -24px;
+		opacity: 1;
+	}
+	.sections .section .contact-me h1 img {
+		margin: 0px;
+		opacity: 1;	
+	}
 
-.sections .section.open .contact-me h1 img,
-.sections .section.open .blog h1 img,
-.sections .section.open .nodeatlas h1 img {
-	opacity: 0;
-	width: 0%;
+	.sections .section.open .contact-me h1 img,
+	.sections .section.open .blog h1 img,
+	.sections .section.open .nodeatlas h1 img {
+		opacity: 0;
+		width: 0%;
+	}
 }
-
-/*** Responsive end ***/ }
 
 @media (max-width: 323px), (max-height: 500px) {
 	.sections .section .contact-me h1 span,
@@ -166,5 +164,3 @@
 		width: 164px;
 	}
 }
-
-/*** Responsive end ***/ }
