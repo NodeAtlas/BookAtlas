@@ -2,20 +2,31 @@
 			<section class="about bepo content">
 				<h1>
 					<ins class="collapse icon keyboard"></ins>
-					<span><%- common.aboutBepo.title %></span>
+					<span><%-: common | et: ['aboutBepo.title', fc] %></span>
 				</h1>
 
 				<div class="vertical scrollable ui">
 					<div class="after panel ui">
-						<%- common.aboutBepo.afterPanel %>
+						<h2><%-: common | et: ['aboutBepo.afterPanel.title', fc] %></h2>
+						<%-: common | eh: ['aboutBepo.afterPanel.content', fc] %>
 					</div>
 				
 					<div class="complete ui">
-						<%- common.aboutBepo.content %>
+						<h2><%-: common.aboutBepo.about.title %></h2>
+						<%-: common.aboutBepo.about.content %>
+
+						<h2><%-: common.aboutBepo.speed.title %></h2>
+						<%-: common.aboutBepo.speed.content %>
+
+						<h2><%-: common.aboutBepo.why.title %></h2>
+						<%-: common.aboutBepo.why.content %>
+
+						<h2><%-: common.aboutBepo.learn.title %></h2>
+						<%-: common.aboutBepo.learn.content %>
 					</div>
 
 					<nav class="ui return">
-						<a href="javascript:;" title="Menu">Menu</a>
+						<a href="javascript:;" title="<%-: common | ea: ['menu.title', fc, 'title'] %>"><%-: common | et: ['menu.content', fc] %></a>
 					</nav>
 				</div>
 			</section>

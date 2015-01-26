@@ -23,6 +23,10 @@
             }
         ]
     },
+    "menu": {
+        "content": "Menu",
+        "title": "Menu"
+    },
     "editableArea": {
         "close": "Fermer",
         "htmlInfo": "(HTML activé)",
@@ -38,8 +42,108 @@
     },
     "aboutSite": {
         "title": "Bienvenue",
-        "intro": "<p>Présentation rapide de mon portail</p><p><strong>Cliquez sur un onglet pour l'ouvrir</strong></p>",
-        "content": "<h2>Présentation</h2><p>Bienvenue sur le portail d'un développeur web sur Annecy et réalisé dans les règles de l'art. Ici exit l'empilement de « table » à n'en plus finir, les balises et attributs qui usurpent le travail du CSS ou encore les morceaux de JavaScript en plein milieu de la sémantique. Nos amis s'appellent HTML5, CSS3, jQuery, AJAX, Node.js, Websocket, PHP, .NET, LINQ et j'en passe ! Ils oeuvrent pour deux choses communes :</p><ul><li>Être au service du référencement et de l'ergonomie pour que le contenu soit trouvable et accessible quel que soit la plateforme d'affichage ou les mécanismes d'animations.</li><li>Être au service de la maintenabilité et de la lisibilité pour garder un site actualisable et aux normes du web dans un souci de productivité, sécurité et d'efficacité.</li></ul><h2>Visite guidé</h2><p>Ce portail présente avant tous les projets dans lesquels je me suis investi hors de mon cadre professionnel en tant qu'autodidacte. Ce sont eux qui m'ont permis d'acquérir des connaissances sur le web ancestral et d'apprendre des erreurs à ne plus commettre.</p><p>Ce portail présente également celui que je suis devenu après 5 ans d'études supérieures et plus de 5 ans d'expériences professionnelles m'ayant donné les clés de l'ergonomie, du référencement, des bonnes pratiques, de la gestion de projet et du développement web.</p><p>Vous trouverez de quoi me suivre moi et mes projets dans « À propos » ainsi que tout ce qu'il faut savoir sur mes développements dans les autres sections.</p><h2>Technos utilisées</h2><p><a class=\"external\" href=\"http://www.w3.org/TR/html5/\" title=\"HTML5\" target=\"_blank\">HTML5</a>, <a class=\"external\" href=\"http://www.w3.org/Style/CSS/current-work/\" title=\"CSS3\" target=\"_blank\">CSS3</a>, <a class=\"external\" href=\"http://www.ecma-international.org/publications/standards/Ecma-262.htm\" title=\"JavaScript\" target=\"_blank\">JavaScript</a>, <a class=\"external\" href=\"http://jquery.com/\" title=\"jQuery\" target=\"_blank\">jQuery</a>, <a class=\"external\" href=\"http://nodejs.org/\" title=\"Node.js\" target=\"_blank\">Node.js</a>, <a class=\"external\" href=\"http://www.w3.org/TR/XMLHttpRequest/\" title=\"Cross Domain\" target=\"_blank\">Cross Domain</a>, <a class=\"external\" href=\"http://api.jquery.com/jquery.ajax/\" title=\"AJAX\" target=\"_blank\">AJAX</a>, <a class=\"external\" href=\"http://socket.io/\" title=\"Websocket\" target=\"_blank\">Websocket</a>, <a class=\"external\" href=\"http://www.json.org/\" title=\"JSON\" target=\"_blank\">JSON</a>, <a class=\"external\" href=\"http://threejs.org/\" title=\"Canvas\" target=\"_blank\">Canvas</a>, <a class=\"external\" href=\"http://dev.mysql.com/doc/refman/5.0/fr/\" title=\"SQL\" target=\"_blank\">SQL</a>, <a class=\"external\" href=\"http://www.mongodb.org/\" title=\"NoSQL\" target=\"_blank\">NoSQL</a>, <a class=\"external\" href=\"http://www.php.net/manual/en/index.php\" title=\"PHP\" target=\"_blank\">PHP</a>, <a class=\"external\" href=\"http://www.microsoft.com/net\" title=\".NET\" target=\"_blank\">.NET</a> </p><h2>Un problème technique ?</h2><p>Si vous rencontrez un quelconque problème contactez-moi via mon adresse email <a href=\"javascript:;\" class=\"link generate-email\">en la générant en cliquant ici</a>.</p>"
+        "intro": "<p>Présentation rapide de mon portail</p>\n<p>\n    <strong>Cliquez sur un onglet pour l'ouvrir</strong>\n</p>",
+        "presentation": {
+            "title": "Présentation",
+            "content": "<p>Bienvenue sur le portail d'un développeur web sur Annecy et réalisé dans les règles de l'art. Ici exit l'empilement de « table » à n'en plus finir, les balises et attributs qui usurpent le travail du CSS ou encore les morceaux de JavaScript en plein milieu de la sémantique. Nos amis s'appellent HTML5, CSS3, jQuery, AJAX, Node.js, Websocket, PHP, .NET, LINQ et j'en passe ! Ils oeuvrent pour deux choses communes :</p>\n\n<ul>\n    <li>Être au service du référencement et de l'ergonomie pour que le contenu soit trouvable et accessible quel que soit la plateforme d'affichage ou les mécanismes d'animations.</li>  \n   <li>Être au service de la maintenabilité et de la lisibilité pour garder un site actualisable et aux normes du web dans un souci de productivité, sécurité et d'efficacité.</li>\n</ul>"
+        },
+        "description": {
+            "title": "Visite guidé",
+            "content": "<p>Ce portail présente avant tous les projets dans lesquels je me suis investi hors de mon cadre professionnel en tant qu'autodidacte. Ce sont eux qui m'ont permis d'acquérir des connaissances sur le web ancestral et d'apprendre des erreurs à ne plus commettre.</p>\n\n<p>Ce portail présente également celui que je suis devenu après 5 ans d'études supérieures et plus de 5 ans d'expériences professionnelles m'ayant donné les clés de l'ergonomie, du référencement, des bonnes pratiques, de la gestion de projet et du développement web.</p>\n\n<p>Vous trouverez de quoi me suivre moi et mes projets dans « À propos » ainsi que tout ce qu'il faut savoir sur mes développements dans les autres sections.</p>"
+        },
+        "techno": {
+            "title": "Technos utilisées",
+            "list": [
+                {
+                    "href": "http://www.w3.org/TR/html5/",
+                    "title": "HTML5",
+                    "target": "_blank",
+                    "content": "HTML5"
+                },
+                {
+                    "href": "http://www.w3.org/Style/CSS/current-work/",
+                    "title": "CSS3",
+                    "target": "_blank",
+                    "content": "CSS3"
+                },
+                {
+                    "href": "http://www.ecma-international.org/publications/standards/Ecma-262.htm",
+                    "title": "JavaScript",
+                    "target": "_blank",
+                    "content": "JavaScript"
+                },
+                {
+                    "href": "http://jquery.com/",
+                    "title": "jQuery",
+                    "target": "_blank",
+                    "content": "jQuery"
+                },
+                {
+                    "href": "http://nodejs.org/",
+                    "title": "Node.js",
+                    "target": "_blank",
+                    "content": "Node.js"
+                },
+                {
+                    "href": "http://www.w3.org/TR/XMLHttpRequest/",
+                    "title": "Cross Domain",
+                    "target": "_blank",
+                    "content": "Cross Domain"
+                },
+                {
+                    "href": "http://api.jquery.com/jquery.ajax/",
+                    "title": "AJAX",
+                    "target": "_blank",
+                    "content": "AJAX"
+                },
+                {
+                    "href": "http://socket.io/",
+                    "title": "Websocket",
+                    "target": "_blank",
+                    "content": "Websocket"
+                },
+                {
+                    "href": "http://www.json.org/",
+                    "title": "JSON",
+                    "target": "_blank",
+                    "content": "JSON"
+                },
+                {
+                    "href": "http://threejs.org/",
+                    "title": "Canvas",
+                    "target": "_blank",
+                    "content": "Canvas"
+                },
+                {
+                    "href": "http://dev.mysql.com/doc/refman/5.0/fr/",
+                    "title": "SQL",
+                    "target": "_blank",
+                    "content": "SQL"
+                },
+                {
+                    "href": "http://www.mongodb.org/",
+                    "title": "NoSQL",
+                    "target": "_blank",
+                    "content": "NoSQL"
+                },
+                {
+                    "href": "http://www.php.net/manual/en/index.php",
+                    "title": "PHP",
+                    "target": "_blank",
+                    "content": "PHP"
+                },
+                {
+                    "href": "http://www.microsoft.com/net",
+                    "title": ".NET",
+                    "target": "_blank",
+                    "content": ".NET"
+                }
+            ]
+        },
+        "issue": {
+            "title": "Un problème technique ?",
+            "content": "<p>Si vous rencontrez un quelconque problème contactez-moi via mon adresse email <a href=\"javascript:;\" class=\"link generate-email\">en la générant en cliquant ici</a>.</p>"
+        }
     },
     "aboutOffers": {
         "title": "Offres",
@@ -58,8 +162,22 @@
     },
     "aboutBlog": {
         "title": "Blog",
-        "content": "<h2>Quelques #ID et beaucoup de .CLASS</h2><p>Mon blog est majoritairement consacré à l'aspect Front-end du développement web, on discute :</p> <ul><li>de HTML avec par exemple cet article à propos <a href=\"http://blog.lesieur.name/les-balises-h1-multiples-autorisees-en-html5/\" title=\"Les balises h1 multiples autorisées en HTML5\">des multiples balises h1 dans une même page</a>,</li><li>de CSS comme vous pouvez le lire avec cet article expliquant <a href=\"http://blog.lesieur.name/centrer-verticalement-n-importe-quel-element-en-quelques-lignes-css/\" title=\"Centrer verticalement n'importe quel élément\">centrer verticalement n'importe quel élément</a> ou </li> <li>de JavaScript avec des explications plus techniques pour <a href=\"http://blog.lesieur.name/les-types-en-javascript-pour-tout-savoir/\" title=\"Les types en JavaScript : pour tout savoir !\">tout savoir sur les diférents types de variable</a>.</li></ul> <p>Côté Back-end, on parle de <a href=\"http://blog.lesieur.name/developper-en-javascript-cote-serveur-avec-nodejs/\" title=\"Développer en JavaScript côté serveur avec Node.js\">développement JavaScript côté serveur avec Node.js</a> et comment <a href=\"http://blog.lesieur.name/node-js-le-guide-pour-convaincre-son-boss/\" title=\"Node.js : le guide pour convaincre son Boss\">précher la bonne parole sur cette technologie d'avenir</a> !</p><p>Vous trouverez également diverses astuces (comme <a href=\"http://blog.lesieur.name/une-alternative-au-switch-c-est-possible-en-javascript/\" title=\"Une alternative au Switch, c'est possible en JavaScript\">une alternative au Switch</a>) et réflexions (comme savoir <a href=\"http://blog.lesieur.name/structurer-le-javascript-de-son-site-avec-ou-sans-framework/\">structurer le JavaScript de son site</a>) autour des bonnes pratiques comme par exemple celle <a href=\"http://blog.lesieur.name/eviter-les-multiples-jquery-document-ready-dans-vos-pages-web/\" title=\"Éviter les multiples $(document).ready() dans vos pages web\">d'éviter les multiples $(document).ready()</a>.</p> <p>Côté serveur, on parle de Node.js.</p> <p>Pour finir, au dela de ces aspects techniques, le site traite également de tous types d'articles touchant de près ou de loin à la webosphère.</p><h2>Accueil du Blog</h2><p><a href\"http://blog.lesieur.name/\" title=\"Visiter le blog Quelques #ID et beaucoup de .CLASS\">Visiter le blog Quelques #ID et beaucoup de .CLASS</a></p>",
-        "afterPanel": "<h2>À lire absoluement</h2><ul><li><a class=\"external\" href=\"http://blog.lesieur.name/bootstrap-est-une-regression-pour-un-developpement-front-end-de-qualite/\" title=\"Bootstrap est une régression pour un développement Front-end de qualité\">Bootstrap est une régression pour un développement Front-end de qualité</a></li><li><a class=\"external\" href=\"http://blog.lesieur.name/les-concepts-autour-du-responsive-web-design/\" title=\"Les concepts autour du Responsive Web Design\">Les concepts autour du Responsive Web Design</a></li></ul><p><a class=\"external\" href=\"http://blog.lesieur.name/archives/\" title=\"Liste complète\">Liste de tous les articles</a></p>"
+        "image": {
+            "alt": "NodeAtlas",
+            "src": "./media/images/blog.png"
+        },
+        "articles": {
+            "title": "Quelques #ID et beaucoup de .CLASS",
+            "content": "<p>Mon blog est majoritairement consacré à l'aspect Front-end du développement web, on discute :</p>\n\n<ul>\n    <li>de HTML avec par exemple cet article à propos <a href=\"http://blog.lesieur.name/les-balises-h1-multiples-autorisees-en-html5/\" title=\"Les balises h1 multiples autorisées en HTML5\">des multiples balises h1 dans une même page</a>,</li>\n    <li>de CSS comme vous pouvez le lire avec cet article expliquant <a href=\"http://blog.lesieur.name/centrer-verticalement-n-importe-quel-element-en-quelques-lignes-css/\" title=\"Centrer verticalement n'importe quel élément\">centrer verticalement n'importe quel élément</a> ou </li>\n    <li>de JavaScript avec des explications plus techniques pour <a href=\"http://blog.lesieur.name/les-types-en-javascript-pour-tout-savoir/\" title=\"Les types en JavaScript : pour tout savoir !\">tout savoir sur les diférents types de variable</a>.</li>\n </ul>\n\n <p>Côté Back-end, on parle de <a href=\"http://blog.lesieur.name/developper-en-javascript-cote-serveur-avec-nodejs/\" title=\"Développer en JavaScript côté serveur avec Node.js\">développement JavaScript côté serveur avec Node.js</a> et comment <a href=\"http://blog.lesieur.name/node-js-le-guide-pour-convaincre-son-boss/\" title=\"Node.js : le guide pour convaincre son Boss\">précher la bonne parole sur cette technologie d'avenir</a> !</p>\n\n <p>Vous trouverez également diverses astuces (comme <a href=\"http://blog.lesieur.name/une-alternative-au-switch-c-est-possible-en-javascript/\" title=\"Une alternative au Switch, c'est possible en JavaScript\">une alternative au Switch</a>) et réflexions (comme savoir <a href=\"http://blog.lesieur.name/structurer-le-javascript-de-son-site-avec-ou-sans-framework/\">structurer le JavaScript de son site</a>) autour des bonnes pratiques comme par exemple celle <a href=\"http://blog.lesieur.name/eviter-les-multiples-jquery-document-ready-dans-vos-pages-web/\" title=\"Éviter les multiples $(document).ready() dans vos pages web\">d'éviter les multiples $(document).ready()</a>.</p>\n\n <p>Côté serveur, on parle de Node.js.</p>\n\n <p>Pour finir, au dela de ces aspects techniques, le site traite également de tous types d'articles touchant de près ou de loin à la webosphère.</p>"
+        },
+        "goTo": {
+            "title": "Accueil du Blog",
+            "content": "<p><a href\"http:=\"\" blog.lesieur.name=\"\" \"=\"\" title=\"Visiter le blog Quelques #ID et beaucoup de .CLASS\">Visiter le blog Quelques #ID et beaucoup de .CLASS</a></p>"
+        },
+        "afterPanel": {
+            "title": "À lire absoluement",
+            "content": "<ul><li><a class=\"external\" href=\"http://blog.lesieur.name/bootstrap-est-une-regression-pour-un-developpement-front-end-de-qualite/\" title=\"Bootstrap est une régression pour un développement Front-end de qualité\">Bootstrap est une régression pour un développement Front-end de qualité</a></li><li><a class=\"external\" href=\"http://blog.lesieur.name/les-concepts-autour-du-responsive-web-design/\" title=\"Les concepts autour du Responsive Web Design\">Les concepts autour du Responsive Web Design</a></li></ul><p><a class=\"external\" href=\"http://blog.lesieur.name/archives/\" title=\"Liste complète\">Liste de tous les articles</a></p>"
+        }
     },
     "aboutWebsite": {
         "title": "Communautés",
@@ -90,13 +208,45 @@
     "aboutFrontend": {
         "title": "Métiers",
         "intro": "<p>I love JavaScript</p>",
-        "beforePanel": "<h2>Autres métiers</h2> <ul> <li>Développeur Node.js</li> <li>Développeur PHP</li> <li>Développeur C#</li> </ul>",
-        "content": "<h2>Qu’est-ce que le Front-end</h2> <p>Je suis développeur Front-end. La partie cliente (ou Front-end) d’un site web fait le pont entre l’utilisateur et le serveur web. C’est la page web visible à l’écran et également les éléments la constituant avec lesquels vous interagissez :</p> <ul> <li>le design graphique,</li> <li>les médias affichés,</li> <li>les animations,</li> <li>la saisie de formulaire,</li> <li>le contrôle des erreurs,</li> <li>les mises à jour après chargement de page…</li> </ul> <h2>Naissance d’un métier</h2> <h3>Les balbutiements</h3> <p>La réalisation de la partie Front-end était initialement faite :</p> <ul> <li>soit par le Webdesigner qui touchait sa bille sur FrontPage ou Dreamweaver,</li> <li>soit par le Développeur Back-end qui avait (web exige) des notions en rendu HTML.</li> </ul> <p>Dans les deux cas, la connaissance des standards n’était pas de mise et le chargé Front-end ou Client-side bricolait du mieux possible en empilant des <samp>&lt;table&gt;</samp> et en vérifiant que cela fonctionnait dans IE6.</p><div></div><h3>Les Intégrateurs Web</h3><p>Puis l’essor de CSS et des multiples navigateurs ont fait naître une spécialité parmi les métiers du web : celle d’Intégrateur Web ou Intégrateur HTML/CSS. Il convenait à cette personne —généralement un développeur Back-end à cheval sur le Webdesign (ou inversement)— de créer une structure aux normes du W3C, indexable dans les moteurs de recherche et maintenable (le design d’un site pouvant changer du tout au tout) avec du JavaScript récupéré de-ci de-là sur EditeurJavascript.</p><p>Nous en sommes alors au stade des développeurs Back-End qui ont de fortes proportions aux développements et mécanismes Front-End.</p><div></div><h3>Les Développeurs Front-end</h3><p>Pour finir, avec l’arrivée :</p><ul> <li>de technologies comme HTML5 et CSS3,</li> <li>des librairies comme jQuery,</li> <li>des requêtes asynchrones,</li> <li>des recommandations en performances web, <br> <ul><li>sur tous les navigateurs,</li> <li>toutes les versions de navigateur,</li> <li>tous les périphériques (Responsive Design),</li></ul></li> <li>les bonnes pratiques pour le référencement naturel…</li> </ul><p>l’intégration web est devenue une affaire de spécialistes. La nécessité absolue d’avoir des connaissances sur l’architecture complète et les fonctionnements d’un site Internet ainsi que la connaissance poussée du JavaScript pour réaliser des interfaces riches font qu’à présent les experts actuels sont des développeurs Front-end qui ont de fortes proportions au développement et mécanismes Back-end.</p><div></div><h2>Des compétences de professionnels</h2><p>C’est donc avec l’essor d’Internet que les développeurs Client-side sont devenus indispensables :</p><ul> <li><strong>Référencement et SEO</strong> : le développeur Front-end transforme un visuel en balise sémantique HTML5 créant une structure « avec du sens » permettant une meilleure compréhension des moteurs de recherche ainsi qu’une meilleure hierarchisation de l’information au sein des pages pour une visibilité accrue.</li> <li><strong>Ergonomie visuelle</strong> : le développeur Front-end s’occupe de l’habillage visuel du site d’après des maquettes et guide de style ainsi que de l’animation des éléments grâce au CSS3.</li> <li><strong>Ergonomie fonctionnelle</strong> : le développeur Front-end s’occupe des animations au passage/clique de la souris, des interactions avec le clavier, ou même au rapatriement de nouvelles informations après chargement grâce à AJAX.</li> <li><strong>Interopérabilité et accessibilité</strong> : Il est indispensable que le développeur Front-end respecte les normes du W3C ainsi que les préconisations d’accessibilités du projet OpQuaSt et reste en veille des techniques de demain comme le Responsive Web Design. Respecter cela est le meilleur moyen d’assurer : le bon fonctionnement, la maintenabilité et l’évolutivité du site sur le maximum de périphériques et de navigateurs.</li> </ul><p>Au final la Qualité Globale d’un site web passe avant tout par le travail du développeur Front-End qui veille à l’ergonomie du site pour l’utilisateur ainsi qu’à la compatibilité du site sur le terminal utilisé et ceci dans un souci de rapidité d’exécution et de performance au chargement.</p>"
+        "beforePanel": {
+            "title": "Autres métiers",
+            "content": "<ul> <li>Développeur Node.js</li> <li>Développeur PHP</li> <li>Développeur C#</li> </ul>"
+        },
+        "frontend": {
+            "title": "Qu’est-ce que le Front-end",
+            "content": "<p>Je suis développeur Front-end. La partie cliente (ou Front-end) d’un site web fait le pont entre l’utilisateur et le serveur web. C’est la page web visible à l’écran et également les éléments la constituant avec lesquels vous interagissez :</p>\n\n<ul>\n    <li>le design graphique,</li> <li>les médias affichés,</li>\n    <li>les animations,</li>\n    <li>la saisie de formulaire,</li>\n    <li>le contrôle des erreurs,</li> <li>les mises à jour après chargement de page…</li>\n</ul>"
+        },
+        "birth": {
+            "title": "Naissance d’un métier",
+            "content": "<h3>Les balbutiements</h3>\n<p>\n\tLa réalisation de la partie Front-end était initialement faite :\n</p>\n<ul>\n\t<li>\n\t\tsoit par le Webdesigner qui touchait sa bille sur FrontPage ou Dreamweaver,\n\t</li>\n\t<li>\n\t\tsoit par le Développeur Back-end qui avait (web exige) des notions en rendu HTML.\n\t</li>\n</ul>\n<p>\n\tDans les deux cas, la connaissance des standards n’était pas de mise et le chargé Front-end ou Client-side bricolait du mieux possible en empilant des\n\t<samp>&lt;table&gt;</samp>\n\tet en vérifiant que cela fonctionnait dans IE6.\n</p>\n<div></div>\n<h3>Les Intégrateurs Web</h3>\n<p>\n\tPuis l’essor de CSS et des multiples navigateurs ont fait naître une spécialité parmi les métiers du web : celle d’Intégrateur Web ou Intégrateur HTML/CSS. Il convenait à cette personne —généralement un développeur Back-end à cheval sur le Webdesign (ou inversement)— de créer une structure aux normes du W3C, indexable dans les moteurs de recherche et maintenable (le design d’un site pouvant changer du tout au tout) avec du JavaScript récupéré de-ci de-là sur EditeurJavascript.\n</p>\n<p>\n\tNous en sommes alors au stade des développeurs Back-End qui ont de fortes proportions aux développements et mécanismes Front-End.\n</p>\n<div></div>\n<h3>Les Développeurs Front-end</h3>\n<p>Pour finir, avec l’arrivée :</p>\n<ul>\n\t<li>de technologies comme HTML5 et CSS3,</li>\n\t<li>des librairies comme jQuery,</li>\n\t<li>des requêtes asynchrones,</li>\n\t<li>\n\t\tdes recommandations en performances web,\n\t\t<br>\n\t\t<ul>\n\t\t\t<li>sur tous les navigateurs,</li>\n\t\t\t<li>toutes les versions de navigateur,</li>\n\t\t\t<li>tous les périphériques (Responsive Design),</li>\n\t\t</ul>\n\t</li>\n\t<li>les bonnes pratiques pour le référencement naturel…</li>\n</ul>\n<p>\n\tl’intégration web est devenue une affaire de spécialistes. La nécessité absolue d’avoir des connaissances sur l’architecture complète et les fonctionnements d’un site Internet ainsi que la connaissance poussée du JavaScript pour réaliser des interfaces riches font qu’à présent les experts actuels sont des développeurs Front-end qui ont de fortes proportions au développement et mécanismes Back-end.\n</p>"
+        },
+        "expert": {
+            "title": "Des compétences de professionnels",
+            "content": "<p>\n\tC’est donc avec l’essor d’Internet que les développeurs Client-side sont devenus indispensables :\n</p>\n<ul>\n\t<li> <strong>Référencement et SEO</strong>\n\t\t: le développeur Front-end transforme un visuel en balise sémantique HTML5 créant une structure « avec du sens » permettant une meilleure compréhension des moteurs de recherche ainsi qu’une meilleure hierarchisation de l’information au sein des pages pour une visibilité accrue.\n\t</li>\n\t<li> <strong>Ergonomie visuelle</strong>\n\t\t: le développeur Front-end s’occupe de l’habillage visuel du site d’après des maquettes et guide de style ainsi que de l’animation des éléments grâce au CSS3.\n\t</li>\n\t<li>\n\t\t<strong>Ergonomie fonctionnelle</strong>\n\t\t: le développeur Front-end s’occupe des animations au passage/clique de la souris, des interactions avec le clavier, ou même au rapatriement de nouvelles informations après chargement grâce à AJAX.\n\t</li>\n\t<li>\n\t\t<strong>Interopérabilité et accessibilité</strong>\n\t\t: Il est indispensable que le développeur Front-end respecte les normes du W3C ainsi que les préconisations d’accessibilités du projet OpQuaSt et reste en veille des techniques de demain comme le Responsive Web Design. Respecter cela est le meilleur moyen d’assurer : le bon fonctionnement, la maintenabilité et l’évolutivité du site sur le maximum de périphériques et de navigateurs.\n\t</li>\n</ul>\n<p>\n\tAu final la Qualité Globale d’un site web passe avant tout par le travail du développeur Front-End qui veille à l’ergonomie du site pour l’utilisateur ainsi qu’à la compatibilité du site sur le terminal utilisé et ceci dans un souci de rapidité d’exécution et de performance au chargement.\n</p>"
+        }
     },
     "aboutBepo": {
         "title": "Bépo",
-        "content": "<h2>Qu’est-ce que la disposition Bépo ?</h2> <p>Le <a href=\"http://bepo.fr/wiki/Accueil\">site officiel</a> vous dira tout cela bien mieux que moi mais pour résumer : la disposition Bépo est une autre manière d’agencer l’ordre des touches de votre clavier de manière à rendre le chemin parcouru par les doigts le plus court possible lors de la saisie d’une phrase en français. Les touches de ponctuation française et les accents sont également plus accessibles et rangés intelligemment. La disposition s’avère également très véloce pour le développement et agréable à la rédaction anglaise. Ainsi, les 4 premières touches sont les b, é, p et o.</p> <p><img src=\"http://download.tuxfamily.org/dvorak/wiki/images/Carte-bepo-complete.png\" alt=\"La disposition des touches en Bépo\" title=\"\"></p> <h2>Rapidité, accessibilité, confort et apprentissage</h2> <p>Il existe <a href=\"http://typematrix.com/bepo/\">des claviers Bépo très utile</a>, surtout lors de l’apprentissage. Cependant, je conseille d’en profiter pour apprendre à écrire à 10 doigts et sans les yeux. Quitte à devoir ré-apprendre à écrire, autant le faire bien ! Actuellement, n’ayant pas besoin de mes yeux pour écrire, je tape en Bépo sur un clavier Azerty. De plus, avec la combinaison de touche « Window + Espace » je peux switcher de la disposition Bépo à Azerty en un clin d’œil pour laisser les non Bépoiste taper sur mon clavier. La disposition s’installe sur n’importe qu’elle OS avec un simple driver.</p> <p><img src=\"http://download.tuxfamily.org/dvorak/wiki/images/thumb/Stats-lignes-mains-flat.png/360px-Stats-lignes-mains-flat.png\" alt=\"L’efficacité Bépo\" title=\"\"></p> <p>Bien que vous allez perdre votre rapidité d’écriture dans un premier temps, vous reprendrez la main en quelque mois et finirez par dépasser votre ancienne rapidité de frappe d’ici 6 à 9 mois. Tout est fait pour que vous puissiez écrire aussi vite que possible et sans effort comme vous pouvez le voir sur l’image ci-dessus.</p> <h2>Pourquoi je suis passé en Bépo ?</h2> <h3>État des lieux</h3> <p>Quand je me suis mis sur un ordinateur, à un très jeune age, j’ai commencé à chercher mes touches avec les yeux sur une disposition Azerty. Curieuse cette disposition ? Pourquoi pas l’ordre de l’alphabet ? Je la connais par cœur celle là ! J’ai fini par connaître par cœur les touches sans pour autant pouvoir appuyer dessus sans faire d’erreur si je ne les regardait pas. À tout casser, je devais écrire avec 4 doigts et quitter quelque fois mon clavier des yeux pour voir ce que j’avais écrit. Cependant je rêvais de pouvoir dégager mes yeux de mon clavier pour en faire autre chose pendant que j’écrivais et surtout écrire avec mes 10 doigts pour gagner en rapidité, vous savez, comme les experts en informatique dans les films !</p> <h3>Le Bépo, même plus pratique que l’Azerty</h3> <p>Je me suis dit que si je devais perdre du temps à chercher mes touches avec les doigts et à en apprendre la disposition dans l’espace par cœur (sans utiliser mes yeux) pour une question de confort et de rapidité, autant prendre la disposition la plus rapide et la plus confortable ! Et écrire en Bépo m’a beaucoup aidé car ce n’était pas ma première tentative d'écrire à 10 doigts et à l'aveugle ; j’avais déjà tenté l’aventure en Azerty mais « Comment s’empêcher de jeter un œil pour s’aider à aller plus vite ? ». La réponse est simple, faire en sorte que jeter un œil sur votre clavier ne vous avance pas plus que si vous ne le faisiez pas. Cela est chose faites puisque vous ne connaissez pas la disposition Bépo.</p> <h2>L’apprentissage</h2> <p>J’ai donc commencé par des exercises de dactylographie en Bépo avec le logiciel <a href=\"http://klavaro.sourceforge.net/fr/\">Klavaro</a> plusieurs fois par semaine pour apprendre mes touches. Durant cette phase, je continuais à écrire en Azerty en dehors de mon logiciel.</p> <p>Quand j’ai fini par plus ou moins connaître les lettres les plus usuelles, je me suis lancé dans le grand bain ! Fini l’Azerty ! Je développais, rédigeait mes docs, écrivais mes mails et mes articles en Bépo ! Et là je suis devenu une vrai limace. Cependant cet apprentissage à concorder avec ma monté en maîtrise de l’éditeur Sublime Text qui via ses divers plugin à réussi à masquer mon handicape. En un mois seulement j’ai réussi à obtenir une vitesse de production normale avec tous mes outils d'assité. L’écriture des programmes web m’a permis d’apprendre le reste de la disposition, notamment au niveau de la ponctuation, souvent utile pour le développement.</p> <p>En environs 6 mois je suis passé à une vitesse de frappe de 30 mots mitutes et j’en suis actuellement à 50 mots minutes. Mon premier palier d’objectif n’a pas encore été atteint puisque j’espérais en commençant mon aprentissage atteindre les 60 mots minutes soit 1 mot par seconde. C’est encore loin des records de 180 mots minutes mais j’arrive, j’arrive ! Work in progress…</p>",
-        "afterPanel": "<h2>Je veux apprendre !</h2><ul><li><a href=\"http://bepo.fr/wiki/Accueil\" title=\"Bépo\">Tout savoir sur le Bépo</a></li><li><a href=\"http://www.typematrix.com/shop/\" title=\"Available in AZERTY, QWERTY, DVORAK, BLANK, or BÉPO\">Obtenir un clavier</a></li><li><a href=\"http://klavaro.sourceforge.net/fr/\" title=\"Klavaro\">Logiciel de dactylographie</a></li></ul>"
+        "about": {
+            "title": "Qu’est-ce que la disposition Bépo ?",
+            "content": "<p>Le <a href=\"http://bepo.fr/wiki/Accueil\">site officiel</a> vous dira tout cela bien mieux que moi mais pour résumer : la disposition Bépo est une autre manière d’agencer l’ordre des touches de votre clavier de manière à rendre le chemin parcouru par les doigts le plus court possible lors de la saisie d’une phrase en français. Les touches de ponctuation française et les accents sont également plus accessibles et rangés intelligemment. La disposition s’avère également très véloce pour le développement et agréable à la rédaction anglaise. Ainsi, les 4 premières touches sont les b, é, p et o.</p> <p><img src=\"http://download.tuxfamily.org/dvorak/wiki/images/Carte-bepo-complete.png\" alt=\"La disposition des touches en Bépo\" title=\"\"></p>"
+        },
+        "speed": {
+            "title": "Rapidité, accessibilité, confort et apprentissage",
+            "content": "<p>Il existe <a href=\"http://typematrix.com/bepo/\">des claviers Bépo très utile</a>, surtout lors de l’apprentissage. Cependant, je conseille d’en profiter pour apprendre à écrire à 10 doigts et sans les yeux. Quitte à devoir ré-apprendre à écrire, autant le faire bien ! Actuellement, n’ayant pas besoin de mes yeux pour écrire, je tape en Bépo sur un clavier Azerty. De plus, avec la combinaison de touche « Window + Espace » je peux switcher de la disposition Bépo à Azerty en un clin d’œil pour laisser les non Bépoiste taper sur mon clavier. La disposition s’installe sur n’importe quel OS avec un simple driver.</p> <p><img src=\"http://download.tuxfamily.org/dvorak/wiki/images/thumb/Stats-lignes-mains-flat.png/360px-Stats-lignes-mains-flat.png\" alt=\"L’efficacité Bépo\" title=\"\"></p> <p>Bien que vous allez perdre votre rapidité d’écriture dans un premier temps, vous reprendrez la main en quelque mois et finirez par dépasser votre ancienne rapidité de frappe d’ici 6 à 9 mois. Tout est fait pour que vous puissiez écrire aussi vite que possible et sans effort comme vous pouvez le voir sur l’image ci-dessus.</p>"
+        },
+        "why": {
+            "title": "Pourquoi je suis passé en Bépo ?",
+            "content": "<h3>État des lieux</h3> <p>Quand je me suis mis sur un ordinateur, à un très jeune age, j’ai commencé à chercher mes touches avec les yeux sur une disposition Azerty. Curieuse cette disposition ? Pourquoi pas l’ordre de l’alphabet ? Je la connais par cœur celle là ! J’ai fini par connaître par cœur les touches sans pour autant pouvoir appuyer dessus sans faire d’erreur si je ne les regardait pas. À tout casser, je devais écrire avec 4 doigts et quitter quelque fois mon clavier des yeux pour voir ce que j’avais écrit. Cependant je rêvais de pouvoir dégager mes yeux de mon clavier pour en faire autre chose pendant que j’écrivais et surtout écrire avec mes 10 doigts pour gagner en rapidité, vous savez, comme les experts en informatique dans les films !</p> <h3>Le Bépo, même plus pratique que l’Azerty</h3> <p>Je me suis dit que si je devais perdre du temps à chercher mes touches avec les doigts et à en apprendre la disposition dans l’espace par cœur (sans utiliser mes yeux) pour une question de confort et de rapidité, autant prendre la disposition la plus rapide et la plus confortable ! Et écrire en Bépo m’a beaucoup aidé car ce n’était pas ma première tentative d'écrire à 10 doigts et à l'aveugle ; j’avais déjà tenté l’aventure en Azerty mais « Comment s’empêcher de jeter un œil pour s’aider à aller plus vite ? ». La réponse est simple, faire en sorte que jeter un œil sur votre clavier ne vous avance pas plus que si vous ne le faisiez pas. Cela est chose faites puisque vous ne connaissez pas la disposition Bépo.</p>"
+        },
+        "learn": {
+            "title": "L’apprentissage",
+            "content": "<p>J’ai donc commencé par des exercises de dactylographie en Bépo avec le logiciel <a href=\"http://klavaro.sourceforge.net/fr/\">Klavaro</a> plusieurs fois par semaine pour apprendre mes touches. Durant cette phase, je continuais à écrire en Azerty en dehors de mon logiciel.</p> <p>Quand j’ai fini par plus ou moins connaître les lettres les plus usuelles, je me suis lancé dans le grand bain ! Fini l’Azerty ! Je développais, rédigeait mes docs, écrivais mes mails et mes articles en Bépo ! Et là je suis devenu une vrai limace. Cependant cet apprentissage à concorder avec ma monté en maîtrise de l’éditeur Sublime Text qui via ses divers plugin à réussi à masquer mon handicape. En un mois seulement j’ai réussi à obtenir une vitesse de production normale avec tous mes outils d'assité. L’écriture des programmes web m’a permis d’apprendre le reste de la disposition, notamment au niveau de la ponctuation, souvent utile pour le développement.</p> <p>En environs 6 mois je suis passé à une vitesse de frappe de 30 mots mitutes et j’en suis actuellement à 50 mots minutes. Mon premier palier d’objectif n’a pas encore été atteint puisque j’espérais en commençant mon aprentissage atteindre les 60 mots minutes soit 1 mot par seconde. C’est encore loin des records de 180 mots minutes mais j’arrive, j’arrive ! Work in progress…</p>"
+        },
+        "afterPanel": {
+            "title": "Je veux apprendre !",
+            "content": "<ul><li><a href=\"http://bepo.fr/wiki/Accueil\" title=\"Bépo\">Tout savoir sur le Bépo</a></li><li><a href=\"http://www.typematrix.com/shop/\" title=\"Available in AZERTY, QWERTY, DVORAK, BLANK, or BÉPO\">Obtenir un clavier</a></li><li><a href=\"http://klavaro.sourceforge.net/fr/\" title=\"Klavaro\">Logiciel de dactylographie</a></li></ul>"
+        }
     },
     "aboutAuthor": {
         "title": "À propos de l'auteur",
@@ -161,6 +311,7 @@
         "title": "Erreur 404",
         "content": "Cette page n'existe pas."
     },
+    "main": "<strong>Site en construction : en attendant rdv sur <a href=\"http://www.haeresis.fr/\" title=\"Site de Bruno Lesieur, Développeur web spécialiste Front-End\">Haeresis.fr</a></strong>",
     "copyright": "©2012-2014 <a href=\"http://www.lesieur.name/\" title=\"Site de Bruno Lesieur, Développeur web spécialiste Front-End / Node.js\">Lesieur.name</a>",
     "engine": "Site développé en <a href=\"http://nodejs.org/\" title=\"node.js, le moteur JavaScript côté serveur\">node.js</a> avec <a href=\"https://haeresis.github.io/NodeAtlas/\" title=\"Le Framework node.js NodeAtlas\">NodeAtlas</a>",
     "listDate": {

@@ -2,21 +2,26 @@
 			<section class="about blog content">
 				<h1>
 					<ins class="collapse icon blog"></ins>
-					<span><%- common.aboutBlog.title %></span>
-					<img src="./media/images/blog.png" alt="NodeAtlas">
+					<span><%-: common | et: ['aboutBlog.title', fc] %></span>
+					<img src="<%-: common | ea: ['aboutBlog.image.src', fc, 'src'] %>" alt="<%-: common | ea: ['aboutBlog.image.alt', fc, 'alt'] %>">
 				</h1>
 
 				<div class="vertical scrollable ui">
 					<div class="after panel ui">
-						<%- common.aboutBlog.afterPanel %>
+						<h2><%-: common | et: ['aboutBlog.afterPanel.title', fc] %></h2>
+						<%-: common | eh: ['aboutBlog.afterPanel.content', fc] %>
 					</div>
 
 					<div class="complete ui">
-						<%- common.aboutBlog.content %>
+						<h2><%-: common | et: ['aboutBlog.articles.title', fc] %></h2>
+						<%-: common | eh: ['aboutBlog.articles.content', fc] %>
+
+						<h2><%-: common | et: ['aboutBlog.goTo.title', fc] %></h2>
+						<%-: common | eh: ['aboutBlog.goTo.content', fc] %>
 					</div>
 
 					<nav class="ui return">
-						<a href="javascript:;" title="Menu">Menu</a>
+						<a href="javascript:;" title="<%-: common | ea: ['menu.title', fc, 'title'] %>"><%-: common | et: ['menu.content', fc] %></a>
 					</nav>
 				</div>
 

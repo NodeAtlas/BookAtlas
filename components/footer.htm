@@ -1,6 +1,6 @@
 
 
 		<footer id="footer" class="footer ui">
-			<div><strong>Site en construction : en attendant rdv sur <a href="http://www.haeresis.fr/" title="Site de Bruno Lesieur, Développeur web spécialiste Front-End">Haeresis.fr</a></strong></div>
-			<div class="copyright"><%- common.copyright %> - <%- common.engine %></div>
-		</footer>	
+			<div><%-: common | et: ['main', fc] %></div>
+			<div class="copyright"><%-: common | et: ['copyright', fc] %> - <%-: common | et: ['engine', fc] %></div>
+		</footer>

@@ -2,14 +2,14 @@
 			<section class="about offers content">
 				<h1>
 					<ins class="collapse icon euro"></ins>
-					<span><%- common.aboutOffers.title %></span>
+					<span><%-: common | et: ['aboutOffers.title', fc] %></span>
 				</h1>
 
 				<div class="intro ui">
-					<%- common.aboutOffers.intro %>
+					<%-: common | eh: ['aboutOffers.intro', fc] %>
 				</div>
 				<nav class="ui return">
-					<a href="javascript:;" title="Menu">Menu</a>
+					<a href="javascript:;" title="<%-: common | ea: ['menu.title', fc, 'title'] %>"><%-: common | et: ['menu.content', fc] %></a>
 				</nav>
 			</section>
 		</li>

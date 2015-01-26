@@ -2,24 +2,33 @@
 			<section class="about front-end content">
 				<h1>
 					<ins class="collapse icon html5"></ins>
-					<span><%- common.aboutFrontend.title %></span>
+					<span><%-: common | et: ['aboutFrontend.title', fc] %></span>
 				</h1>
 
 				<div class="vertical scrollable ui">
 					<div class="intro ui">
-						<%- common.aboutFrontend.intro %>
+						<%-: common | eh: ['aboutFrontend.intro', fc] %>
 					</div>
 
 					<div class="before panel ui">
-						<%- common.aboutFrontend.beforePanel %>
+						<h2><%-: common | et: ['aboutFrontend.beforePanel.title', fc] %></h2>
+						<%-: common | eh: ['aboutFrontend.beforePanel.content', fc] %>
 					</div>
 
 					<div class="complete ui">
 						<%- common.aboutFrontend.content %>
+						<h2><%-: common | et: ['aboutFrontend.frontend.title', fc] %></h2>
+						<%-: common | eh: ['aboutFrontend.frontend.content', fc] %>
+
+						<h2><%-: common | et: ['aboutFrontend.birth.title', fc] %></h2>
+						<%-: common | eh: ['aboutFrontend.birth.content', fc] %>
+
+						<h2><%-: common | et: ['aboutFrontend.expert.title', fc] %></h2>
+						<%-: common | eh: ['aboutFrontend.expert.content', fc] %>
 					</div>
 
 					<nav class="ui return">
-						<a href="javascript:;" title="Menu">Menu</a>
+						<a href="javascript:;" title="<%-: common | ea: ['menu.title', fc, 'title'] %>"><%-: common | et: ['menu.content', fc] %></a>
 					</nav>
 				</div>
 			</section>

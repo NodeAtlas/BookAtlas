@@ -8,7 +8,6 @@ website.components = {};
 	website.components.socketio = require('../components/controllers/socket-io');
 	website.components.editAtlas = require('../components/controllers/edit-atlas');
 
-
 	publics.loadModules = function (NA) {
 		NA.modules.cookie = require('cookie');
 		NA.modules.socketio = require('socket.io');
@@ -45,6 +44,8 @@ website.components = {};
 
 		        currentVariation.specific = JSON.parse(fs.readFileSync(NA.websitePhysicalPath + NA.webconfig.variationsRelativePath + "index.json", 'utf-8'));
 		        currentVariation.common = JSON.parse(fs.readFileSync(NA.websitePhysicalPath + NA.webconfig.variationsRelativePath + "common.json", 'utf-8'));
+				/*currentVariation.fs = currentVariation.currentRouteParameters.variation;*/
+				currentVariation.fc = NA.webconfig.commonVariation;
 
 		        data.topPart = {};
 		        data.topPart.bepo = ejs.render(fs.readFileSync(NA.websitePhysicalPath + NA.webconfig.componentsRelativePath + "section-bepo.htm", 'utf-8'), currentVariation);
@@ -73,9 +74,8 @@ website.components = {};
 		var variation = params.variation,
 			session = params.request.session;
 
-		variation.fs = false;
-		variation.fc = false;
-
+		// variation.fs = false;
+		// variation.fc = false;
 		/*if (session.hasPermissionForEdit) {*/
 			// Le fichier spécifique utilisé pour générer cette vue.
 			variation.fs = variation.currentRouteParameters.variation;

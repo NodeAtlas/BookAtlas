@@ -2,20 +2,34 @@
 			<section class="about website content">
 				<h1>
 					<ins class="collapse icon home"></ins>
-					<span><%- common.aboutSite.title %></span>
+					<span><%-: common | et: ['aboutSite.title', fc] %></span>
 				</h1>
 
 				<div class="vertical scrollable ui">
 					<div class="intro ui">
-						<%- common.aboutSite.intro %>
+						<%-: common | eh: ['aboutSite.intro', fc] %>
 					</div>
 
 					<div class="complete ui">
-						<%- common.aboutSite.content %>
+						<h2><%-: common | et: ['aboutSite.presentation.title', fc] %></h2>
+						<%-: common | eh: ['aboutSite.presentation.content', fc] %>
+
+						<h2><%-: common | et: ['aboutSite.description.title', fc] %></h2>
+						<%-: common | eh: ['aboutSite.description.content', fc] %>
+
+						<h2><%-: common | et: ['aboutSite.techno.title', fc] %></h2>
+						<p>
+						<% for (var i = 0; i < common.aboutSite.techno.list.length; i++) { %>
+							<a class="external" href="<%-: common | ea: ['aboutSite.techno.list[' + i + '].href', fc, 'href'] %>" title="<%-: common | ea: ['aboutSite.techno.list[' + i + '].title', fc, 'title'] %>" target="<%-: common | ea: ['aboutSite.techno.list[' + i + '].target', fc, 'target'] %>"><%-: common | et: ['aboutSite.techno.list[' + i + '].content', fc] %></a><%- (i + 1 !== common.aboutSite.techno.list.length) ? ",": "" %>
+						<% } %>
+						</p>
+
+						<h2><%-: common | et: ['aboutSite.issue.title', fc] %></h2>
+						<%-: common | eh: ['aboutSite.issue.content', fc, 'website.generateEmail()'] %>
 					</div>
 
 					<nav class="ui return">
-						<a href="javascript:;" title="Menu">Menu</a>
+						<a href="javascript:;" title="<%-: common | ea: ['menu.title', fc, 'title'] %>"><%-: common | et: ['menu.content', fc] %></a>
 					</nav>
 				</div>
 			</section>

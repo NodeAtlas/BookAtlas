@@ -106,16 +106,6 @@ var website = website || {},
             $topSection = $(".top.sections .section");
             $bottomSection = $(".bottom.sections .section");
 
-            /*$window.on("popstate", function (event) {
-                console.log(event.originalEvent.state);
-
-                if (event.originalEvent.state) {
-                    $(".section[data-url=" + event.originalEvent.state + "]").trigger("click");
-                } else {
-                    closeSection();
-                }
-            });*/
-
             function calcHalfHeight() {
                 if (window.matchMedia("(max-width: 323px), (max-height: 500px)").matches) {
                     halfHeight = $window.height();
@@ -177,6 +167,8 @@ var website = website || {},
             $html.click(function () {
                 history.replaceState(null, "", "/");
                 closeSection();
+            }).find(".popup-edit-atlas").click(function() {
+                return false;
             });
 
             $topSection.each(function () {
