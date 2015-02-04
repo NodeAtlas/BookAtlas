@@ -131,23 +131,25 @@ var website = website || {},
             }
 
             function openSection($currentSection, current, other) {
-                history.replaceState($currentSection.data("url"), "", "/" + $currentSection.data("url") + "/");
+                if (!(website.keys[17] && website.keys[18] && website.keys[69])) {
+                    history.replaceState($currentSection.data("url"), "", "/" + $currentSection.data("url") + "/");
 
-                $topSection.removeClass("open");
-                $bottomSection.removeClass("open");
-                $currentSection.addClass("open");
+                    $topSection.removeClass("open").removeClass("start");
+                    $bottomSection.removeClass("open").removeClass("start");
+                    $currentSection.addClass("open");
 
-                $main.css(other, "");
-                $main.css(current, halfHeight);
+                    $main.css(other, "");
+                    $main.css(current, halfHeight);
 
-                $topSection.find(".content").css("height", "");
-                $bottomSection.find(".content").css("height", "");
-                $currentSection.find(".content").css("height", halfHeight);
+                    $topSection.find(".content").css("height", "");
+                    $bottomSection.find(".content").css("height", "");
+                    $currentSection.find(".content").css("height", halfHeight);
 
-                $currentSection.find(".scrollable").css("height", halfHeightPadding);
+                    $currentSection.find(".scrollable").css("height", halfHeightPadding);
 
-                $main.removeClass("to " + current);
-                $main.addClass("to " + other);
+                    $main.removeClass("to " + current);
+                    $main.addClass("to " + other);
+                }
             }
 
             calcHalfHeight();
@@ -184,7 +186,6 @@ var website = website || {},
 
                 openSection($(this), "top", "bottom");
             });
-
 
             $bottomSection.each(function () {
                 var $this = $(this);

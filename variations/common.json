@@ -29,7 +29,7 @@
     },
     "editableArea": {
         "close": "Fermer",
-        "htmlInfo": "(HTML activé)",
+        "htmlInfo": "(WYSIWYG)",
         "sourceInfo": "Cette valeur provenant du serveur, un rechargement de page peut-être nécessaire.",
         "title": "Zone d'édition de contenu",
         "next": "Continuer avant d'envoyer",
@@ -42,10 +42,10 @@
     },
     "aboutSite": {
         "title": "Bienvenue",
-        "intro": "<p>Présentation rapide de mon portail</p>\n<p>\n    <strong>Cliquez sur un onglet pour l'ouvrir</strong>\n</p>",
+        "intro": "<p>Présentation rapide de mon portail</p>\n\n<p><strong>Cliquez sur un onglet pour l'ouvrir</strong></p>",
         "presentation": {
             "title": "Présentation",
-            "content": "<p>Bienvenue sur le portail d'un développeur web sur Annecy et réalisé dans les règles de l'art. Ici exit l'empilement de « table » à n'en plus finir, les balises et attributs qui usurpent le travail du CSS ou encore les morceaux de JavaScript en plein milieu de la sémantique. Nos amis s'appellent HTML5, CSS3, jQuery, AJAX, Node.js, Websocket, PHP, .NET, LINQ et j'en passe ! Ils oeuvrent pour deux choses communes :</p>\n\n<ul>\n    <li>Être au service du référencement et de l'ergonomie pour que le contenu soit trouvable et accessible quel que soit la plateforme d'affichage ou les mécanismes d'animations.</li>  \n   <li>Être au service de la maintenabilité et de la lisibilité pour garder un site actualisable et aux normes du web dans un souci de productivité, sécurité et d'efficacité.</li>\n</ul>"
+            "content": "<p>Bienvenue sur le portail d'un développeur web sur Annecy et réalisé dans les règles de l'art. Ici exit l'empilement de « table » à n'en plus finir, les balises et attributs qui usurpent le travail du CSS ou encore les morceaux de JavaScript en plein milieu de la sémantique. Nos amis s'appellent HTML5, CSS3, jQuery, AJAX, Node.js, Websocket, PHP, .NET, LINQ et j'en passe ! Ils oeuvrent pour deux choses communes :</p>\n\n<ul>\n\t<li>Être au service du référencement et de l'ergonomie pour que le contenu soit trouvable et accessible quel que soit la plateforme d'affichage ou les mécanismes d'animations.</li>\n\t<li>Être au service de la maintenabilité et de la lisibilité pour garder un site actualisable et aux normes du web dans un souci de productivité, sécurité et d'efficacité.</li>\n</ul>"
         },
         "description": {
             "title": "Visite guidé",
@@ -157,13 +157,17 @@
     },
     "aboutNodeAtlas": {
         "title": "NodeAtlas",
+        "image": {
+            "alt": "NodeAtlas",
+            "src": "./media/images/node-atlas.png"
+        },
         "content": "<iframe class=\"scrollable\" src=\"http://blog.lesieur.name/nodeatlas-le-framework-nodejs-mvc2-oriente-front-end/\"></iframe>",
         "beforePanel": "<h2>Projets sur Github</h2><ul><li><a class=\"external\" href=\"https://github.com/Haeresis/NodeAtlas/\" title=\"NodeAtlas\">NodeAtlas</a></li><li><a class=\"external\" href=\"https://github.com/Haeresis/ResumeAtlas/\" title=\"ResumeAtlas\">ResumeAtlas</a></li><li><a class=\"external\" href=\"https://github.com/Haeresis/BookAtlas/\" title=\"BookAtlas\">BookAtlas</a></li><li><a class=\"external\" href=\"https://github.com/Haeresis/BlogAtlas/\" title=\"BlogAtlas\">BlogAtlas</a></li><li><a class=\"external\" href=\"https://github.com/Haeresis/EditAtlas/\" title=\"EditAtlas\">EditAtlas</a></li></ul><p><a class=\"external\" href=\"https://github.com/Haeresis/\" title=\"Liste complète\">Liste complète</a></p>"
     },
     "aboutBlog": {
         "title": "Blog",
         "image": {
-            "alt": "NodeAtlas",
+            "alt": "Quelques #ID et beaucoup de .CLASS",
             "src": "./media/images/blog.png"
         },
         "articles": {

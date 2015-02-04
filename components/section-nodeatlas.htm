@@ -2,8 +2,8 @@
 			<section class="about nodeatlas content">
 				<h1>
 					<ins class="collapse icon github"></ins>
-					<span><%- common.aboutNodeAtlas.title %></span>
-					<img src="./media/images/node-atlas.png" alt="NodeAtlas">
+					<span><%-: common | et: ['aboutNodeAtlas.title', fc] %></span>
+					<img src="<%-: common | ea: ['aboutNodeAtlas.image.src', fc, 'src'] %>" alt="<%-: common | ea: ['aboutNodeAtlas.image.alt', fc, 'alt'] %>">
 				</h1>
 
 				<div class="vertical scrollable ui">

@@ -13,7 +13,7 @@ var website = website || {},
 
     publics.socket = io.connect(($body.data('subpath') !== '') ? $body.data('hostname') : undefined, optionsSocket);
 
-    publics.isEditable = false;
+    publics.keys = {};
 
     publics.cleanDataEditAtlas = function ($object) {
         $object.removeAttr("data-edit-targeted");
@@ -94,7 +94,7 @@ var website = website || {},
                     name,
                     accept = false;
 
-                if (publics.isEditable) {
+                if (publics.keys[17] && publics.keys[18] && publics.keys[69]) {
                     e.preventDefault();
 
                     $popup.addClass("opened");
@@ -127,6 +127,60 @@ var website = website || {},
                         }
                         privates.editedObjects.push($editedObject);
                         publics.targetDataEditAtlas();
+
+                        $(".wysiwyg").click(function () {
+                            var $wysiwyg = $(this),
+                                alreadyLoad = false;
+
+                            function createEditor() {
+                                CKEDITOR.disableAutoInline = true;
+                                CKEDITOR.inline($wysiwyg.parents(".html:first").find("textarea")[0], {
+                                    extraPlugins: 'sharedspace',
+                                    entities_latin: false,
+                                    entities: false,
+                                    toolbar: [
+                                        { name: 'document', items: [ 'Source' ] },
+                                        { name: 'clipboard', items: [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ] },
+                                        { name: 'tools', items: [ 'Maximize', 'ShowBlocks' ] },
+                                        '/',
+                                        { name: 'editing', items: [ 'Find', 'Replace', '-', 'SelectAll', '-', 'Scayt' ] },
+                                        { name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat' ] },
+                                        '/',
+                                        { name: 'paragraph', items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl' ] },
+                                        '/',
+                                        { name: 'links', items: [ 'Link', 'Unlink', 'Anchor', 'TextColor', 'BGColor', 'Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak', 'Iframe' ] },
+                                        '/',
+                                        { name: 'styles', items: [ 'Styles', 'Format', 'Font', 'FontSize' ] }
+                                    ]
+                                });
+                                for (var i in CKEDITOR.instances) {
+                                    CKEDITOR.instances[i].on('change', function (e, a) {
+                                        $clone.find("textarea").val(CKEDITOR.instances[i].getData());
+                                        $('[data-edit-path='+ $editedObject.data('edit-path').replace(/\./g, "\\\.").replace(/\[/g, "\\\[").replace(/\]/g, "\\\]") + ']').html(CKEDITOR.instances[i].getData());
+                                        if (typeof $editedObject.data('edit-source') === 'string') {
+                                            eval($editedObject.data('edit-source'));
+                                        }
+                                    });
+                                }
+                            }
+
+                            if (!alreadyLoad) {
+                                (function(d, script) {
+                                    script = d.createElement('script');
+                                    script.type = 'text/javascript';
+                                    script.async = true;
+                                    script.onload = function(){
+                                        alreadyLoad = true;
+                                        createEditor();
+                                    };
+                                    script.src = '//cdn.ckeditor.com/4.4.7/full-all/ckeditor.js';
+                                    d.getElementsByTagName('head')[0].appendChild(script);
+                                }(document));
+                            } else {
+                                createEditor();
+                            }
+
+                        });
                     }
 
                     if ($editedObject.data("edit-type") === "text" &&
@@ -207,32 +261,19 @@ var website = website || {},
     };
 
     publics.editContent = function () {
-        var ctrlIsPressed = false,
+        var shiftIsPressed = false,
             $popup = $(".popup-edit-atlas");
 
         privates.editedObjects = [];
 
-        // Ctrl is currently press ?
-        $(document).keyup(function(e) {
-            if (!e.ctrlKey) {
-                ctrlIsPressed = e.ctrlKey;
-                publics.isEditable = false;
-                $html.removeClass("is-editable");
-            }
-        }).keydown(function(e) {
-            if (e.ctrlKey) {
-                ctrlIsPressed = e.ctrlKey;
-                publics.isEditable = true;
-                $html.addClass("is-editable");
-            }
-        });
+        publics.keys = {};
 
         $(".popup-edit-atlas .update-variation-change").click(function () {
             var options = [],
                 currentOptions,
                 name;
                 
-            if (!website.isEditable) {
+            if (!(publics.keys[17] && publics.keys[18] && publics.keys[69])) {
 
                 for (var i = 0, l = privates.editedObjects.length; i < l; i++) {
                     if (privates.editedObjects[i].data('edit-type') === 'html') {
@@ -323,10 +364,24 @@ var website = website || {},
         });
     };
 
+    publics.listeningKeystroke = function () {
+        $window.on("keyup keydown", function (e) {
+            e = e || event;
+            publics.keys[e.keyCode] = e.type === 'keydown';
+
+            if (publics.keys[17] && publics.keys[18] && publics.keys[69]) {
+                $html.addClass("is-editable");
+            } else {
+                $html.removeClass("is-editable");
+            }
+        });
+    };
+
     publics.editAtlas = function () {
         publics.editContent();
         publics.broadcastContent();
         publics.sourceContent();
         publics.moveEditableArea();
+        publics.listeningKeystroke();
     };
 }(website));

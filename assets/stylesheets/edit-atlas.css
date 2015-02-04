@@ -53,13 +53,15 @@
 	background-color: #fff;
 	cursor: default;
 }
-@media (min-width: 400px) {
+@media (min-width: 430px) {
 	.popup-edit-atlas .popup-content {
-		width: 400px;
+		width: 430px;
 	}
 }
+.popup-edit-atlas .popup-content .cke_textarea_inline,
 .popup-edit-atlas .popup-content textarea,
 .popup-edit-atlas .popup-content input[type=text] {
+	border: 1px solid rgb(169, 169, 169);
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
