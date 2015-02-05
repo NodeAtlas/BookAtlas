@@ -102,7 +102,7 @@
 	font-size: 0.7em;
 }
 .popup-edit-atlas .templates {
-	max-height: 200px;
+	max-height: 250px;
 	-ms-overflow-y: auto;
 	    overflow-y: auto;
 }
