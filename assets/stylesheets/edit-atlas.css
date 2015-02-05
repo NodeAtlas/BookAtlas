@@ -8,6 +8,16 @@
 	margin: -3px;
 }
 
+.popup-edit-atlas .plaintext {
+	display: none;
+}
+.popup-edit-atlas .alternative .plaintext {
+	display: inline;
+}
+.popup-edit-atlas .alternative .wysiwyg {
+	display: none;
+}
+
 .popup-edit-atlas {
 	display: none;
 }
@@ -92,7 +102,7 @@
 	font-size: 0.7em;
 }
 .popup-edit-atlas .templates {
-	max-height: 400px;
+	max-height: 200px;
 	-ms-overflow-y: auto;
 	    overflow-y: auto;
 }

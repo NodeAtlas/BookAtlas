@@ -2,20 +2,40 @@
 			<section class="about skills content">
 				<h1>
 					<ins class="collapse icon code"></ins>
-					<span><%- common.aboutSkills.title %></span>
+					<span><%-: common | et: ['aboutSkills.title', fc] %></span>
 				</h1>
 
 				<div class="vertical scrollable ui">
 					<div class="intro ui">
-						<%- common.aboutSkills.intro %>
+						<%-: common | eh: ['aboutSkills.intro', fc] %>
 					</div>
 
 					<div class="before panel ui">
-						<%- common.aboutSkills.beforePanel %>
+						<h2><%-: common | et: ['aboutSkills.beforePanel.title', fc] %></h2>
+						<%-: common | eh: ['aboutSkills.beforePanel.content', fc] %>
 					</div>
 
 					<div class="complete ui">
-						<%- common.aboutSkills.content %>
+						<h2><%-: common | et: ['aboutSkills.about.title', fc] %></h2>
+						<%-: common | eh: ['aboutSkills.about.content', fc] %>
+
+						<h2><%-: common | et: ['aboutSkills.clientSide.title', fc] %></h2>
+						<%-: common | eh: ['aboutSkills.clientSide.content', fc] %>
+
+						<h2><%-: common | et: ['aboutSkills.seo.title', fc] %></h2>
+						<%-: common | eh: ['aboutSkills.seo.content', fc] %>
+
+						<h2><%-: common | et: ['aboutSkills.serverSide.title', fc] %></h2>
+						<%-: common | eh: ['aboutSkills.serverSide.content', fc] %>
+
+						<h2><%-: common | et: ['aboutSkills.framework.title', fc] %></h2>
+						<%-: common | eh: ['aboutSkills.framework.content', fc] %>
+
+						<h2><%-: common | et: ['aboutSkills.webserver.title', fc] %></h2>
+						<%-: common | eh: ['aboutSkills.webserver.content', fc] %>
+
+						<h2><%-: common | et: ['aboutSkills.tools.title', fc] %></h2>
+						<%-: common | eh: ['aboutSkills.tools.content', fc] %>
 					</div>
 
 					<nav class="ui return">

@@ -69,6 +69,8 @@ var website = website || {},
         }).data("draggable", false).data("offset-x", 0).data("offset-y", 0);
     };
 
+    publics.eaNumberId = 0;
+
     publics.targetDataEditAtlas = function () {
         function clone(obj) {
             if (null == obj || "object" != typeof obj) return obj;
@@ -105,6 +107,7 @@ var website = website || {},
                         $template = $(".popup-edit-atlas .template.html");
                         $clone = $template.clone().removeClass("template");
                         $clone = publics.cleanDataEditAtlas($clone);
+                        $clone.find("textarea").attr("id", "ea-editor-" + publics.eaNumberId);
                         $popup.find(".insert").before($clone);
                         $clone.find("label").addClass($editedObject.data('edit-path'));
                         $clone.find("label .info").text($editedObject.data('edit-file') + " > " + $editedObject.data('edit-path'));
@@ -128,9 +131,11 @@ var website = website || {},
                         privates.editedObjects.push($editedObject);
                         publics.targetDataEditAtlas();
 
-                        $(".wysiwyg").click(function () {
+                        $clone.find(".wysiwyg").click(function () {
                             var $wysiwyg = $(this),
                                 alreadyLoad = false;
+
+                            $wysiwyg.parents(".html").addClass("alternative");
 
                             function createEditor() {
                                 CKEDITOR.disableAutoInline = true;
@@ -138,6 +143,10 @@ var website = website || {},
                                     extraPlugins: 'sharedspace',
                                     entities_latin: false,
                                     entities: false,
+                                    sharedSpaces: {
+                                        top: 'wysiwyg',
+                                        bottom: 'wysiwyg-bottom'
+                                    },
                                     toolbar: [
                                         { name: 'document', items: [ 'Source' ] },
                                         { name: 'clipboard', items: [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ] },
@@ -181,6 +190,18 @@ var website = website || {},
                             }
 
                         });
+
+                        $clone.find(".plaintext").click(function () {
+                            var $plainText = $(this);
+
+                            $plainText.parents(".html").removeClass("alternative");
+
+                            console.log($plainText.parents(".html").find("textarea").attr("id"));
+
+                            CKEDITOR.instances[$plainText.parents(".html").find("textarea").attr("id")].destroy();
+                        });
+
+                        publics.eaNumberId++;
                     }
 
                     if ($editedObject.data("edit-type") === "text" &&

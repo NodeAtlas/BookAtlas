@@ -262,11 +262,16 @@
 }	
 
 .sections .intro {
-	-webkit-transition: opacity 1s ease;
-	   -moz-transition: opacity 1s ease;
-	    -ms-transition: opacity 1s ease;
-	     -o-transition: opacity 1s ease;
-	        transition: opacity 1s ease;
+	-webkit-transition: opacity 1s ease,
+	        			height 1s ease;
+	   -moz-transition: opacity 1s ease,
+	        			height 1s ease;
+	    -ms-transition: opacity 1s ease,
+	        			height 1s ease;
+	     -o-transition: opacity 1s ease,
+	        			height 1s ease;
+	        transition: opacity 1s ease,
+	        			height 1s ease;
 }
 
 .sections .scrollable {
@@ -675,12 +680,6 @@ a:hover {
 	.main.to.bottom .sections .section.open .panel {
 		top: 0;
 	}
-
-	.main.to.bottom .sections .medium.section.open .complete,
-	.bottom.sections .large.section.open .complete,
-	.top.sections .huge.section.open .complete {
-		margin-top: -116px;
-	}
 }
 
 .sections .content {
@@ -837,6 +836,7 @@ a:hover {
 
 .sections .section.open .intro {
 	opacity: 0;
+	height: 0;
 }
 
 .header {
