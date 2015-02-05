@@ -2,14 +2,17 @@
 			<section class="about websites content">
 				<h1>
 					<ins class="collapse icon chat"></ins>
-					<span><%- common.aboutWebsite.title %></span>
+					<span><%-: common | et: ['aboutWebsite.title', fc] %></span>
 				</h1>
 
-				<div class="intro ui">
-					<!-- image here -->
+				<div class="vertical scrollable ui">
+					<div class="complete ui">
+						<%-: common | eh: ['aboutWebsite.content', fc] %>
+					</div>
+
+					<nav class="ui return">
+						<a href="javascript:;" title="<%-: common | ea: ['menu.title', fc, 'title'] %>"><%-: common | et: ['menu.content', fc] %></a>
+					</nav>
 				</div>
-				<nav class="ui return">
-					<a href="javascript:;" title="Menu">Menu</a>
-				</nav>
 			</section>
 		</li>

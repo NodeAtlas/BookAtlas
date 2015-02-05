@@ -40,7 +40,7 @@ var website = website || {},
 
     publics.socket = io.connect(($body.data('subpath') !== '') ? $body.data('hostname') : undefined, optionsSocket);
 
-    privates.generateEmail = function () {
+    publics.generateEmail = function () {
         $(".generate-email").click(function () {
             var email = "bruno-lesieur_gmail-com";
 
@@ -216,7 +216,7 @@ var website = website || {},
                 }
             });
 
-            privates.generateEmail();
+            publics.generateEmail();
 
             publics.editAtlas();
         });

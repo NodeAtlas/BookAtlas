@@ -7,5 +7,6 @@
  	"bundles": "bundles.json",
  	"languageCode": "fr-fr",
 	"routes": "routes.json",
-	"_minified": ""
+	"_minified": "",
+	"_indexFollow": "noindex, nofollow"
 }

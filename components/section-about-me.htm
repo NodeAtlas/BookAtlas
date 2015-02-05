@@ -2,24 +2,47 @@
 			<section class="about-me content">
 				<h1>
 					<ins class="collapse icon user"></ins>
-					<span><%- common.aboutMe.title %></span>
+					<span><%-: common | et: ['aboutMe.title', fc] %></span>
 				</h1>
 
 				<div class="vertical scrollable ui">
 					<div class="intro ui">
-						<%- common.aboutMe.intro %>
+						<%-: common | eh: ['aboutMe.intro', fc] %>
 					</div>
 
 					<div class="after panel ui">
-						<%- common.aboutMe.afterPanel %>
+						<h2><%-: common | et: ['aboutMe.afterPanel.title', fc] %></h2>
+						<%-: common | eh: ['aboutMe.afterPanel.content', fc] %>
 					</div>
 
 					<div class="complete ui">
-						<%- common.aboutMe.content %>
+						<h2><%-: common | et: ['aboutMe.description.title', fc] %></h2>
+						<%-: common | eh: ['aboutMe.description.content', fc] %>
+
+						<h2>
+							<ins class="float sign linkedin icon ui"></ins>
+							<%-: common | et: ['aboutMe.cv.title', fc] %>
+						</h2>
+						<%-: common | eh: ['aboutMe.cv.content', fc] %>
+
+						<h2>
+							<ins class="float sign google plus icon ui"></ins>
+							<%-: common | et: ['aboutMe.gplus.title', fc] %>
+						</h2>
+						<%-: common | eh: ['aboutMe.gplus.content', fc] %>
+
+						<h2>
+							<ins class="float sign twitter icon ui"></ins>
+							<%-: common | et: ['aboutMe.twitter.title', fc] %>
+						</h2>
+						<%-: common | eh: ['aboutMe.twitter.content', fc] %>
+
+						<h2><%-: common | et: ['aboutMe.contact.title', fc] %></h2>
+						<%-: common | eh: ['aboutMe.contact.content', fc, 'website.generateEmail()'] %>
 					</div>
 
 					<nav class="ui return">
-						<a href="javascript:;" title="Menu">Menu</a>
+						<a href="javascript:;" title="<%-: common | ea: ['menu.title', fc, 'title'] %>"><%-: common | et: ['menu.content', fc] %></a>
 					</nav>
 				</div>
 			</section>

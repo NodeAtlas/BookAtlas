@@ -1,6 +1,5 @@
 {
     "placename": "Annecy, Haute-Savoie, France",
-    "indexFollow": "noindex, nofollow",
     "javascriptDisable": "Votre JavaScript est désactivé aussi toutes les fonctionalités de ce site ne seront pas disponibles.",
     "permalink": "Permalien :",
     "skipLink": {
@@ -149,12 +148,11 @@
     "aboutOffers": {
         "title": "Offres",
         "intro": "<p>Besoin d'un site ?</p>",
-        "content": "Ce blog est majoritairement consacré au JavaScript que ce soit côté Front-end ou côté Back-end. Côté Front, on parle d'astuces et réflexions autour des bonnes pratiques HTML5, CSS3, et JavaScript. Côté serveur, on parle de Node.js. Le site traite également de tous types d'articles touchant de près ou de loin à la webosphère."
+        "content": "<p>Prochainement...</p>"
     },
     "aboutBook": {
         "title": "Portfolio",
-        "intro": "<p>Pour une présentation rapide du site, c'est par ici !</p><p><strong>Cliquez sur un onglet pour l'ouvrir</strong></p>",
-        "content": "Ce blog est majoritairement consacré au JavaScript que ce soit côté Front-end ou côté Back-end. Côté Front, on parle d'astuces et réflexions autour des bonnes pratiques HTML5, CSS3, et JavaScript. Côté serveur, on parle de Node.js. Le site traite également de tous types d'articles touchant de près ou de loin à la webosphère."
+        "content": "<p>Prochainement...</p>"
     },
     "aboutNodeAtlas": {
         "title": "NodeAtlas",
@@ -186,8 +184,7 @@
     },
     "aboutWebsite": {
         "title": "Communautés",
-        "intro": "<p>Pour une présentation rapide du site, c'est par ici !</p><p><strong>Cliquez sur un onglet pour l'ouvrir</strong></p>",
-        "content": "Ce blog est majoritairement consacré au JavaScript que ce soit côté Front-end ou côté Back-end. Côté Front, on parle d'astuces et réflexions autour des bonnes pratiques HTML5, CSS3, et JavaScript. Côté serveur, on parle de Node.js. Le site traite également de tous types d'articles touchant de près ou de loin à la webosphère."
+        "content": "<p>Prochainement...</p>"
     },
     "aboutSkills": {
         "title": "Compétences",
@@ -227,18 +224,43 @@
     },
     "contactMe": {
         "title": "Contact",
-        "content": ""
+        "image": {
+            "alt": "Me contacter",
+            "src": "./media/images/contact-me.png"
+        },
+        "content": "<p>Si vous souhaitez me contacter par email, vous pouvez le faire via mon adresse personnelle <a class=\"link generate-email\" href=\"javascript:;\">en la générant en cliquant ici</a>.</p><p>Formulaire et carte pour bientôt...</p>"
     },
     "aboutMe": {
         "title": "À propos",
         "intro": "<p>En savoir plus sur moi et mes réseaux</p>",
-        "content": "<h2>Description</h2><p>Développeur web spécialisé JavaScript sur Annecy, je vis chaque jour ma passion nageant parmi les techniques actuelles et d'avenir en matière de Front-end et de Node.js. C'est pourquoi tous les jours au petit déjeuner (mais pas seulement), je prépare de quoi satisfaire ma faim de Responsive Web Design, de performances web, de respect des standards, de bonnes pratiques, de POC HTML5/CSS3, d'accessibilité web, de factorisation, d'automatisation, de partage, de casse-tête en tout genre et ce à travers des projets et prototypes toujours plus appétissants. Dernier gros plat en date ? Du JavaScript côté serveur avec NodeAtlas !</p><h2><ins class=\"float sign linkedin icon ui\"></ins>Mon Curriculum Vitae</h2><p><a href=\"https://www.linkedin.com/in/brunolesieur\" class=\"external\" title=\"Consultez mon CV à jour\">Consultez mon CV à jour</a> et mes avancées professionnelles en rejoignant le réseau LinkedIn. Vous pouvez également voir <a href=\"http://bruno.lesieur.name/\" class=\"external\" title=\"CV version web et papier\">mon CV version web et papier</a>.</p><h2><ins class=\"float sign google plus icon ui\"></ins>Mes passions et mes envies</h2><p>Encerclez <a href=\"https://plus.google.com/u/0/+BrunoLesieur/\" class=\"external\" title=\"+Bruno Lesieur\">+Bruno Lesieur</a> sur le réseau social Google+ pour en savoir plus sur qui je suis, ce qui me fait vibrer et partager avec moi.</p><h2><ins class=\"float sign twitter icon ui\"></ins>Mes travaux et la Webosphère</h2><p>Suivez moi et suivez l'actualité de mes projets et les actus web, PCs, mobiles, sociales et mes coups de coeur avec <a href=\"https://twitter.com/HaeresisDotFr/\" class=\"external\" title=\"+Bruno Lesieur\">@HaeresisDotFr</a>.</p><h2>Me contacter par Email</h2><p>Si vous souhaitez me contacter par email, vous pouvez le faire via mon adresse personnelle <a href=\"javascript:;\" class=\"link generate-email\">en la générant en cliquant ici</a>.</p>",
-        "afterPanel": "<h2>Mes réseaux</h2><ul><li><a class=\"external\" href=\"https://plus.google.com/u/0/+BrunoLesieur/\" title=\"Google+\">Google+</a></li><li><a class=\"external\" href=\"https://twitter.com/HaeresisDotFr/\" title=\"Twitter\">Twitter</a></li><li><a class=\"external\" href=\"http://www.pinterest.com/haeresis/\" title=\"Pinterest\">Pinterest</a></li><li><a class=\"external\" href=\"https://www.linkedin.com/in/brunolesieur/\" title=\"LinkedIn\">LinkedIn</a></li><li><a class=\"external\" href=\"http://www.viadeo.com/fr/profile/bruno.lesieur1\" title=\"Viadeo\">Viadeo</a></li><li><a class=\"external\" href=\"https://disqus.com/HaeresisDotFr/\" title=\"Disqus\">Disqus</a></li><li><a class=\"external\" href=\"https://github.com/Haeresis/\" title=\"GitHub\">GitHub</a></li><li><a class=\"external\" href=\"https://bitbucket.org/Haeresis/\" title=\"Bitbucket\">Bitbucket</a></li><li><a class=\"external\" href=\"http://stackoverflow.com/users/2412797/haeresis/\" title=\"StackOverflow\">StackOverflow</a></li></ul>"
+        "description": {
+            "title": "Description",
+            "content": "<p>Développeur web spécialisé JavaScript sur Annecy, je vis chaque jour ma passion nageant parmi les techniques actuelles et d'avenir en matière de Front-end et de Node.js. C'est pourquoi tous les jours au petit déjeuner (mais pas seulement), je prépare de quoi satisfaire ma faim de Responsive Web Design, de performances web, de respect des standards, de bonnes pratiques, de POC HTML5/CSS3, d'accessibilité web, de factorisation, d'automatisation, de partage, de casse-tête en tout genre et ce à travers des projets et prototypes toujours plus appétissants. Dernier gros plat en date ? Du JavaScript côté serveur avec NodeAtlas !</p>"
+        },
+        "cv": {
+            "title": "Mon Curriculum Vitae",
+            "content": "<p><a href=\"https://www.linkedin.com/in/brunolesieur\" class=\"external\" title=\"Consultez mon CV à jour\">Consultez mon CV à jour</a> et mes avancées professionnelles en rejoignant le réseau LinkedIn. Vous pouvez également voir <a href=\"http://bruno.lesieur.name/\" class=\"external\" title=\"CV version web et papier\">mon CV version web et papier</a>.</p>"
+        },
+        "gplus": {
+            "title": "Mes passions et mes envies",
+            "content": "<p>Encerclez <a href=\"https://plus.google.com/u/0/+BrunoLesieur/\" class=\"external\" title=\"+Bruno Lesieur\">+Bruno Lesieur</a> sur le réseau social Google+ pour en savoir plus sur qui je suis, ce qui me fait vibrer et partager avec moi.</p>"
+        },
+        "twitter": {
+            "title": "Mes travaux et la Webosphère",
+            "content": "<p>Encerclez <a href=\"https://plus.google.com/u/0/+BrunoLesieur/\" class=\"external\" title=\"+Bruno Lesieur\">+Bruno Lesieur</a> sur le réseau social Google+ pour en savoir plus sur qui je suis, ce qui me fait vibrer et partager avec moi.</p>"
+        },
+        "contact": {
+            "title": "Me contacter par Email",
+            "content": "<p>Si vous souhaitez me contacter par email, vous pouvez le faire via mon adresse personnelle <a class=\"link generate-email\" href=\"javascript:;\">en la générant en cliquant ici</a>.</p>"
+        },
+        "afterPanel": {
+            "title": "Mes réseaux",
+            "content": "<ul><li><a class=\"external\" href=\"https://plus.google.com/u/0/+BrunoLesieur/\" title=\"Google+\">Google+</a></li><li><a class=\"external\" href=\"https://twitter.com/HaeresisDotFr/\" title=\"Twitter\">Twitter</a></li><li><a class=\"external\" href=\"http://www.pinterest.com/haeresis/\" title=\"Pinterest\">Pinterest</a></li><li><a class=\"external\" href=\"https://www.linkedin.com/in/brunolesieur/\" title=\"LinkedIn\">LinkedIn</a></li><li><a class=\"external\" href=\"http://www.viadeo.com/fr/profile/bruno.lesieur1\" title=\"Viadeo\">Viadeo</a></li><li><a class=\"external\" href=\"https://disqus.com/HaeresisDotFr/\" title=\"Disqus\">Disqus</a></li><li><a class=\"external\" href=\"https://github.com/Haeresis/\" title=\"GitHub\">GitHub</a></li><li><a class=\"external\" href=\"https://bitbucket.org/Haeresis/\" title=\"Bitbucket\">Bitbucket</a></li><li><a class=\"external\" href=\"http://stackoverflow.com/users/2412797/haeresis/\" title=\"StackOverflow\">StackOverflow</a></li></ul>"
+        }
     },
     "aboutGames": {
         "title": "Hobbies",
-        "intro": "<p>En savoir plus sur moi et mes réseaux</p>",
-        "content": "Ce blog est majoritairement consacré au JavaScript que ce soit côté Front-end ou côté Back-end. Côté Front, on parle d'astuces et réflexions autour des bonnes pratiques HTML5, CSS3, et JavaScript. Côté serveur, on parle de Node.js. Le site traite également de tous types d'articles touchant de près ou de loin à la webosphère."
+        "content": "<p style=\"text-align: right;\">Prochainement...</p>"
     },
     "aboutFrontend": {
         "title": "Métiers",

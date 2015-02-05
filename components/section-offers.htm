@@ -5,11 +5,19 @@
 					<span><%-: common | et: ['aboutOffers.title', fc] %></span>
 				</h1>
 
-				<div class="intro ui">
-					<%-: common | eh: ['aboutOffers.intro', fc] %>
+
+				<div class="vertical scrollable ui">
+					<div class="intro ui">
+						<%-: common | eh: ['aboutOffers.intro', fc] %>
+					</div>
+
+					<div class="complete ui">
+						<%-: common | eh: ['aboutOffers.content', fc] %>
+					</div>
+
+					<nav class="ui return">
+						<a href="javascript:;" title="<%-: common | ea: ['menu.title', fc, 'title'] %>"><%-: common | et: ['menu.content', fc] %></a>
+					</nav>
 				</div>
-				<nav class="ui return">
-					<a href="javascript:;" title="<%-: common | ea: ['menu.title', fc, 'title'] %>"><%-: common | et: ['menu.content', fc] %></a>
-				</nav>
 			</section>
 		</li>
