@@ -196,8 +196,6 @@ var website = website || {},
 
                             $plainText.parents(".html").removeClass("alternative");
 
-                            console.log($plainText.parents(".html").find("textarea").attr("id"));
-
                             CKEDITOR.instances[$plainText.parents(".html").find("textarea").attr("id")].destroy();
                         });
 
@@ -339,6 +337,9 @@ var website = website || {},
                 }
 
                 publics.sendContent(options);
+                for (var i in CKEDITOR.instances) {
+                    CKEDITOR.instances[i].destroy();
+                }
 
                 privates.editedObjects = [];
                 $(".popup-edit-atlas .html:not(.template)").remove();
