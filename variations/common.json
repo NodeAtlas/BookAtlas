@@ -146,9 +146,19 @@
         }
     },
     "aboutOffers": {
-        "title": "Offres",
-        "intro": "<p>Besoin d'un site ?</p>",
-        "content": "<p>Prochainement...</p>"
+        "title": "Édition",
+        "about": {
+            "title": "Avez-vous déjà édité dans un Front-office ?",
+            "content": "<p>Le principe de l'édition Front-office par du fait qu'il n'est pas nécéssaire de reproduire un environnement mirroir ne ressemblant pas à la page finale pour éditer du texte. Quoi de mieux que de vérifier dans la vrai zone ou doit apparaître le texte quel va être son rendu ?</p>\n\n<p>Bien entendu, cette possibilité d'édition doit être offerte uniquement quand l'utilisateur est loggué et en a les droits. J'ai implémenté un mécanisme vous permettant de tester l'édition Front-office sans vous logguer pour que vous puissiez tester ici mais rassuré vous, les textes que vous changez ici redeviendrons normale en rechargeant la page.</p>\n\n<p>Ce mécanisme d'édition Front-office permet également de raffraichir les textes dans les pages déjà ouverte dans tous les navigateurs sans les recharger. Vous pouvez tester cela en ouvrant un autre onglet, en modifiant du texte, et en allant constater dans le second qu'il a bien changé.</p>\n\n<p>Pour finir, ce mécanisme est simple a intégré dans les sites en développement. Plus d'information sur le projet <a href=\"https://github.com/Haeresis/EditAtlas\">EditAtlas</a> qui est une extension du framework <a href=\"https://github.com/Haeresis/NodeAtlas\">NodeAtlas</a>.</p>"
+        },
+        "howTo": {
+            "title": "Comment éditer du texte, des images, etc.",
+            "content": "<p>Prochainement...</p>"
+        },
+        "afterPanel": {
+            "title": "Éditer du contenu",
+            "content": "<ol>\n\t<li>Maintenir <strong>Ctrl+Alt+E</strong>,</li>\n\t<li>Cliquer sur les <strong>zones surbrillantes</strong>,</li>\n\t<li><strong>Modifier</strong> les champs en code ou à l'éditeur,</li>\n\t<li>Valider et<strong> répercuter les changements en temps rée</strong>l dans les autres fenêtres !</li>\n</ol>"
+        }
     },
     "aboutBook": {
         "title": "Portfolio",
@@ -284,6 +294,7 @@
     },
     "aboutBepo": {
         "title": "Bépo",
+        "intro": "<p>Envie d'écrire ?</p>",
         "about": {
             "title": "Qu’est-ce que la disposition Bépo ?",
             "content": "<p>Le <a href=\"http://bepo.fr/wiki/Accueil\">site officiel</a> vous dira tout cela bien mieux que moi mais pour résumer : la disposition Bépo est une autre manière d’agencer l’ordre des touches de votre clavier de manière à rendre le chemin parcouru par les doigts le plus court possible lors de la saisie d’une phrase en français. Les touches de ponctuation française et les accents sont également plus accessibles et rangés intelligemment. La disposition s’avère également très véloce pour le développement et agréable à la rédaction anglaise. Ainsi, les 4 premières touches sont les b, é, p et o.</p> \n\n<p><img src=\"http://download.tuxfamily.org/dvorak/wiki/images/Carte-bepo-complete.png\" alt=\"La disposition des touches en Bépo\" title=\"\"></p>"
@@ -350,7 +361,7 @@
     },
     "url": {
         "bepo": "bepo",
-        "offers": "offres",
+        "offers": "edition",
         "book": "portfolio",
         "website": "bienvenue",
         "blog": "blog",

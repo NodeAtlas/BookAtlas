@@ -337,8 +337,10 @@ var website = website || {},
                 }
 
                 publics.sendContent(options);
-                for (var i in CKEDITOR.instances) {
-                    CKEDITOR.instances[i].destroy();
+                if (typeof CKEDITOR !== 'undefined') {
+                    for (var i in CKEDITOR.instances) {
+                        CKEDITOR.instances[i].destroy();
+                    }
                 }
 
                 privates.editedObjects = [];

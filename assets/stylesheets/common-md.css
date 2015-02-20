@@ -29,6 +29,7 @@
 	.sections .small.section {
 		display: inline-block;
 	}
+	.main .bepo .complete.ui > :last-child,
 	.main .front-end .complete.ui > :last-child {
 		padding-bottom: 56px;
 	}
@@ -144,6 +145,7 @@
 	}
 
 	.main.to.bottom .sections .section.open .bepo .scrollable.ui,
+	.main.to.bottom .sections .section.open .offers .scrollable.ui,
 	.main.to.bottom .sections .section.open .blog .scrollable.ui,
 	.main.to.top .sections .section.open .about-me .scrollable.ui {
 		margin-right: 188px;

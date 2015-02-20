@@ -1,18 +1,25 @@
-		<li class="medium section ui <%= specific.opened.offers %>" data-url="<%= common.url.offers %>">
+		<li class="small section ui <%= specific.opened.offers %>" data-url="<%= common.url.offers %>">
 			<section class="about offers content">
 				<h1>
-					<ins class="collapse icon euro"></ins>
+					<ins class="collapse icon edit"></ins>
 					<span><%-: common | et: ['aboutOffers.title', fc] %></span>
 				</h1>
 
 
 				<div class="vertical scrollable ui">
-					<div class="intro ui">
-						<%-: common | eh: ['aboutOffers.intro', fc] %>
+					<div class="after panel ui">
+						<h2><%-: common | et: ['aboutOffers.afterPanel.title', fc] %></h2>
+						<%-: common | eh: ['aboutOffers.afterPanel.content', fc] %>
 					</div>
 
 					<div class="complete ui">
-						<%-: common | eh: ['aboutOffers.content', fc] %>
+						<h2><%-: common | et: ['aboutOffers.about.title', fc] %></h2>
+						<%-: common | eh: ['aboutOffers.about.content', fc] %>
+					</div>
+
+					<div class="complete ui">
+						<h2><%-: common | et: ['aboutOffers.howTo.title', fc] %></h2>
+						<%-: common | eh: ['aboutOffers.howTo.content', fc] %>
 					</div>
 
 					<nav class="ui return">

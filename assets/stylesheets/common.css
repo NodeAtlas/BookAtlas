@@ -119,8 +119,8 @@
 	content: "\f02d";
 }
 
-.icon.euro:before {
-	content: "\f153";
+.icon.edit:before {
+	content: "\f040";
 }
 
 .icon.chat:before {
@@ -412,6 +412,10 @@ table,
 pre, 
 dl {
 	margin: 16px 0 0;	
+}
+
+.panel h2 {
+	margin-top: 48px;
 }
 
 .link,
@@ -825,16 +829,18 @@ a:hover {
 .sections .intro {
 	padding-left: 8px;
 	padding-right: 8px;
-	height: 100px;
 	opacity: 1;
+	height: 120px;
 }
 
 .main.to.top .sections .intro,
 .main.to.bottom .sections .intro {
 	opacity: 0;
+	height: 0;
 }
 
-.sections .section.open .intro {
+.main.to.top .sections .section.open .intro,
+.main.to.bottom .sections .section.open .intro {
 	opacity: 0;
 	height: 0;
 }
@@ -924,6 +930,7 @@ a:hover {
 	width: 84px;
 }
 
+.panel ol,
 .panel ul {
 	padding-left: 16px;
 }
@@ -978,6 +985,7 @@ a:hover {
 	}
 
 	.main.to.bottom .sections .section.open .bepo .scrollable.ui,
+	.main.to.bottom .sections .section.open .offers .scrollable.ui,
 	.main.to.bottom .sections .section.open .blog .scrollable.ui,
 	.main.to.top .sections .section.open .about-me .scrollable.ui {
 		margin-right: 108px;
@@ -995,6 +1003,7 @@ a:hover {
 		opacity: 1;
 	}
 
+	.section.open .offers .after.panel,
 	.section.open .bepo .after.panel,
 	.section.open .blog .after.panel,
 	.section.open .about-me .after.panel {

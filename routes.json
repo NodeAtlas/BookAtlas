@@ -7,11 +7,11 @@
     "redirect": "/bepo/",
     "statusCode": 301
   },
-  "/offres/": {
+  "/edition/": {
     "template": "offers.htm",
     "variation": "offers.json"
   },
-  "/offres": {
+  "/edition": {
     "redirect": "/offres/",
     "statusCode": 301
   },

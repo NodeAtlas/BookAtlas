@@ -1,4 +1,4 @@
-		<li class="small section ui <%= specific.opened.bepo %>" data-url="<%= common.url.bepo %>">
+		<li class="medium section ui <%= specific.opened.bepo %>" data-url="<%= common.url.bepo %>">
 			<section class="about bepo content">
 				<h1>
 					<ins class="collapse icon keyboard"></ins>
@@ -6,6 +6,10 @@
 				</h1>
 
 				<div class="vertical scrollable ui">
+					<div class="intro ui">
+						<%-: common | eh: ['aboutBepo.intro', fc] %>
+					</div>
+
 					<div class="after panel ui">
 						<h2><%-: common | et: ['aboutBepo.afterPanel.title', fc] %></h2>
 						<%-: common | eh: ['aboutBepo.afterPanel.content', fc] %>
