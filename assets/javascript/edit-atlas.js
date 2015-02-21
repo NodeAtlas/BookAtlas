@@ -388,30 +388,32 @@ var website = website || {},
         });
     };
 
-    publics.listeningKeystroke = function () {
+    publics.listeningKeystroke = function (onKeyup, onKeyDown) {
         $window.on("keyup keydown", function (e) {
             e = e || event;
             publics.keys[e.keyCode] = e.type === 'keydown';
 
             if (document.activeElement.tagName !== 'TEXTAREA' && document.activeElement.tagName !== 'INPUT') {
                 if (publics.keys[16] && publics.keys[69]) {
-                    $(".toggle.checkbox.ui").addClass("checked");
-                    $(".toggle.checkbox.ui").find("input").prop("checked", true);
+                    if (typeof onKeyup !== 'undefined') {
+                        onKeyup();
+                    }
                     $html.addClass("is-editable");
                 } else {
-                    $(".toggle.checkbox.ui").removeClass("checked");
-                    $(".toggle.checkbox.ui").find("input").prop("checked", false);
+                    if (typeof onKeyDown !== 'undefined') {
+                        onKeyDown();
+                    }
                     $html.removeClass("is-editable");
                 }
             }
         });
     };
 
-    publics.editAtlas = function () {
+    publics.editAtlas = function (onKeyup, onKeyDown) {
         publics.editContent();
         publics.broadcastContent();
         publics.sourceContent();
         publics.moveEditableArea();
-        publics.listeningKeystroke();
+        publics.listeningKeystroke(onKeyup, onKeyDown);
     };
 }(website));
