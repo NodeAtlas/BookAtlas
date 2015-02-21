@@ -94,6 +94,22 @@ var website = website || {},
         });
     };
 
+    publics.activeEditMode = function () {
+        $(".toggle.checkbox.ui").click(function () {
+            var $this = $(this);
+
+            if (!$this.hasClass("checked")) {
+                $this.addClass("checked");
+                $this.find("input").prop("checked", true);
+                $html.addClass("is-editable");
+            } else {
+                $this.removeClass("checked");
+                $this.find("input").prop("checked", false);
+                $html.removeClass("is-editable");
+            }
+        });
+    };
+
     publics.init = function () {
         var halfHeight,
             halfHeightPadding,
@@ -131,7 +147,7 @@ var website = website || {},
             }
 
             function openSection($currentSection, current, other) {
-                if (!(website.keys[17] && website.keys[18] && website.keys[69])) {
+                if (!$html.hasClass("is-editable")) {
                     history.replaceState($currentSection.data("url"), "", "/" + $currentSection.data("url") + "/");
 
                     $topSection.removeClass("open").removeClass("start");
@@ -219,6 +235,8 @@ var website = website || {},
             publics.generateEmail();
 
             publics.editAtlas();
+
+            publics.activeEditMode();
         });
     };
 }(website));

@@ -96,7 +96,7 @@ var website = website || {},
                     name,
                     accept = false;
 
-                if (publics.keys[17] && publics.keys[18] && publics.keys[69]) {
+                if ($html.hasClass("is-editable")) {
                     e.preventDefault();
 
                     $popup.addClass("opened");
@@ -292,7 +292,7 @@ var website = website || {},
                 currentOptions,
                 name;
                 
-            if (!(publics.keys[17] && publics.keys[18] && publics.keys[69])) {
+            if (!$html.hasClass("is-editable")) {
 
                 for (var i = 0, l = privates.editedObjects.length; i < l; i++) {
                     if (privates.editedObjects[i].data('edit-type') === 'html') {
@@ -393,10 +393,16 @@ var website = website || {},
             e = e || event;
             publics.keys[e.keyCode] = e.type === 'keydown';
 
-            if (publics.keys[17] && publics.keys[18] && publics.keys[69]) {
-                $html.addClass("is-editable");
-            } else {
-                $html.removeClass("is-editable");
+            if (document.activeElement.tagName !== 'TEXTAREA' && document.activeElement.tagName !== 'INPUT') {
+                if (publics.keys[16] && publics.keys[69]) {
+                    $(".toggle.checkbox.ui").addClass("checked");
+                    $(".toggle.checkbox.ui").find("input").prop("checked", true);
+                    $html.addClass("is-editable");
+                } else {
+                    $(".toggle.checkbox.ui").removeClass("checked");
+                    $(".toggle.checkbox.ui").find("input").prop("checked", false);
+                    $html.removeClass("is-editable");
+                }
             }
         });
     };

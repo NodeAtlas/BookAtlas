@@ -9,6 +9,13 @@
 				<div class="vertical scrollable ui">
 					<div class="after panel ui">
 						<h2><%-: common | et: ['aboutOffers.afterPanel.title', fc] %></h2>
+						<p class="toggle checkbox ui">
+			          		<input type="radio" name="edit">
+			          		<label><%-: common | et: ['aboutOffers.afterPanel.radioButton', fc] %></label>
+						</p>
+						<p class="horizontal divider ui">
+							<%-: common | et: ['aboutOffers.afterPanel.separator', fc] %>
+						</p>
 						<%-: common | eh: ['aboutOffers.afterPanel.content', fc] %>
 					</div>
 
