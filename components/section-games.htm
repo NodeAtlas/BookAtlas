@@ -2,16 +2,16 @@
 			<section class="about games content">
 				<h1>
 					<ins class="collapse icon gamepad"></ins>
-					<span><%-: common | et: ['aboutGames.title', fc] %></span>
+					<span><%- et(common, ['aboutGames.title', fc]) %></span>
 				</h1>
 
 				<div class="vertical scrollable ui">
 					<div class="complete ui">
-						<%-: common | eh: ['aboutGames.content', fc] %>
+						<%- eh(common, ['aboutGames.content', fc]) %>
 					</div>
 
 					<nav class="ui return">
-						<a href="javascript:;" title="<%-: common | ea: ['menu.title', fc, 'title'] %>"><%-: common | et: ['menu.content', fc] %></a>
+						<a href="javascript:;" title="<%- ea(common,['menu.title', fc, 'title']) %>"><%- et(common, ['menu.content', fc]) %></a>
 					</nav>
 				</div>
 			</section>

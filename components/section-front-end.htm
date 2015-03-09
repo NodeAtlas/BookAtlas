@@ -2,33 +2,33 @@
 			<section class="about front-end content">
 				<h1>
 					<ins class="collapse icon html5"></ins>
-					<span><%-: common | et: ['aboutFrontend.title', fc] %></span>
+					<span><%- et(common, ['aboutFrontend.title', fc]) %></span>
 				</h1>
 
 				<div class="vertical scrollable ui">
 					<div class="intro ui">
-						<%-: common | eh: ['aboutFrontend.intro', fc] %>
+						<%- eh(common, ['aboutFrontend.intro', fc]) %>
 					</div>
 
 					<div class="before panel ui">
-						<h2><%-: common | et: ['aboutFrontend.beforePanel.title', fc] %></h2>
-						<%-: common | eh: ['aboutFrontend.beforePanel.content', fc] %>
+						<h2><%- et(common, ['aboutFrontend.beforePanel.title', fc]) %></h2>
+						<%- eh(common, ['aboutFrontend.beforePanel.content', fc]) %>
 					</div>
 
 					<div class="complete ui">
 						<%- common.aboutFrontend.content %>
-						<h2><%-: common | et: ['aboutFrontend.frontend.title', fc] %></h2>
-						<%-: common | eh: ['aboutFrontend.frontend.content', fc] %>
+						<h2><%- et(common, ['aboutFrontend.frontend.title', fc]) %></h2>
+						<%- eh(common, ['aboutFrontend.frontend.content', fc]) %>
 
-						<h2><%-: common | et: ['aboutFrontend.birth.title', fc] %></h2>
-						<%-: common | eh: ['aboutFrontend.birth.content', fc] %>
+						<h2><%- et(common, ['aboutFrontend.birth.title', fc]) %></h2>
+						<%- eh(common, ['aboutFrontend.birth.content', fc]) %>
 
-						<h2><%-: common | et: ['aboutFrontend.expert.title', fc] %></h2>
-						<%-: common | eh: ['aboutFrontend.expert.content', fc] %>
+						<h2><%- et(common, ['aboutFrontend.expert.title', fc]) %></h2>
+						<%- eh(common, ['aboutFrontend.expert.content', fc]) %>
 					</div>
 
 					<nav class="ui return">
-						<a href="javascript:;" title="<%-: common | ea: ['menu.title', fc, 'title'] %>"><%-: common | et: ['menu.content', fc] %></a>
+						<a href="javascript:;" title="<%- ea(common,['menu.title', fc, 'title']) %>"><%- et(common, ['menu.content', fc]) %></a>
 					</nav>
 				</div>
 			</section>

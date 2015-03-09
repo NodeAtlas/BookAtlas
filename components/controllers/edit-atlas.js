@@ -68,8 +68,8 @@ var website = {};
         return files;
     };
 
-    publics.setFilters = function (templateEngine, NA) {
-        templateEngine.filters.et = templateEngine.filters.editText = function (obj, arr) {
+    publics.setFilters = function (variation, NA) {
+        variation.et = variation.editText = function (obj, arr) {
             var markup = "span",
                 file,
                 claimSource = " ";
@@ -105,7 +105,7 @@ var website = {};
             }
         };
 
-        templateEngine.filters.eh = templateEngine.filters.editHtml = function (obj, arr) {
+        variation.eh = variation.editHtml = function (obj, arr) {
             var markup = "div",
                 file,
                 claimSource = " ";
@@ -141,7 +141,7 @@ var website = {};
             }
         };
 
-        templateEngine.filters.ea = templateEngine.filters.editAttr = function (obj, arr) {
+        variation.ea = variation.editAttr = function (obj, arr) {
             var file,
                 claimSource = " ";
 
@@ -174,7 +174,7 @@ var website = {};
             }
         };
 
-        return templateEngine;
+        return variation;
     };
 
     publics.sockets = function (socket, NA, auth) {

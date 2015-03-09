@@ -2,35 +2,35 @@
 			<section class="about bepo content">
 				<h1>
 					<ins class="collapse icon keyboard"></ins>
-					<span><%-: common | et: ['aboutBepo.title', fc] %></span>
+					<span><%- et(common, ['aboutBepo.title', fc]) %></span>
 				</h1>
 
 				<div class="vertical scrollable ui">
 					<div class="intro ui">
-						<%-: common | eh: ['aboutBepo.intro', fc] %>
+						<%- eh(common, ['aboutBepo.intro', fc]) %>
 					</div>
 
 					<div class="after panel ui">
-						<h2><%-: common | et: ['aboutBepo.afterPanel.title', fc] %></h2>
-						<%-: common | eh: ['aboutBepo.afterPanel.content', fc] %>
+						<h2><%- et(common, ['aboutBepo.afterPanel.title', fc]) %></h2>
+						<%- eh(common, ['aboutBepo.afterPanel.content', fc]) %>
 					</div>
 				
 					<div class="complete ui">
-						<h2><%-: common | et: ['aboutBepo.about.title', fc] %></h2>
-						<%-: common | eh: ['aboutBepo.about.content', fc] %>
+						<h2><%- et(common, ['aboutBepo.about.title', fc]) %></h2>
+						<%- eh(common, ['aboutBepo.about.content', fc]) %>
 
-						<h2><%-: common | et: ['aboutBepo.speed.title', fc] %></h2>
-						<%-: common | eh: ['aboutBepo.speed.content', fc] %>
+						<h2><%- et(common, ['aboutBepo.speed.title', fc]) %></h2>
+						<%- eh(common, ['aboutBepo.speed.content', fc]) %>
 
-						<h2><%-: common | et: ['aboutBepo.why.title', fc] %></h2>
-						<%-: common | eh: ['aboutBepo.why.content', fc] %>
+						<h2><%- et(common, ['aboutBepo.why.title', fc]) %></h2>
+						<%- eh(common, ['aboutBepo.why.content', fc]) %>
 
-						<h2><%-: common | et: ['aboutBepo.learn.title', fc] %></h2>
-						<%-: common | eh: ['aboutBepo.learn.content', fc] %>
+						<h2><%- et(common, ['aboutBepo.learn.title', fc]) %></h2>
+						<%- eh(common, ['aboutBepo.learn.content', fc]) %>
 					</div>
 
 					<nav class="ui return">
-						<a href="javascript:;" title="<%-: common | ea: ['menu.title', fc, 'title'] %>"><%-: common | et: ['menu.content', fc] %></a>
+						<a href="javascript:;" title="<%- ea(common, ['menu.title', fc, 'title']) %>"><%- et(common, ['menu.content', fc]) %></a>
 					</nav>
 				</div>
 			</section>

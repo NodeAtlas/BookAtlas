@@ -394,7 +394,7 @@ var website = website || {},
             publics.keys[e.keyCode] = e.type === 'keydown';
 
             if (document.activeElement.tagName !== 'TEXTAREA' && document.activeElement.tagName !== 'INPUT') {
-                if (publics.keys[16] && publics.keys[69]) {
+                if (publics.keys[69] && publics.keys[84]) {
                     if (typeof onKeyup !== 'undefined') {
                         onKeyup();
                     }

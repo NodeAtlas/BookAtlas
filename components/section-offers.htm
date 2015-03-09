@@ -2,35 +2,35 @@
 			<section class="about offers content">
 				<h1>
 					<ins class="collapse icon edit"></ins>
-					<span><%-: common | et: ['aboutOffers.title', fc] %></span>
+					<span><%- et(common, ['aboutOffers.title', fc]) %></span>
 				</h1>
 
 
 				<div class="vertical scrollable ui">
 					<div class="after panel ui">
-						<h2><%-: common | et: ['aboutOffers.afterPanel.title', fc] %></h2>
+						<h2><%- et(common, ['aboutOffers.afterPanel.title', fc]) %></h2>
 						<p class="toggle checkbox ui">
 			          		<input type="radio" name="edit">
-			          		<label><%-: common | et: ['aboutOffers.afterPanel.radioButton', fc] %></label>
+			          		<label><%- et(common, ['aboutOffers.afterPanel.radioButton', fc]) %></label>
 						</p>
 						<p class="horizontal divider ui">
-							<%-: common | et: ['aboutOffers.afterPanel.separator', fc] %>
+							<%- et(common, ['aboutOffers.afterPanel.separator', fc]) %>
 						</p>
-						<%-: common | eh: ['aboutOffers.afterPanel.content', fc] %>
+						<%- eh(common, ['aboutOffers.afterPanel.content', fc]) %>
 					</div>
 
 					<div class="complete ui">
-						<h2><%-: common | et: ['aboutOffers.about.title', fc] %></h2>
-						<%-: common | eh: ['aboutOffers.about.content', fc] %>
+						<h2><%- et(common, ['aboutOffers.about.title', fc]) %></h2>
+						<%- eh(common, ['aboutOffers.about.content', fc]) %>
 					</div>
 
 					<div class="complete ui">
-						<h2><%-: common | et: ['aboutOffers.howTo.title', fc] %></h2>
-						<%-: common | eh: ['aboutOffers.howTo.content', fc] %>
+						<h2><%- et(common, ['aboutOffers.howTo.title', fc]) %></h2>
+						<%- eh(common, ['aboutOffers.howTo.content', fc]) %>
 					</div>
 
 					<nav class="ui return">
-						<a href="javascript:;" title="<%-: common | ea: ['menu.title', fc, 'title'] %>"><%-: common | et: ['menu.content', fc] %></a>
+						<a href="javascript:;" title="<%- ea(common, ['menu.title', fc, 'title']) %>"><%- et(common, ['menu.content', fc]) %></a>
 					</nav>
 				</div>
 			</section>

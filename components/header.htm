@@ -1,8 +1,7 @@
 		<header id="header" class="header ui" role="banner">
 			<h1>
-				<a href="<%-: common | ea: ['logo.href', fc, 'href'] %>" title="<%-: common | ea: ['logo.title', fc, 'title'] %>">
-					<%-: common | et: ['logo.content', fc] %>
+				<a href="<%- ea(common, ['logo.href', fc, 'href']) %>" title="<%- ea(common, ['logo.title', fc, 'title']) %>">
+					<%- et(common, ['logo.content', fc]) %>
 				</a>
 			</h1>
-		</header>
-		
+		</header>	
