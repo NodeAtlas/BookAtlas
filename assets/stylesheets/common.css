@@ -1255,12 +1255,12 @@ a:hover {
 	height: 1.5rem;
 	border-radius: 500rem;
 }
-.ui.checkbox .box:after, 
+/*.ui.checkbox .box:after, 
 .ui.checkbox .box:before, 
 .ui.checkbox label:after, 
 .ui.checkbox label:before {
 	font-family: Checkbox;
-}
+}*/
 .ui.checkbox .box:before, 
 .ui.checkbox label:before {
 	position: absolute;
