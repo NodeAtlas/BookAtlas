@@ -9,6 +9,10 @@ var website = website || {},
     var privates = {},
         optionsSocket;
 
+    privates.toDash = function(text) {
+        return text.replace(/([A-Z])/g, function ($1) { return "-" + $1.toLowerCase(); });
+    };
+
     optionsSocket = ($body.data('subpath') !== '') ? { path: '/' + $body.data('subpath') + (($body.data('subpath')) ? "/" : "") + 'socket.io' } : undefined;
 
     publics.socket = io.connect(($body.data('subpath') !== '') ? $body.data('hostname') : undefined, optionsSocket);
@@ -237,7 +241,7 @@ var website = website || {},
                             (function () {
                                 var name;
                                 if (i.indexOf('editAttrName') !== -1) {
-                                    name = i.replace('editAttrName', '').toLowerCase();
+                                    name = privates.toDash(i.replace('editAttrName', '')).slice(1);
 
                                     if ($popup.find("." + $editedObject.data('edit-attr-path-' + name).replace(/\./g, "\\\.").replace(/\[/g, "\\\[").replace(/\]/g, "\\\]")).length === 0) {
                                         accept = true;
@@ -320,7 +324,7 @@ var website = website || {},
                     if (privates.editedObjects[i].data('edit-attr') === true) {
                         for (var j in privates.editedObjects[i].data()) {
                             if (j.indexOf('editAttrName') !== -1) {
-                                name = j.replace('editAttrName', '').toLowerCase();
+                                name = privates.toDash(j.replace('editAttrName', '')).slice(1);
 
                                 currentOptions = {};
 
@@ -393,19 +397,21 @@ var website = website || {},
             e = e || event;
             publics.keys[e.keyCode] = e.type === 'keydown';
 
-            if (document.activeElement.tagName !== 'TEXTAREA' && document.activeElement.tagName !== 'INPUT') {
                 if (publics.keys[69] && publics.keys[84]) {
-                    if (typeof onKeyup !== 'undefined') {
-                        onKeyup();
+                    if (document.activeElement.tagName !== 'TEXTAREA' && document.activeElement.tagName !== 'INPUT') {
+                        if (typeof onKeyup !== 'undefined') {
+                            onKeyup();
+                        }
+                        $html.addClass("is-editable");
+                        //$("textarea, input")[0].readOnly = true;
                     }
-                    $html.addClass("is-editable");
                 } else {
                     if (typeof onKeyDown !== 'undefined') {
                         onKeyDown();
                     }
                     $html.removeClass("is-editable");
+                    //$("textarea, input")[0].readOnly = false;
                 }
-            }
         });
     };
 
