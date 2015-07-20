@@ -29,6 +29,7 @@ website.components = {};
 	publics.asynchrones = function (params) {
 		var socketio = params.socketio,
 			NA = params.NA,
+			path = NA.modules.path,
 			ejs = NA.modules.ejs,
 			fs = NA.modules.fs;
 
@@ -37,32 +38,31 @@ website.components = {};
 
 			socket.on('load-sections', function () {
 		        var data = {},
-		        	currentVariation = {},
-		        	common;
+		        	currentVariation = {};
 
-		        currentVariation.specific = JSON.parse(fs.readFileSync(NA.websitePhysicalPath + NA.webconfig.variationsRelativePath + "index.json", 'utf-8'));
-		        currentVariation.common = JSON.parse(fs.readFileSync(NA.websitePhysicalPath + NA.webconfig.variationsRelativePath + "common.json", 'utf-8'));
+		        currentVariation.specific = JSON.parse(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, "index.json"), 'utf-8'));
+		        currentVariation.common = JSON.parse(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, "common.json"), 'utf-8'));
 				/*currentVariation.fs = currentVariation.currentRouteParameters.variation;*/
 				currentVariation.fc = NA.webconfig.commonVariation;
 				currentVariation = website.components.editAtlas.setFilters(currentVariation, NA);
 
 		        data.topPart = {};
-		        data.topPart.offers = ejs.render(fs.readFileSync(NA.websitePhysicalPath + NA.webconfig.componentsRelativePath + "section-offers.htm", 'utf-8'), currentVariation);
-		        data.topPart.bepo = ejs.render(fs.readFileSync(NA.websitePhysicalPath + NA.webconfig.componentsRelativePath + "section-bepo.htm", 'utf-8'), currentVariation);
-		        data.topPart.book = ejs.render(fs.readFileSync(NA.websitePhysicalPath + NA.webconfig.componentsRelativePath + "section-book.htm", 'utf-8'), currentVariation);
-		        data.topPart.website = ejs.render(fs.readFileSync(NA.websitePhysicalPath + NA.webconfig.componentsRelativePath + "section-website.htm", 'utf-8'), currentVariation);
-		        data.topPart.blog = ejs.render(fs.readFileSync(NA.websitePhysicalPath + NA.webconfig.componentsRelativePath + "section-blog.htm", 'utf-8'), currentVariation);
-		        data.topPart["front-end"] = ejs.render(fs.readFileSync(NA.websitePhysicalPath + NA.webconfig.componentsRelativePath + "section-front-end.htm", 'utf-8'), currentVariation);
-		        data.topPart["unknown-top"] = ejs.render(fs.readFileSync(NA.websitePhysicalPath + NA.webconfig.componentsRelativePath + "section-unknown-top.htm", 'utf-8'), currentVariation);
+		        data.topPart.offers = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-offers.htm"), 'utf-8'), currentVariation);
+		        data.topPart.bepo = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-bepo.htm"), 'utf-8'), currentVariation);
+		        data.topPart.book = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-book.htm"), 'utf-8'), currentVariation);
+		        data.topPart.website = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-website.htm"), 'utf-8'), currentVariation);
+		        data.topPart.blog = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-blog.htm"), 'utf-8'), currentVariation);
+		        data.topPart["front-end"] = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-front-end.htm"), 'utf-8'), currentVariation);
+		        data.topPart["unknown-top"] = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-unknown-top.htm"), 'utf-8'), currentVariation);
 
 				data.bottomPart = {};
-		        data.bottomPart["unknown-bottom"] = ejs.render(fs.readFileSync(NA.websitePhysicalPath + NA.webconfig.componentsRelativePath + "section-unknown-bottom.htm", 'utf-8'), currentVariation);
-		        data.bottomPart.websites = ejs.render(fs.readFileSync(NA.websitePhysicalPath + NA.webconfig.componentsRelativePath + "section-websites.htm", 'utf-8'), currentVariation);
-		        data.bottomPart.skills = ejs.render(fs.readFileSync(NA.websitePhysicalPath + NA.webconfig.componentsRelativePath + "section-skills.htm", 'utf-8'), currentVariation);
-		        data.bottomPart['contact-me'] = ejs.render(fs.readFileSync(NA.websitePhysicalPath + NA.webconfig.componentsRelativePath + "section-contact-me.htm", 'utf-8'), currentVariation);
-		        data.bottomPart['about-me'] = ejs.render(fs.readFileSync(NA.websitePhysicalPath + NA.webconfig.componentsRelativePath + "section-about-me.htm", 'utf-8'), currentVariation);
-		        data.bottomPart.nodeatlas = ejs.render(fs.readFileSync(NA.websitePhysicalPath + NA.webconfig.componentsRelativePath + "section-nodeatlas.htm", 'utf-8'), currentVariation);
-		        data.bottomPart.games = ejs.render(fs.readFileSync(NA.websitePhysicalPath + NA.webconfig.componentsRelativePath + "section-games.htm", 'utf-8'), currentVariation);
+		        data.bottomPart["unknown-bottom"] = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-unknown-bottom.htm"), 'utf-8'), currentVariation);
+		        data.bottomPart.websites = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-websites.htm"), 'utf-8'), currentVariation);
+		        data.bottomPart.skills = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-skills.htm"), 'utf-8'), currentVariation);
+		        data.bottomPart['contact-me'] = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-contact-me.htm"), 'utf-8'), currentVariation);
+		        data.bottomPart['about-me'] = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-about-me.htm"), 'utf-8'), currentVariation);
+		        data.bottomPart.nodeatlas = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-nodeatlas.htm"), 'utf-8'), currentVariation);
+		        data.bottomPart.games = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-games.htm"), 'utf-8'), currentVariation);
 
 				socket.emit('load-sections', data);
 			});

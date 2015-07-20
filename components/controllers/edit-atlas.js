@@ -178,7 +178,8 @@ var website = {};
     };
 
     publics.sockets = function (socket, NA, auth) {
-        var fs = NA.modules.fs;
+        var fs = NA.modules.fs,
+            path = NA.modules.path;
 
         socket.on('update-variation', function (options) {
             var files, object, key;
@@ -188,7 +189,7 @@ var website = {};
                 
                 for (var file in files) {
                     try {
-                        object = require(NA.websitePhysicalPath + NA.webconfig.variationsRelativePath + file);
+                        object = require(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, file));
                         if (object) {
                             for (var i = 0, l = files[file].length; i < l; i++) {
                                 key = files[file][i].path.split('.').slice(1).join('.');
@@ -209,7 +210,7 @@ var website = {};
                             }
                         }
                         if (!NA.webconfig._demo) { // Adding part for avoid recording for demo mode.
-                            fs.writeFileSync(NA.websitePhysicalPath + NA.webconfig.variationsRelativePath + file, JSON.stringify(object, undefined, "    "));
+                            fs.writeFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, file), JSON.stringify(object, undefined, "    "));
                         }
                     } catch (exception) {
                         console.log(exception);
@@ -223,7 +224,7 @@ var website = {};
 
             if (auth) {
                 try {
-                    object = require(NA.websitePhysicalPath + NA.webconfig.variationsRelativePath + options.file);
+                    object = require(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, options.file));
                     if (object) {
                         key = options.path.split('.').slice(1).join('.');
 
