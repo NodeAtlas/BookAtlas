@@ -36,34 +36,41 @@ website.components = {};
 		socketio.sockets.on('connection', function (socket) {
 			website.components.editAtlas.sockets(socket, NA, true);
 
-			socket.on('load-sections', function () {
+			socket.on('load-sections', function (dataEmit) {
 		        var data = {},
-		        	currentVariation = {};
+	        		currentVariation = {};
 
-		        currentVariation.specific = JSON.parse(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, "index.json"), 'utf-8'));
-		        currentVariation.common = JSON.parse(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, "common.json"), 'utf-8'));
-				/*currentVariation.fs = currentVariation.currentRouteParameters.variation;*/
+        		/* Asynchrone render of template and variations */
+				currentVariation = NA.addSpecificVariation(dataEmit.variation + ".json", dataEmit.lang, currentVariation);
+		        currentVariation = NA.addCommonVariation(dataEmit.lang, currentVariation);
+
+		        /* Asynchrone addon for editAtlas render */
+				currentVariation.fs = dataEmit.variation + ".json";
 				currentVariation.fc = NA.webconfig.commonVariation;
 				currentVariation = website.components.editAtlas.setFilters(currentVariation, NA);
 
+				/* Asynchrone Top Components */
 		        data.topPart = {};
-		        data.topPart.offers = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-offers.htm"), 'utf-8'), currentVariation);
-		        data.topPart.bepo = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-bepo.htm"), 'utf-8'), currentVariation);
-		        data.topPart.book = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-book.htm"), 'utf-8'), currentVariation);
-		        data.topPart.website = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-website.htm"), 'utf-8'), currentVariation);
-		        data.topPart.blog = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-blog.htm"), 'utf-8'), currentVariation);
-		        data.topPart["front-end"] = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-front-end.htm"), 'utf-8'), currentVariation);
-		        data.topPart["unknown-top"] = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-unknown-top.htm"), 'utf-8'), currentVariation);
+		        data.topPart.offers = NA.newRender("section-offers.htm", currentVariation);
+		        data.topPart.offers = NA.newRender("section-offers.htm", currentVariation);
+		        data.topPart.bepo = NA.newRender("section-bepo.htm", currentVariation);
+		        data.topPart.book = NA.newRender("section-book.htm", currentVariation);
+		        data.topPart.website = NA.newRender("section-website.htm", currentVariation);
+		        data.topPart.blog = NA.newRender("section-blog.htm", currentVariation);
+		        data.topPart["front-end"] = NA.newRender("section-front-end.htm", currentVariation);
+		        data.topPart["unknown-top"] = NA.newRender("section-unknown-top.htm", currentVariation);
 
+				/* Asynchrone Top Components */
 				data.bottomPart = {};
-		        data.bottomPart["unknown-bottom"] = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-unknown-bottom.htm"), 'utf-8'), currentVariation);
-		        data.bottomPart.websites = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-websites.htm"), 'utf-8'), currentVariation);
-		        data.bottomPart.skills = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-skills.htm"), 'utf-8'), currentVariation);
-		        data.bottomPart['contact-me'] = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-contact-me.htm"), 'utf-8'), currentVariation);
-		        data.bottomPart['about-me'] = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-about-me.htm"), 'utf-8'), currentVariation);
-		        data.bottomPart.nodeatlas = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-nodeatlas.htm"), 'utf-8'), currentVariation);
-		        data.bottomPart.games = ejs.render(fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.componentsRelativePath, "section-games.htm"), 'utf-8'), currentVariation);
+		        data.bottomPart["unknown-bottom"] = NA.newRender("section-unknown-bottom.htm", currentVariation);
+		        data.bottomPart.websites = NA.newRender("section-websites.htm", currentVariation);
+		        data.bottomPart.skills = NA.newRender("section-skills.htm", currentVariation);
+		        data.bottomPart['contact-me'] = NA.newRender("section-contact-me.htm", currentVariation);
+		        data.bottomPart['about-me'] = NA.newRender("section-about-me.htm", currentVariation);
+		        data.bottomPart.nodeatlas = NA.newRender("section-nodeatlas.htm", currentVariation);
+		        data.bottomPart.games = NA.newRender("section-games.htm", currentVariation);
 
+		        /* Load Components */
 				socket.emit('load-sections', data);
 			});
 		});

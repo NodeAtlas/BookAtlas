@@ -53,7 +53,10 @@ var website = website || {},
     };
 
     privates.loadSections = function(callback) {
-        publics.socket.emit("load-sections");
+        publics.socket.emit("load-sections", { 
+            lang: $html.attr('lang'), 
+            variation: $body.data('variation')
+        });
         publics.socket.on("load-sections", function (data) {
             var targetTop = ".top.sections.ui > .ui.return > a",
                 targetBottom = ".bottom.sections.ui > .ui.return > a",

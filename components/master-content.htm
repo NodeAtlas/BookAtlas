@@ -1,5 +1,5 @@
 	</head>
-	<body data-hostname='<%= webconfig.urlWithoutFileName %>' data-subpath='<%= webconfig.urlRelativeSubPath.slice(1) %>'>
+	<body data-variation='<%= currentRouteParameters.variation.replace(/\.json/,'') %>' data-hostname='<%= webconfig.urlWithoutFileName %>' data-subpath='<%= webconfig.urlRelativeSubPath.slice(1) %>'>
 		<noscript>
 			<p><%= common.javascriptDisable %></p>
 		</noscript>
