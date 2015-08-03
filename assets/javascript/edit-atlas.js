@@ -378,8 +378,8 @@ var website = website || {},
 
             /* Close if click on item */
             setTimeout(function() {
-                if (typeof onKeyup !== 'undefined') {
-                    onKeyup();
+                if (typeof privates.onKeyup !== 'undefined') {
+                    privates.onKeyup();
                 }
                 $html.removeClass("is-editable");
             }, 500);
@@ -599,6 +599,7 @@ var website = website || {},
                             $html.addClass("is-editable");
                         } else {
                             if (typeof onKeyup !== 'undefined') {
+                                privates.onKeyup = onKeyup;
                                 onKeyup();
                             }
                             $html.removeClass("is-editable");
