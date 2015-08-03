@@ -34,7 +34,7 @@ website.components = {};
 			fs = NA.modules.fs;
 
 		socketio.sockets.on('connection', function (socket) {
-			website.components.editAtlas.sockets(socket, NA, true);
+			website.components.editAtlas.sockets(socket, NA, true, !NA.webconfig._modeDemo);
 
 			socket.on('load-sections', function (dataEmit) {
 		        var data = {},
@@ -45,8 +45,8 @@ website.components = {};
 		        currentVariation = NA.addCommonVariation(dataEmit.lang, currentVariation);
 
 		        /* Asynchrone addon for editAtlas render */
-				currentVariation.fs = dataEmit.variation + ".json";
-				currentVariation.fc = NA.webconfig.commonVariation;
+				currentVariation.fs = dataEmit.lang + "/" + dataEmit.variation + ".json";
+				currentVariation.fc = dataEmit.lang + "/" + NA.webconfig.commonVariation;
 				currentVariation = website.components.editAtlas.setFilters(currentVariation, NA);
 
 				/* Asynchrone Top Components */
@@ -78,16 +78,15 @@ website.components = {};
 
 	publics.changeVariation = function (params, mainCallback) {
 		var variation = params.variation,
-			NA = params.NA,
-			session = params.request.session;
+			NA = params.NA;
 
 		// variation.fs = false;
 		// variation.fc = false;
 		/*if (session.hasPermissionForEdit) {*/
 			// Le fichier spécifique utilisé pour générer cette vue.
-			variation.fs = variation.currentRouteParameters.variation;
+			variation.fs = ((variation.languageCode) ? variation.languageCode + "/": "") + variation.currentRouteParameters.variation;
 			// Le fichier commun utilisé pour générer cette vue.
-			variation.fc = variation.webconfig.commonVariation;
+			variation.fc = ((variation.languageCode) ? variation.languageCode + "/": "") + variation.webconfig.commonVariation;
 		/*}*/
 
 		variation = website.components.editAtlas.setFilters(variation, NA);

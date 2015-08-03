@@ -3,16 +3,16 @@
 
 		<% if (webconfig._minified) { %>
 		<script type="text/javascript" src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
-		<script type="text/javascript" src="javascript/common.min.js"></script>
+		<script type="text/javascript" src="<%- urlBasePath %>javascript/common.min.js"></script>
 		<% } else { %>
-		<script type="text/javascript" src="/socket.io/socket.io.js"></script>
-		<script type="text/javascript" src="javascript/modernizr.js"></script>
-		<script type="text/javascript" src="javascript/jquery.js"></script>
-		<script type="text/javascript" src="javascript/jquery/jquery.validate.js"></script>
-		<script type="text/javascript" src="javascript/prettify.js"></script>
-		<script type="text/javascript" src="javascript/prettify/run_prettify.js"></script>
-		<script type="text/javascript" src="javascript/edit-atlas.js"></script>
-		<script type="text/javascript" src="javascript/common.js"></script>
+		<script type="text/javascript" src="<%- urlBasePath %>socket.io/socket.io.js"></script>
+		<script type="text/javascript" src="<%- urlBasePath %>javascript/modernizr.js"></script>
+		<script type="text/javascript" src="<%- urlBasePath %>javascript/jquery.js"></script>
+		<script type="text/javascript" src="<%- urlBasePath %>javascript/jquery/jquery.validate.js"></script>
+		<script type="text/javascript" src="<%- urlBasePath %>javascript/prettify.js"></script>
+		<script type="text/javascript" src="<%- urlBasePath %>javascript/prettify/run_prettify.js"></script>
+		<script type="text/javascript" src="<%- urlBasePath %>javascript/edit-atlas.js"></script>
+		<script type="text/javascript" src="<%- urlBasePath %>javascript/common.js"></script>
 		<% } %>
 	</body>
 </html>

@@ -6,13 +6,13 @@
 		<div class="templates">
 			<div class="template html">
 				<hr>
-				<label><span class="info"></span> <ins class="wysiwyg link"><%- et(common, ['editableArea.wysiwyg', fc]) %></ins><del class="plaintext link"><%- et(common, ['editableArea.wysiwyg', fc]) %></del></label>
+				<label><span class="info"></span> <ins class="wysiwyg link"><%- et(common, ['editableArea.wysiwyg', fc]) %></ins><del class="plaintext link"><%- et(common, ['editableArea.plainText', fc]) %></del> <span class="cancel link"><%- et(common, ['editableArea.cancelUpdate', fc]) %></span></label>
 				<textarea cols="30" rows="6"></textarea>
 				<span class="source"><em><%- et(common, ['editableArea.sourceInfo', fc]) %></em></span>
 			</div>
 			<div class="template text">
 				<hr>
-				<label><span class="info"></span></label>
+				<label><span class="info"></span> <span class="cancel link"><%- et(common, ['editableArea.cancelUpdate', fc]) %></span></label>
 				<input type="text">
 				<span class="source"><em><%- et(common, ['editableArea.sourceInfo', fc]) %></em></span>
 			</div>
@@ -21,6 +21,9 @@
 		<hr>
 		<div id="wysiwyg-bottom"></div>
 		<div class="submit">
+			<div class="to-left"><%- et(common, ['editableArea.dockLeft', fc]) %></div>
+			<div class="anchor"><%- et(common, ['editableArea.anchor', fc]) %></div>
+			<div class="to-right"><%- et(common, ['editableArea.dockRight', fc]) %></div>
 			<label><input type="button" class="next-variation-change" value="<%- ea(common, ['editableArea.next', fc, 'value']) %>"></label>
 			<label><input type="button" class="update-variation-change" value="<%- ea(common, ['editableArea.submit', fc, 'value']) %>"></label>
 		</div>

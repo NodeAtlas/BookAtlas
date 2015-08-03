@@ -238,11 +238,11 @@ var website = website || {},
             publics.generateEmail();
 
             publics.editAtlas(function () {
-                $(".toggle.checkbox.ui").addClass("checked");
-                $(".toggle.checkbox.ui").find("input").prop("checked", true);
-            }, function () {
                 $(".toggle.checkbox.ui").removeClass("checked");
                 $(".toggle.checkbox.ui").find("input").prop("checked", false);  
+            }, function () {
+                $(".toggle.checkbox.ui").addClass("checked");
+                $(".toggle.checkbox.ui").find("input").prop("checked", true);
             });
 
             publics.activeEditMode();

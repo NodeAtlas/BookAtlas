@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!--[if lte 8]><html lang="fr" class="old-ie"><![endif]-->
-<!--[if IE 9]><html lang="fr" class="ie9"><![endif]-->
-<!--[if gt IE 9]><!--><html lang="fr-fr" class="<%= webconfig._minified.replace(".", "") %>"><!--<![endif]-->
+<!--[if lte 8]><html lang="<%- languageCode %>" class="old-ie"><![endif]-->
+<!--[if IE 9]><html lang="<%- languageCode %>" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="<%- languageCode %>" class="<%= webconfig._minified.replace(".", "") %>"><!--<![endif]-->
 	<head>
 		<meta charset="utf-8" />
 		<title><%= specific.titlePage %></title>
@@ -19,10 +19,10 @@
 		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700">
 
 		<% if (webconfig._minified) { %>
-		<link rel="stylesheet" type="text/css" href="stylesheets/common.min.css" />
+		<link rel="stylesheet" type="text/css" href="<%- urlBasePath %>stylesheets/common.min.css" />
 		<% } else { %>
-		<link rel="stylesheet" type="text/css" href="stylesheets/edit-atlas.css" />
-		<link rel="stylesheet" type="text/css" href="stylesheets/common.css" />
-		<link rel="stylesheet" type="text/css" href="stylesheets/common-sm.css" media="screen and (min-width: 768px)" />
-		<link rel="stylesheet" type="text/css" href="stylesheets/common-md.css" media="screen and (min-width: 1200px)" />
+		<link rel="stylesheet" type="text/css" href="<%- urlBasePath %>stylesheets/edit-atlas.css" />
+		<link rel="stylesheet" type="text/css" href="<%- urlBasePath %>stylesheets/common.css" />
+		<link rel="stylesheet" type="text/css" href="<%- urlBasePath %>stylesheets/common-sm.css" media="screen and (min-width: 768px)" />
+		<link rel="stylesheet" type="text/css" href="<%- urlBasePath %>stylesheets/common-md.css" media="screen and (min-width: 1200px)" />
 		<% } %>

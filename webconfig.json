@@ -8,5 +8,6 @@
  	"languageCode": "fr-fr",
 	"routes": "routes.json",
 	"_minified": "",
-	"_indexFollow": "noindex, nofollow"
+	"_indexFollow": "noindex, nofollow",
+	"_modeDemo": false
 }

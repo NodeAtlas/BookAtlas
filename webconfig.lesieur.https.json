@@ -1,0 +1,18 @@
+{
+	"httpPort": 7770,
+	"languageCode": "fr-fr",
+	"httpSecure": "security/server",
+	"httpHostname": "test.lesieur.name",
+ 	"commonVariation": "common.json",
+ 	"commonController": "common.js",
+ 	"urlPort": 443,
+  	"languageCode": "fr-fr",
+ 	"controllersRelativePath": "controllers",
+  	"pageNotFound": "/page-inexistante/",
+  	"bundles": "bundles.json",
+	"routes": "routes.json",
+	"_demo": "true",
+	"_minified": ".min",
+	"_indexFollow": "noindex, nofollow",
+	"_modeDemo": true
+}

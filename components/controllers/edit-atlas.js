@@ -1,14 +1,14 @@
+/* jslint node: true */
 var website = {};
 
 (function (publics) {
     "use strict";
 
-    publics.setLookup = function (obj, key, val) {
+    publics.setLookup = function (object, key, value) {
         var fields,
-            type = typeof key,
-            result = obj;
+            result = object;
 
-        if (type == 'string' || type == "number") {
+        if (typeof key === 'string' || typeof key === "number") {
             fields = ("" + key).replace(/\[(.*?)\]/, function (m, key) {
                 return '.' + key;
             }).split('.');
@@ -18,9 +18,9 @@ var website = {};
             var field = fields[i];
 
             if (i === n - 1) {
-                result[field] = val;
+                result[field] = value;
             } else {
-                if (typeof result[field] === 'undefined' || !((typeof result[field] == "object") && (result[field] !== null))) {
+                if (typeof result[field] === 'undefined' || !((typeof result[field] === "object") && (result[field] !== null))) {
                     result[field] = {};
                 }
                 result = result[field];
@@ -28,23 +28,22 @@ var website = {};
         }
     };
 
-    publics.getLookup = function (obj, key) {
-        var type = typeof key;
-
-        if (type == 'string' || type == "number") {
+    publics.getLookup = function (object, key) {
+        if (typeof key === 'string' || typeof key === "number") {
             key = ("" + key).replace(/\[(.*?)\]/, function (m, key) {
                 return '.' + key;
             }).split('.');
         }
-        for (var i = 0, l = key.length, currentkey; i < l; i++) {
-            if (obj.hasOwnProperty(key[i])) {
-                obj = obj[key[i]];
+
+        for (var i = 0, l = key.length; i < l; i++) {
+            if (object.hasOwnProperty(key[i])) {
+                object = object[key[i]];
             } else { 
                 return undefined;
             }
         }
 
-        return obj;
+        return object;
     };
 
     publics.orderByFile = function (options) {
@@ -68,116 +67,83 @@ var website = {};
         return files;
     };
 
-    publics.setFilters = function (variation, NA) {
-        variation.et = variation.editText = function (obj, arr) {
-            var markup = "span",
-                file,
-                claimSource = " ";
-
-            if (typeof obj === 'string') {
-                if (arr[0].split(".")[0] === "specific") {
-                    file = arr[1];
-                } else {
-                    file = NA.webconfig.commonVariation;
-                }
-            } else {
-                file = arr[1];
-                obj = website.getLookup(obj, arr[0]);
-                if (file === NA.webconfig.commonVariation) {
-                    arr[0] = 'common.' + arr[0];
-                } else {
-                    arr[0] = 'specific.' + arr[0];
-                }
-            }
-
-            if (!obj) { obj = " "; }
-
-            //if (arr[2]) { markup = "div"; }
-            
-            if (arr[2]) {
-                claimSource = ' data-edit-source="' + arr[2] + '" ';
-            }
-
-            if (arr[1]) {
-                return '<' + markup + claimSource + 'data-edit="true" data-edit-type="text" data-edit-file="' + file + '" data-edit-path="' + arr[0] + '">' +  obj + "</" + markup + ">";
-            } else {
-                return '<' + markup + ' data-edit-path="' + arr[0] + '">' +  obj + "</" + markup + ">";
-            }
-        };
-
-        variation.eh = variation.editHtml = function (obj, arr) {
-            var markup = "div",
-                file,
-                claimSource = " ";
-
-            if (typeof obj === 'string') {
-                if (arr[0].split(".")[0] === "specific") {
-                    file = arr[1];
-                } else {
-                    file = NA.webconfig.commonVariation;
-                }
-            } else {
-                file = arr[1];
-                obj = website.getLookup(obj, arr[0]);
-                if (file === NA.webconfig.commonVariation) {
-                    arr[0] = 'common.' + arr[0];
-                } else {
-                    arr[0] = 'specific.' + arr[0];
-                }
-            }
-
-            if (!obj) { obj = " "; }
-
-            //if (arr[2]) { markup = "span"; }
-
-            if (arr[2]) {
-                claimSource = ' data-edit-source="' + arr[2] + '" ';
-            }
-
-            if (arr[1]) {
-                return '<' + markup + claimSource  + ' data-edit="true" data-edit-type="html" data-edit-file="' + file + '" data-edit-path="' + arr[0] + '">' +  obj + "</" + markup + ">";
-            } else {
-                return '<' + markup + ' data-edit-path="' + arr[0] + '">' +  obj + "</" + markup + ">";
-            }
-        };
-
-        variation.ea = variation.editAttr = function (obj, arr) {
+    publics.setFilters = function (variation, NA, activateFront) {
+        function setFilter(object, auth, pathProperty, sourceFunction, property, markup, type) {
             var file,
-                claimSource = " ";
+                claimSource = " ",
+                result;
 
-            if (typeof obj === 'string') {
-                if (arr[0].split(".")[0] === "specific") {
-                    file = arr[1];
+            if (typeof object === 'string') {
+                if (pathProperty.split(".")[0] === "specific") {
+                    file = auth;
                 } else {
                     file = NA.webconfig.commonVariation;
                 }
             } else {
-                file = arr[1];
-                obj = website.getLookup(obj, arr[0]);
+                file = auth;
+                object = website.getLookup(object, pathProperty);
                 if (file === NA.webconfig.commonVariation) {
-                    arr[0] = 'common.' + arr[0];
+                    pathProperty = 'common.' + pathProperty;
                 } else {
-                    arr[0] = 'specific.' + arr[0];
+                    pathProperty = 'specific.' + pathProperty;
                 }
             }
 
-            if (!obj) { obj = ""; }
+            if (typeof activateFront === 'undefined' || activateFront) {
 
-            if (arr[3]) {
-                claimSource = ' data-edit-attr-source-' + arr[2] + '="' + arr[3] + '" ';
-            }
+                if (!object) { object = ""; }
 
-            if (arr[1]) {
-                return obj + '" data-edit="true"' + claimSource + 'data-edit-attr="true" data-edit-attr-name-' + arr[2] + '="true" data-edit-attr-path-' + arr[2] + '="' + arr[0] + '" data-edit-attr-file-' + arr[2] + '="' + file;
+                if (typeof markup !== 'undefined') {
+                    if (sourceFunction) {
+                        claimSource = ' data-edit-source="' + sourceFunction + '" ';
+                    }
+                    if (auth) {
+                        result = '<' + markup + claimSource + 'data-edit="true" data-edit-type="' + type + '" data-edit-file="' + file + '" data-edit-path="' + pathProperty + '">' +  object + "</" + markup + ">";
+                    } else {
+                        result = '<' + markup + ' data-edit-path="' + pathProperty + '">' +  object + "</" + markup + ">";
+                    }
+                } else {
+                    if (sourceFunction) {
+                        claimSource = ' data-edit-attr-source-' + property + '="' + sourceFunction + '" ';
+                    }
+                    if (property !== '$text') {               
+                        if (auth) {
+                            result = object + '" data-edit="true"' + claimSource + 'data-edit-attr="true" data-edit-attr-name-' + property + '="true" data-edit-attr-path-' + property + '="' + pathProperty + '" data-edit-attr-file-' + property + '="' + file;
+                        } else {
+                            result = object + '" data-edit-attr-path-' + property + '="' + pathProperty;
+                        }        
+                    } else {
+                        if (auth) {
+                            result = ' data-edit="true"' + claimSource + 'data-edit-attr="true" data-edit-attr-name-' + property + '="true" data-edit-attr-path-' + property + '="' + pathProperty + '" data-edit-attr-file-' + property + '="' + file + '">' + object;
+                        } else {
+                            result = ' data-edit-attr-path-' + property + '="' + pathProperty + '">' + object;
+                        }   
+                    }
+                }
+
             } else {
-                return obj + '" data-edit-attr-path-' + arr[2] + '="' + arr[0];
+                result = object;
             }
+
+            return result;
+        }
+
+        variation.et = variation.editText = function (object, arr) {
+            return setFilter(object, arr[1], arr[0], arr[2], undefined, "span", "text");
+        };
+
+        variation.eh = variation.editHtml = function (object, arr) {
+            return setFilter(object, arr[1], arr[0], arr[2], undefined, "div", "html");
+        };
+
+        variation.ea = variation.editAttr = function (object, arr) {
+            return setFilter(object, arr[1], arr[0], arr[3], arr[2]);
         };
 
         return variation;
     };
 
-    publics.sockets = function (socket, NA, auth) {
+    publics.sockets = function (socket, NA, auth, activateDemo) {
         var fs = NA.modules.fs,
             path = NA.modules.path;
 
@@ -188,32 +154,34 @@ var website = {};
                 files = publics.orderByFile(options);
                 
                 for (var file in files) {
-                    try {
-                        object = require(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, file));
-                        if (object) {
-                            for (var i = 0, l = files[file].length; i < l; i++) {
-                                key = files[file][i].path.split('.').slice(1).join('.');
+                    if (files.hasOwnProperty(file)) {
+                        try {
+                            object = require(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, file));
+                            if (object) {
+                                for (var i = 0, l = files[file].length; i < l; i++) {
+                                    key = files[file][i].path.split('.').slice(1).join('.');
 
-                                if (publics.getLookup(object, key) || publics.getLookup(object, key) === "") {
-                                    publics.setLookup(object, key, String(files[file][i].value).toString());
+                                    //if (publics.getLookup(object, key) || publics.getLookup(object, key) === "") {
+                                        publics.setLookup(object, key, String(files[file][i].value).toString());
 
-                                    if (!files[file][i].source || typeof files[file][i].source === 'string') {
-                                        socket.broadcast.emit('update-variation', {
-                                            path: files[file][i].path,
-                                            value: files[file][i].value,
-                                            source: files[file][i].source,
-                                            type: files[file][i].type,
-                                            attrName: files[file][i].attrName
-                                        });
-                                    }
+                                        if (!files[file][i].source || typeof files[file][i].source === 'string') {
+                                            socket.broadcast.emit('update-variation', {
+                                                path: files[file][i].path,
+                                                value: files[file][i].value,
+                                                source: files[file][i].source,
+                                                type: files[file][i].type,
+                                                attrName: files[file][i].attrName
+                                            });
+                                        }
+                                    //}
                                 }
                             }
+                            if (typeof activateDemo === 'undefined' || activateDemo) {
+                                fs.writeFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, file), JSON.stringify(object, undefined, "    "));
+                            }
+                        } catch (exception) {
+                            console.log(exception);
                         }
-                        if (!NA.webconfig._demo) { // Adding part for avoid recording for demo mode.
-                            fs.writeFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, file), JSON.stringify(object, undefined, "    "));
-                        }
-                    } catch (exception) {
-                        console.log(exception);
                     }
                 }   
             }
