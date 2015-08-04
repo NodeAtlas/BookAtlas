@@ -163,7 +163,7 @@
             "separator": "ou",
             "radioButton": "<ins>Activer</ins><del>Désactiver</del> le <b>mode édition</b>",
             "title": "Éditer du contenu",
-            "content": "<p>Maintenir les touches <strong>ctrl + s</strong></p>"
+            "content": "<p>Appuyez sur <strong>ctrl + s</strong> !</p>"
         }
     },
     "aboutBook": {
