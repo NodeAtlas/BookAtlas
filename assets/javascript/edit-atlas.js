@@ -149,13 +149,16 @@ var website = website || {},
 
     publics.addhocEditAtlas = function () {
         $("select").each(function () {
-            var $opener = $(this);
+            var $opener = $(this),
+                $subpart = $opener.find("[data-edit=true]");
 
-            $opener.removeAttr("data-addhoc").attr("data-addhoc", true);
+            $opener.removeAttr("data-addhoc");
+
+            if ($subpart.length) {
+                $opener.attr("data-addhoc", true);
+            }
 
             function setPropagation() {
-                var $subpart = $opener.find("[data-edit=true]");
-
                 if ($subpart.length > 0 && $html.hasClass("is-editable")) {
                     $subpart.each(function () {
                         privates.loadData($(this), undefined);
@@ -167,13 +170,16 @@ var website = website || {},
             $opener.unbind("click", setPropagation).bind("click", setPropagation);
         });
         $("a").each(function () {
-            var $opener = $(this);
+            var $opener = $(this),
+                $subpart = $opener.find("[data-edit=true]");
 
-            $opener.removeAttr("data-addhoc").attr("data-addhoc", true);
+            $opener.removeAttr("data-addhoc");
+
+            if ($subpart.length) {
+                $opener.attr("data-addhoc", true);
+            }
 
             function setPropagation() {
-                var $subpart = $opener.find("[data-edit=true]");
-
                 if ($subpart.length > 0 && $html.hasClass("is-editable")) {
                     $subpart.each(function () {
                         privates.loadData($(this), undefined);
@@ -192,8 +198,6 @@ var website = website || {},
             accept = false;
 
         if ($html.hasClass("is-editable")) {
-
-            console.log($editedObject.data("edit-type"));
 
             if (typeof e !== 'undefined') {
                 if (document.activeElement.tagName === 'A') {
@@ -226,7 +230,8 @@ var website = website || {},
 
                 if (!$editedObject.data('edit-source') || typeof $editedObject.data('edit-source') === 'string') {
                     $clone.find("textarea").keyup(function () {
-                        $('[data-edit-path='+ privates.cleanPath($editedObject.data('edit-path')) + ']').html($clone.find("textarea").val());
+                        var $this = $('[data-edit-path='+ privates.cleanPath($editedObject.data('edit-path')) + ']');
+                        $this.html($clone.find("textarea").val());
                         if (typeof $editedObject.data('edit-source') === 'string') {
                             eval($editedObject.data('edit-source'));
                         }
@@ -234,8 +239,10 @@ var website = website || {},
                 }
 
                 $clone.find(".cancel").click(function () {
+                    var $this;
                     if (!$html.hasClass("is-editable")) {
-                        $('[data-edit-path='+ privates.cleanPath($editedObject.data('edit-path')) + ']').html($clone.find("label").attr("data-cancel"));
+                        $this = $('[data-edit-path='+ privates.cleanPath($editedObject.data('edit-path')) + ']');
+                        $this.html($clone.find("label").attr("data-cancel"));
                         if (typeof $editedObject.data('edit-source') === 'string') {
                             eval($editedObject.data('edit-source'));
                         }
@@ -283,8 +290,10 @@ var website = website || {},
                         });
                         for (var i in CKEDITOR.instances) {
                             CKEDITOR.instances[i].on('change', function (e, a) {
+                                var $this;
                                 $clone.find("textarea").val(CKEDITOR.instances[i].getData());
-                                $('[data-edit-path='+ privates.cleanPath($editedObject.data('edit-path')) + ']').html(CKEDITOR.instances[i].getData());
+                                $this = $('[data-edit-path='+ privates.cleanPath($editedObject.data('edit-path')) + ']');
+                                $this.html(CKEDITOR.instances[i].getData());
                                 if (typeof $editedObject.data('edit-source') === 'string') {
                                     eval($editedObject.data('edit-source'));
                                 }
@@ -354,7 +363,8 @@ var website = website || {},
                 }
                 if (!$editedObject.data('edit-source') || typeof $editedObject.data('edit-source') === 'string') {
                     $clone.find("input").keyup(function () {
-                        $('[data-edit-path='+ privates.cleanPath($editedObject.data('edit-path')) + ']').html($clone.find("input").val());
+                        var $this = $('[data-edit-path='+ privates.cleanPath($editedObject.data('edit-path')) + ']');
+                        $this.html($clone.find("input").val());
                         if (typeof $editedObject.data('edit-source') === 'string') {
                             eval($editedObject.data('edit-source'));
                         }
@@ -362,8 +372,10 @@ var website = website || {},
                 }
 
                 $clone.find(".cancel").click(function () {
+                    var $this;
                     if (!$html.hasClass("is-editable")) {
-                        $('[data-edit-path='+ privates.cleanPath($editedObject.data('edit-path')) + ']').html($clone.find("label").attr("data-cancel"));
+                        $this = $('[data-edit-path='+ privates.cleanPath($editedObject.data('edit-path')) + ']');
+                        $this.html($clone.find("label").attr("data-cancel"));
                         if (typeof $editedObject.data('edit-source') === 'string') {
                             eval($editedObject.data('edit-source'));
                         }
@@ -415,35 +427,40 @@ var website = website || {},
                                         $clone.find("label").attr("data-cancel", $editedObject.attr(name).trim());
                                     }
                                 }
+                                var currentName = currentName || publics.clone(name);
                                 if (!$editedObject.data('edit-attr-source-' + name) || typeof $editedObject.data('edit-attr-source-' + name) === 'string') {
-                                    var currentName = currentName || publics.clone(name);
                                     $clone.find("input").keyup(function () {
+                                        var $this;
                                         if (currentName === '$text') {
-                                            $('[data-edit-attr-path-' + privates.cleanName(currentName) + '='+ privates.cleanPath($editedObject.data('edit-attr-path-' + currentName)) + ']').html($(this).val());         
+                                            $this = $('[data-edit-attr-path-' + privates.cleanName(currentName) + '='+ privates.cleanPath($editedObject.data('edit-attr-path-' + currentName)) + ']');
+                                            $this.html($(this).val());         
                                         } else {
-                                            $('[data-edit-attr-path-' + currentName + '='+ privates.cleanPath($editedObject.data('edit-attr-path-' + currentName)) + ']').attr(currentName, $(this).val());
+                                            $this = $('[data-edit-attr-path-' + currentName + '='+ privates.cleanPath($editedObject.data('edit-attr-path-' + currentName)) + ']');
+                                            $this.attr(currentName, $(this).val());
                                         }
                                         if (typeof $editedObject.data('edit-attr-source-' + currentName) === 'string') {
                                             eval($editedObject.data('edit-attr-source-' + currentName));
                                         }
                                     });
-                                    $clone.find(".cancel").click(function () {
-                                        if (!$html.hasClass("is-editable")) {
-                                            if (currentName === '$text') {
-                                                $('[data-edit-attr-path-' + privates.cleanName(currentName) + '='+ privates.cleanPath($editedObject.data('edit-attr-path-' + currentName)) + ']').html($(this).parents(".text:first").find("label").attr("data-cancel"));
-                                            } else {
-                                                $('[data-edit-attr-path-' + currentName + '='+ privates.cleanPath($editedObject.data('edit-attr-path-' + currentName)) + ']').attr(currentName, $(this).parents(".text:first").find("label").attr("data-cancel"));
-                                            }
-                                            if (typeof $editedObject.data('edit-attr-source-' + currentName) === 'string') {
-                                                eval($editedObject.data('edit-attr-source-' + currentName));
-                                            }
-                                            $(this).parents(".text:first").remove();
-                                            privates.closePopupIfAllCancel();
-                                        }
-                                    });
                                 }
+                                $clone.find(".cancel").click(function () {
+                                    var $this;
+                                    if (!$html.hasClass("is-editable")) {
+                                        if (currentName === '$text') {
+                                            $this = $('[data-edit-attr-path-' + privates.cleanName(currentName) + '='+ privates.cleanPath($editedObject.data('edit-attr-path-' + currentName)) + ']');
+                                            $this.html($(this).parents(".text:first").find("label").attr("data-cancel"));
+                                        } else {
+                                            $this = $('[data-edit-attr-path-' + currentName + '='+ privates.cleanPath($editedObject.data('edit-attr-path-' + currentName)) + ']');
+                                            $this.attr(currentName, $(this).parents(".text:first").find("label").attr("data-cancel"));
+                                        }
+                                        if (typeof $editedObject.data('edit-attr-source-' + currentName) === 'string') {
+                                            eval($editedObject.data('edit-attr-source-' + currentName));
+                                        }
+                                        $(this).parents(".text:first").remove();
+                                        privates.closePopupIfAllCancel();
+                                    }
+                                });
                             }
-
                         }
                     }());
                 }
@@ -568,14 +585,17 @@ var website = website || {},
 
     publics.broadcastContent = function () {
         publics.socket.on('update-variation', function (data) {
+            var $this;
             if (data.type === 'html' || data.type === 'text') {
                 $('[data-edit-path=' + privates.cleanPath(data.path) + ']').html(data.value);
             } 
             if (data.type === 'attr') {
                 if (data.attrName === '$text') {
-                    $('[data-edit-attr-path-' + privates.cleanName(data.attrName) + '=' + privates.cleanPath(data.path) + ']').html(data.value);
+                    $this = $('[data-edit-attr-path-' + privates.cleanName(data.attrName) + '=' + privates.cleanPath(data.path) + ']');
+                    $this.html(data.value);
                 } else {
-                    $('[data-edit-attr-path-' + data.attrName + '=' + privates.cleanPath(data.path) + ']').attr(data.attrName, data.value);
+                    $this = $('[data-edit-attr-path-' + data.attrName + '=' + privates.cleanPath(data.path) + ']');
+                    $this.attr(data.attrName, data.value);
                 }
             }
             eval(data.source);
@@ -589,7 +609,7 @@ var website = website || {},
                 e = e || event;
                 publics.keys[e.keyCode] = true;
 
-                if (publics.keys[17] && publics.keys[83]) {
+                if (publics.keys[17] && publics.keys[83] && privates.activate) {
                     e.preventDefault();
                     //if (document.activeElement.tagName !== 'TEXTAREA' && document.activeElement.tagName !== 'INPUT') {
                         if (!$html.hasClass("is-editable")) {
@@ -615,6 +635,7 @@ var website = website || {},
     };
 
     publics.editAtlas = function (onKeyup, onKeyDown) {
+        privates.activate = $("[data-edit=true]").length;
         publics.editContent();
         publics.broadcastContent();
         publics.sourceContent();
