@@ -14,6 +14,7 @@ var website = website || {},
 
     publics.keys = {};
     publics.ctrl = {};
+    privates.auto = false;
 
     privates.toDash = function(text) {
         return text.replace(/([A-Z])/g, function ($1) { return "-" + $1.toLowerCase(); });
@@ -391,10 +392,12 @@ var website = website || {},
 
             /* Close if click on item */
             setTimeout(function() {
-                if (typeof privates.onKeyup !== 'undefined') {
-                    privates.onKeyup();
+                if (!privates.autoQuit) {
+                    if (typeof privates.onKeyup !== 'undefined') {
+                        privates.onKeyup();
+                    }
+                    $html.removeClass("is-editable");
                 }
-                $html.removeClass("is-editable");
             }, 500);
             /* --- */
 
@@ -610,6 +613,11 @@ var website = website || {},
 
             if (publics.ctrl[83] && publics.keys[83] && privates.activate) {
                 e.preventDefault();
+                if (!privates.auto) {
+                    privates.auto = true;
+                    privates.timeout = setTimeout(function () {
+                        privates.autoQuit = true;
+                    }, 1000);
 
                 //if (document.activeElement.tagName !== 'TEXTAREA' && document.activeElement.tagName !== 'INPUT') {
                     if (!$html.hasClass("is-editable")) {
@@ -625,12 +633,24 @@ var website = website || {},
                         $html.removeClass("is-editable");
                     }
                 //}
+                }
             }
         });
         $window.on("keyup", function (e) {
             e = e || event;
             publics.keys[e.keyCode] = false;
             publics.ctrl[e.keyCode] = false;
+            privates.auto = false;
+            clearTimeout(privates.timeout);
+
+            if (privates.autoQuit) {
+                privates.autoQuit = false;
+                if (typeof onKeyup !== 'undefined') {
+                    privates.onKeyup = onKeyup;
+                    onKeyup();
+                }
+                $html.removeClass("is-editable");
+            }
         });
     };
 
