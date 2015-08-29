@@ -9,7 +9,7 @@ var website = {};
             result = object;
 
         if (typeof key === 'string' || typeof key === "number") {
-            fields = ("" + key).replace(/\[(.*?)\]/, function (m, key) {
+            fields = ("" + key).replace(/\[(.*?)\]/g, function (m, key) {
                 return '.' + key;
             }).split('.');
         }
@@ -30,7 +30,7 @@ var website = {};
 
     publics.getLookup = function (object, key) {
         if (typeof key === 'string' || typeof key === "number") {
-            key = ("" + key).replace(/\[(.*?)\]/, function (m, key) {
+            key = ("" + key).replace(/\[(.*?)\]/g, function (m, key) {
                 return '.' + key;
             }).split('.');
         }
@@ -74,7 +74,7 @@ var website = {};
                 result;
 
             if (typeof object === 'string') {
-                if (pathProperty.split(".")[0] === "specific") {
+                if (pathProperty.split(".")[0] !== "common") {
                     file = auth;
                 } else {
                     file = NA.webconfig.commonVariation;
