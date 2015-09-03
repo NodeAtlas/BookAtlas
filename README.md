@@ -1,8 +1,8 @@
 # BookAtlas #
 
-Version : 0.22.0 (Beta)
+Version : 0.23.0 (Beta)
 
-NodeAtlas Version minimale : 0.45.x
+NodeAtlas Version minimale : 1.0.x
 
 **For an international version of this README.md, [see below](#international-version).**
 
