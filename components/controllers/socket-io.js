@@ -1,20 +1,11 @@
 var website = {};
 
 (function (publics) {
-    "use strict";
 
-    publics.events = function (socketio, NA, asynchroneCallback) {
-        var params = {};
-
-        params.socketio = socketio;
-        params.NA = NA;
-
-        asynchroneCallback(params);
-    };
-
-    publics.initialisation = function (socketio, NA, callback) {
-        var optionIo = (NA.webconfig.urlRelativeSubPath) ? { path: NA.webconfig.urlRelativeSubPath + '/socket.io', secure: ((NA.webconfig.httpSecure) ? true : false) } : undefined,
-            socketio = socketio(NA.server, optionIo),
+    publics.initialisation = function (socketioFunc, callback) {
+        var NA = this,
+            optionIo = (NA.webconfig.urlRelativeSubPath) ? { path: NA.webconfig.urlRelativeSubPath + '/socket.io', secure: ((NA.webconfig.httpSecure) ? true : false) } : undefined,
+            socketio = socketioFunc(NA.server, optionIo),
             cookie = NA.modules.cookie,
             cookieParser = NA.modules.cookieParser;
 
@@ -31,15 +22,15 @@ var website = {};
 
             NA.sessionStore.load(handshakeData.sessionID, function (error, session) {
                 if (error || !session) {
-                    return next(new Error('Aucune session récupérée.'));
+                    return next(new Error('No session found.'));
                 } else {
-                    handshakeData.session = session;                    
+                    handshakeData.session = session;
                     next();
                 }
             });
         });
 
-        callback(socketio, NA);
+        callback(socketio);
     };
 
 }(website));

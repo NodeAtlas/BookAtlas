@@ -18,13 +18,13 @@ website.components = {};
 
 	publics.setConfigurations = function (next) {
 		var NA = this,
-			socketio = NA.modules.socketio;
+			socketio = NA.modules.socketio,
+			params = {};
 
-		website.components.socketio.initialisation(socketio, NA, function (socketio, NA) {
-			website.components.socketio.events(socketio, NA, function (params) {
-				website.asynchrones.call(NA, params);
-				next();
-			});
+		website.components.socketio.initialisation.call(NA, socketio, function (socketio) {
+			params.socketio = socketio;
+			website.asynchrones.call(NA, params);
+			next();
 		});
 	};
 
@@ -33,7 +33,7 @@ website.components = {};
 			socketio = params.socketio;
 
 		socketio.sockets.on('connection', function (socket) {
-			website.components.editAtlas.sockets(socket, NA, true, !NA.webconfig._modeDemo);
+			website.components.editAtlas.sockets.call(NA, socket, true, !NA.webconfig._modeDemo);
 
 			socket.on('load-sections', function (dataEmit) {
 		        var data = {},
@@ -46,7 +46,7 @@ website.components = {};
 		        /* Asynchrone addon for editAtlas render */
 				currentVariation.fs = dataEmit.lang + "/" + dataEmit.variation + ".json";
 				currentVariation.fc = dataEmit.lang + "/" + NA.webconfig.commonVariation;
-				currentVariation = website.components.editAtlas.setFilters(currentVariation, NA);
+				currentVariation = website.components.editAtlas.setFilters.call(NA, currentVariation);
 
 				/* Asynchrone Top Components */
 		        data.topPart = {};
@@ -88,7 +88,7 @@ website.components = {};
 			variation.fc = ((variation.languageCode) ? variation.languageCode + "/": "") + variation.webconfig.commonVariation;
 		/*}*/
 
-		variation = website.components.editAtlas.setFilters(variation, NA);
+		variation = website.components.editAtlas.setFilters.call(NA, variation);
 
 		mainCallback(variation);
 	};
