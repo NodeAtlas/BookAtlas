@@ -28,6 +28,8 @@
     },
     "editableArea": {
         "close": "Fermer",
+        "switchBlock": "Contenu<br>complet",
+        "switchInline": "Annuler les modifications",
         "wysiwyg": "(Éditeur)",
         "plainText": "(Source)",
         "dockLeft": "⇤",

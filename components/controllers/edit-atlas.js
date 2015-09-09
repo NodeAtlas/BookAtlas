@@ -312,6 +312,35 @@ var website = {};
     };
 
     /**
+     * Save file and change it into all browser open.
+     * @param  {Object} NA            NodeAtlas full object.
+     * @param  {Object} socket        Socket for well working.
+     * @param  {Object} options       Data from Client-side.
+     * @param  {boolean} activateDemo Allow you to save or not into variation file.
+     */
+    publics.updateBlock = function (NA, socket, options, activateDemo) {
+        var fs = NA.modules.fs,
+            path = NA.modules.path,
+            objectCommon = JSON.parse(options.contentCommon),
+            objectSpecific = JSON.parse(options.contentSpecific);
+
+        try {
+            if (typeof activateDemo === 'undefined' || activateDemo) {
+                fs.writeFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, options.fileCommon), JSON.stringify(objectCommon, undefined, "    "));
+                fs.writeFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, options.fileSpecific), JSON.stringify(objectSpecific, undefined, "    "));
+                socket.emit('update-block', {
+                    status: true
+                });
+                socket.broadcast.emit('update-block', {
+                    status: true
+                });
+            }
+        } catch (exception) {
+            NA.log(exception);
+        }
+    };
+
+    /**
      * Get a value from variation file and not from Client DOM
      * @param  {Object} NA      NodeAtlas full object.
      * @param  {Object} socket  Socket for well working.
@@ -337,7 +366,33 @@ var website = {};
     };
 
     /**
-     * [sockets description]
+     * Get the file from variation file.
+     * @param  {Object} NA      NodeAtlas full object.
+     * @param  {Object} socket  Socket for well working.
+     * @param  {[type]} options Data from Client-side.
+     */
+    publics.sourceBlock = function (NA, socket, options) {
+        var objectCommon,
+            objectSpecific,
+            path = NA.modules.path;
+
+        console.log(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, options.fileCommon));
+        console.log(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, options.fileSpecific));
+
+        try {
+            objectCommon = require(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, options.fileCommon));
+            objectSpecific = require(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, options.fileSpecific));
+            socket.emit('source-block', {
+                fileCommon: JSON.stringify(objectCommon, undefined, "    "),
+                fileSpecific: JSON.stringify(objectSpecific, undefined, "    ")
+            });
+        } catch (exception) {
+            NA.log(exception);
+        }
+    };
+
+    /**
+     * Socket mechanism.
      * @param  {Object} socket        Socket for well working.
      * @param  {boolean} auth         Where register value.
      * @param  {boolean} activateDemo Allow you to save or not into variation file.
@@ -354,6 +409,18 @@ var website = {};
         socket.on('source-variation', function (options) {
             if (auth) {
                 publics.sourceVariation(NA, socket, options);
+            }
+        });
+
+        socket.on('update-block', function (options) {
+            if (auth) {
+                publics.updateBlock(NA, socket, options, activateDemo);
+            }
+        });
+
+        socket.on('source-block', function (options) {
+            if (auth) {
+                publics.sourceBlock(NA, socket, options);
             }
         });
     };

@@ -1,31 +1,57 @@
-<div class="popup-edit-atlas">
-	<section class="popup-content">
-		<div class="close"><input type="button" class="next-variation-change" value="<%- ea(common, ['editableArea.close', fc, 'value']) %>"></div>
-		<h1><%- et(common, ['editableArea.title', fc]) %></h1>
-		<div id="wysiwyg"></div>
-		<div class="templates">
-			<div class="template html">
-				<hr>
-				<label><span class="info"></span> <ins class="wysiwyg link"><%- et(common, ['editableArea.wysiwyg', fc]) %></ins><del class="plaintext link"><%- et(common, ['editableArea.plainText', fc]) %></del> <span class="cancel link"><%- et(common, ['editableArea.cancelUpdate', fc]) %></span></label>
-				<textarea cols="30" rows="6"></textarea>
-				<span class="source"><em><%- et(common, ['editableArea.sourceInfo', fc]) %></em></span>
+<div class="edit-atlas">
+	<div class="edit-atlas--popup">
+		<section class="edit-atlas--inline">
+			<div class="edit-atlas--close">
+				<button class="edit-atlas--close--switch-block"><%- et(common, ['editableArea.switchBlock', fc]) %></button>
+				<input type="button" class="edit-atlas--close--button" value="<%- ea(common, ['editableArea.close', fc, 'value']) %>">
 			</div>
-			<div class="template text">
-				<hr>
-				<label><span class="info"></span> <span class="cancel link"><%- et(common, ['editableArea.cancelUpdate', fc]) %></span></label>
-				<input type="text">
-				<span class="source"><em><%- et(common, ['editableArea.sourceInfo', fc]) %></em></span>
+			<h1><%- et(common, ['editableArea.title', fc]) %></h1>
+			<div id="edit-atlas--wysiwyg" class="edit-atlas--wysiwyg"></div>
+			<div class="edit-atlas--templates">
+				<div class="edit-atlas--template as-html">
+					<hr>
+					<label><span class="edit-atlas--info"></span> <ins class="edit-atlas--wysiwyg as-link"><%- et(common, ['editableArea.wysiwyg', fc]) %></ins><del class="edit-atlas--plaintext as-link"><%- et(common, ['editableArea.plainText', fc]) %></del> <span class="edit-atlas--cancel as-link"><%- et(common, ['editableArea.cancelUpdate', fc]) %></span></label>
+					<textarea cols="30" rows="6"></textarea>
+					<span class="edit-atlas--source"><em><%- et(common, ['editableArea.sourceInfo', fc]) %></em></span>
+				</div>
+				<div class="edit-atlas--template as-text">
+					<hr>
+					<label><span class="edit-atlas--info"></span> <span class="edit-atlas--cancel as-link"><%- et(common, ['editableArea.cancelUpdate', fc]) %></span></label>
+					<input type="text">
+					<span class="edit-atlas--source"><em><%- et(common, ['editableArea.sourceInfo', fc]) %></em></span>
+				</div>
+				<div class="edit-atlas--insert"></div>
 			</div>
-			<div class="insert"></div>
-		</div>
-		<hr>
-		<div id="wysiwyg-bottom"></div>
-		<div class="submit">
-			<div class="to-left"><%- et(common, ['editableArea.dockLeft', fc]) %></div>
-			<div class="anchor"><%- et(common, ['editableArea.anchor', fc]) %></div>
-			<div class="to-right"><%- et(common, ['editableArea.dockRight', fc]) %></div>
-			<label><input type="button" class="next-variation-change" value="<%- ea(common, ['editableArea.next', fc, 'value']) %>"></label>
-			<label><input type="button" class="update-variation-change" value="<%- ea(common, ['editableArea.submit', fc, 'value']) %>"></label>
-		</div>
-	</section>
+			<hr>
+			<div id="edit-atlas--wysiwyg-bottom" class="edit-atlas--wysiwyg-bottom"></div>
+			<div class="edit-atlas--submit">
+				<div class="edit-atlas--to-left"><%- et(common, ['editableArea.dockLeft', fc]) %></div>
+				<div class="edit-atlas--anchor"><%- et(common, ['editableArea.anchor', fc]) %></div>
+				<div class="edit-atlas--to-right"><%- et(common, ['editableArea.dockRight', fc]) %></div>
+				<label><input type="button" class="edit-atlas--close--button" value="<%- ea(common, ['editableArea.next', fc, 'value']) %>"></label>
+				<label><input type="button" class="edit-atlas--update" value="<%- ea(common, ['editableArea.submit', fc, 'value']) %>"></label>
+			</div>
+		</section>
+		<section class="edit-atlas--block">
+			<div class="edit-atlas--close"><input type="button" class="edit-atlas--close--button" value="<%- ea(common, ['editableArea.close', fc, 'value']) %>"></div>
+			<h1><%- et(common, ['editableArea.title', fc]) %></h1>
+			<div class="edit-atlas--variations" data-variation-common="<%- ((languageCode) ? languageCode + '/' : '') + webconfig.commonVariation %>" data-variation-specific="<%- ((languageCode) ? languageCode + '/' : '') + currentRouteParameters.variation %>">
+				<div class="edit-atlas--variations--common">
+					<span class="edit-atlas--variations--common--title">Fichier <span class="edit-atlas--variations--common--file"><%- ((languageCode) ? languageCode + '/' : '') + webconfig.commonVariation %></span></span>
+					<textarea cols="30" rows="12"></textarea>
+				</div>
+				<div class="edit-atlas--variations--specific">
+					<span class="edit-atlas--variations--specific--title">Fichier <span class="edit-atlas--variations--specific--file"><%- ((languageCode) ? languageCode + '/' : '') + currentRouteParameters.variation %></span></span>
+					<textarea cols="30" rows="12"></textarea>
+				</div>
+			</div>
+			<div class="edit-atlas--submit">
+				<div class="edit-atlas--to-left"><%- et(common, ['editableArea.dockLeft', fc]) %></div>
+				<div class="edit-atlas--anchor"><%- et(common, ['editableArea.anchor', fc]) %></div>
+				<div class="edit-atlas--to-right"><%- et(common, ['editableArea.dockRight', fc]) %></div>
+				<label><button class="edit-atlas--close--switch-inline"><%- et(common, ['editableArea.switchInline', fc]) %></button></label>
+				<label><input type="button" class="edit-atlas--full--update" value="<%- ea(common, ['editableArea.submit', fc, 'value']) %>"></label>
+			</div>
+		</section>
+	</div>
 </div>
