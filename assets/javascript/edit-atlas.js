@@ -80,7 +80,10 @@ var website = website || {},
             $(this).css("cursor", "");
         }).mousedown(function (e) {
             e.stopPropagation();
-            if ($(e.target).hasClass('edit-atlas--popup')) {
+            if ($(e.target).hasClass('edit-atlas--popup') ||
+                $(e.target).hasClass('edit-atlas--inline') ||
+                $(e.target).hasClass('edit-atlas--block'))
+            {
                 $popup.removeClass("is-docked-right");
                 $popup.removeClass("is-docked-left");
                 $.data(this, "draggable", true);
