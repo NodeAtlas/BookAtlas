@@ -253,6 +253,8 @@ var website = website || {},
             function createEditor() {
                 CKEDITOR.disableAutoInline = true;
                 CKEDITOR.inline($wysiwyg.parents(".as-html:first").find("textarea")[0], {
+                    enterMode : CKEDITOR.ENTER_BR,
+                    shiftEnterMode : CKEDITOR.ENTER_P,
                     extraPlugins: 'sharedspace',
                     entities_latin: false,
                     entities: false,
