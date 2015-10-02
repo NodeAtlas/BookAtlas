@@ -567,6 +567,7 @@ var website = website || {},
                 contentSpecific: $(".edit-atlas--variations--specific textarea").val()
             };
             publics.sendBlock(options);
+            publics.sourceBlock();
         });
 
         $(".edit-atlas--update").click(function () {

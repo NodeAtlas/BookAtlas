@@ -1,4 +1,43 @@
-		<footer id="footer" class="footer ui">
+		<footer class="footer">
+			<% if (typeof component !== 'undefined' && component.members === 'true') { %>
+				<% if (!session.account) { %>
+					<form class="form-account-login" action="" method="post">
+						<div class="field email">
+							<label for="account-login-email">Email</label>
+							<input type="text" id="account-login-email" class="account-login-email" name="email" placeholder="Email"
+							   data-val="true"
+					           data-rule-required="true"
+					           data-msg-required="Le champ email est vide."
+					           data-rule-email="true"
+					           data-msg-email="Le champ email est incorrecte.">
+				           	<span data-valmsg-for="email" data-valmsg-replace="true"></span>
+						</div>
+
+						<div class="field password">
+							<label for="account-login-password">Mot de passe</label>
+							<input type="password" id="account-login-password" class="account-login-password" name="password" placeholder="Mot de passe"
+								data-val="true"
+								data-rule-required="true"
+	             				data-msg-required="Le champ password est vide.">
+							<span data-valmsg-for="password" data-valmsg-replace="true"></span>
+						</div>
+
+						<div class="submit">
+							<label><button class="account-login-button">Connexion</button></label>
+							<div class="errors">
+								<div class="empty">Les email/mot de passe sont invalides.</div>
+							</div>
+						</div>
+					</form>
+				<% } else { %>
+					<form class="form-account-logout" action="" method="post">
+						<div class="submit">
+							<label><button class="account-logout-button">Déconnexion</button></label>
+						</div>
+					</form>
+				<% } %>
+			<% } else { %>
 			<div><%- et(common, ['main', fc]) %></div>
 			<div class="copyright"><%- et(common, ['copyright', fc]) %> - <%- et(common.engine, ['engine', fc]) %></div>
+			<% } %>
 		</footer>

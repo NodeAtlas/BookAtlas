@@ -1,44 +1,25 @@
-		<li class="large section ui <%= specific.opened.skills %>" data-url="<%= common.url.skills %>">
+		<li class="large section <%= specific.opened.skills %>" data-url="<%= common.url.skills %>">
 			<section class="about skills content">
 				<h1>
 					<ins class="collapse icon code"></ins>
 					<span><%- et(common, ['aboutSkills.title', fc]) %></span>
 				</h1>
 
-				<div class="vertical scrollable ui">
-					<div class="intro ui">
+				<div class="vertical scrollable">
+					<div class="intro">
 						<%- eh(common, ['aboutSkills.intro', fc]) %>
 					</div>
 
-					<div class="before panel ui">
+					<div class="before panel">
 						<h2><%- et(common, ['aboutSkills.beforePanel.title', fc]) %></h2>
 						<%- eh(common, ['aboutSkills.beforePanel.content', fc]) %>
 					</div>
 
-					<div class="complete ui">
-						<h2><%- et(common, ['aboutSkills.about.title', fc]) %></h2>
-						<%- eh(common, ['aboutSkills.about.content', fc]) %>
-
-						<h2><%- et(common, ['aboutSkills.clientSide.title', fc]) %></h2>
-						<%- eh(common, ['aboutSkills.clientSide.content', fc]) %>
-
-						<h2><%- et(common, ['aboutSkills.seo.title', fc]) %></h2>
-						<%- eh(common, ['aboutSkills.seo.content', fc]) %>
-
-						<h2><%- et(common, ['aboutSkills.serverSide.title', fc]) %></h2>
-						<%- eh(common, ['aboutSkills.serverSide.content', fc]) %>
-
-						<h2><%- et(common, ['aboutSkills.framework.title', fc]) %></h2>
-						<%- eh(common, ['aboutSkills.framework.content', fc]) %>
-
-						<h2><%- et(common, ['aboutSkills.webserver.title', fc]) %></h2>
-						<%- eh(common, ['aboutSkills.webserver.content', fc]) %>
-
-						<h2><%- et(common, ['aboutSkills.tools.title', fc]) %></h2>
-						<%- eh(common, ['aboutSkills.tools.content', fc]) %>
+					<div class="complete">
+						<%- eh(common, ['aboutSkills.content', fc]) %>
 					</div>
 
-					<nav class="ui return">
+					<nav class="return">
 						<a href="javascript:;" title="<%- ea(common, ['menu.title', fc, 'title']) %>"><%- et(common, ['menu.content', fc]) %></a>
 					</nav>
 				</div>

@@ -7,22 +7,18 @@
 		<title><%= specific.titlePage %></title>
 
 		<base href="<%= urlBasePath %>" />
-		
+
 		<meta name="description" content="<%= specific.description %>" />
 		<meta name="geo.placename" content="<%= common.placename %>" />
-		
+
 		<meta name="robots" content="<%= webconfig._indexFollow %>" />
-		
+
 		<!--[if IE]><meta name="viewport" content="width=device-width, user-scalable=no" /><![endif]-->
 		<!--[if !IE]><!--><meta name="viewport" content="initial-scale=1.0, user-scalable=no" /><!--<![endif]-->
-
-		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700">
 
 		<% if (webconfig._minified) { %>
 		<link rel="stylesheet" type="text/css" href="<%- urlBasePath %>stylesheets/common.min.css" />
 		<% } else { %>
 		<link rel="stylesheet" type="text/css" href="<%- urlBasePath %>stylesheets/edit-atlas.css" />
 		<link rel="stylesheet" type="text/css" href="<%- urlBasePath %>stylesheets/common.css" />
-		<link rel="stylesheet" type="text/css" href="<%- urlBasePath %>stylesheets/common-sm.css" media="screen and (min-width: 768px)" />
-		<link rel="stylesheet" type="text/css" href="<%- urlBasePath %>stylesheets/common-md.css" media="screen and (min-width: 1200px)" />
 		<% } %>

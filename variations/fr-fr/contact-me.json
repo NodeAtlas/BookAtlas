@@ -1,6 +1,26 @@
 {
-	"titlePage": "Bruno Lesieur (Haeresis), intégrateur web et développeur node.js sur Annecy",
-	"description": "Ce portail web est dédié à la présentation de mes projets et compétences, mais pas que ! Besoin d'un développeur HTML, CSS, JavaScript pour une intégration web ou bien vous ne savez pas à quoi sert un développeur Front-end ou Node.js, vous êtes au bon endroit.",
+    "components": {
+        "content" : [{
+            "path": "top-section.htm"
+        }, {
+            "path": "bottom-section.htm"
+        }, {
+            "path": "section-contact-me.htm"
+        }, {
+            "path": "presentation.htm",
+            "variation": {
+				"components": {
+					"content" : [{
+			            "path": "header.htm"
+			        }, {
+			            "path": "footer.htm"
+			        }]
+		        }
+            }
+        }]
+    },
+	"titlePage": "Besoin de contacter Bruno Lesieur ?",
+	"description": "Si vous souhaitez me contacter pour du développement, du conseil, savoir l'avenir ou devenir un super héros, c'est par ici.",
 	"opened": {
 		"main": "to top",
 		"bepo": "",

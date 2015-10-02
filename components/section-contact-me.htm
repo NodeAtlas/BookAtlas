@@ -1,4 +1,4 @@
-		<li class="huge section ui <%= specific.opened['contact-me'] %>" data-url="<%= common.url['contact-me'] %>">
+		<li class="huge section <%= specific.opened['contact-me'] %>" data-url="<%= common.url['contact-me'] %>">
 			<section class="contact-me content">
 				<h1>
 					<ins class="collapse icon mail"></ins>
@@ -6,14 +6,14 @@
 					<img src="<%- ea(common, ['contactMe.image.src', fc, 'src']) %>" alt="<%- ea(common, ['contactMe.image.alt', fc, 'alt']) %>">
 				</h1>
 
-				<div class="vertical scrollable ui">
-					<div class="complete ui">
+				<div class="vertical scrollable">
+					<div class="complete">
 						<%- eh(common, ['contactMe.content', fc, 'website.generateEmail()']) %>
 					</div>
 
-					<form class="contact form ui" action="" method="post"></form>
+					<form class="contact form" action="" method="post"></form>
 
-					<nav class="ui return">
+					<nav class="return">
 						<a href="javascript:;" title="<%- ea(common, ['menu.title', fc, 'title']) %>"><%- et(common, ['menu.content', fc]) %></a>
 					</nav>
 				</div>

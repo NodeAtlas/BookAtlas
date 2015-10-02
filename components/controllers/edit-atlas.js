@@ -147,6 +147,7 @@ var website = {};
      * @param  {Object|string}    params.object         The object contain all data (or path to the value 'legacy').
      * @param  {string|boolean}   params.auth           Filename (+ path) to find the value, if false value could not be saving.
      * @param  {string}           params.pathProperty   Path to the value.
+     * @param  {string}           params.languageCode   Current langue used.
      * @param  {string|undefined} params.sourceFunction Function to execute after value modification.
      * @param  {string|undefined} params.property       Set the `attr` where save the value.
      * @param  {string|undefined} params.markup         Type of Tag used.
@@ -164,7 +165,8 @@ var website = {};
         property = params.property,
         markup = params.markup,
         type = params.type,
-        result;
+        result,
+        languageCode = "";
 
         /*-- Legacy mechanism --*/
         /* By default, the value is from file passed in eh, et or ea. */
@@ -177,7 +179,8 @@ var website = {};
 
             /* Find value of object or return "" */
             object = website.getLookup(object, pathProperty) || "";
-            if (file === NA.webconfig.commonVariation) {
+            languageCode = (params.languageCode) ? params.languageCode : "";
+            if (file === NA.modules.path.join(languageCode, NA.webconfig.commonVariation).replace(/\\/g, "/")) {
                 /* set path to common property or... */
                 pathProperty = 'common.' + pathProperty;
             } else {
@@ -225,6 +228,7 @@ var website = {};
                 pathProperty: arr[0],
                 sourceFunction: arr[2],
                 property: undefined,
+                languageCode: variation.languageCode,
                 markup: "span",
                 type: "text"
             });
@@ -240,6 +244,7 @@ var website = {};
                 pathProperty: arr[0],
                 sourceFunction: arr[2],
                 property: undefined,
+                languageCode: variation.languageCode,
                 markup: "div",
                 type: "html"
             });
@@ -253,6 +258,7 @@ var website = {};
                 object: object,
                 auth: arr[1],
                 pathProperty: arr[0],
+                languageCode: variation.languageCode,
                 sourceFunction: arr[3],
                 property: arr[2]
             });
@@ -374,17 +380,15 @@ var website = {};
     publics.sourceBlock = function (NA, socket, options) {
         var objectCommon,
             objectSpecific,
+            fs = NA.modules.fs,
             path = NA.modules.path;
 
-        console.log(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, options.fileCommon));
-        console.log(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, options.fileSpecific));
-
         try {
-            objectCommon = require(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, options.fileCommon));
-            objectSpecific = require(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, options.fileSpecific));
+            objectCommon = fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, options.fileCommon), 'utf-8');
+            objectSpecific = fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, options.fileSpecific), 'utf-8');
             socket.emit('source-block', {
-                fileCommon: JSON.stringify(objectCommon, undefined, "    "),
-                fileSpecific: JSON.stringify(objectSpecific, undefined, "    ")
+                fileCommon: objectCommon,
+                fileSpecific: objectSpecific
             });
         } catch (exception) {
             NA.log(exception);

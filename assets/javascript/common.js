@@ -53,44 +53,44 @@ var website = website || {},
     };
 
     privates.loadSections = function(callback) {
-        publics.socket.emit("load-sections", { 
-            lang: $html.attr('lang'), 
+        publics.socket.emit("load-sections", {
+            lang: $html.attr('lang'),
             variation: $body.data('variation')
         });
         publics.socket.on("load-sections", function (data) {
-            var targetTop = ".top.sections.ui > .ui.return > a",
-                targetBottom = ".bottom.sections.ui > .ui.return > a",
+            var targetTop = ".top.sections > .return > a",
+                targetBottom = ".bottom.sections > .return > a",
                 $section;
 
             function animatedOpenSection($sectionWrap) {
                 var $section = $sectionWrap.find("section"),
-                    tempHeight = $section;
-                    
+                    tempHeight = $section.height();
+
                 $section.css({
                     height: "0"
-                }).animate({ 
+                }).animate({
                     height: tempHeight
                 }, 500, function () {
                     $(this).removeAttr("style");
                 });
-            };
+            }
 
             for (var i in data.topPart) {
-                if (!$(".top.sections.ui > .section > ." + i).length) {
+                if (!$(".top.sections > .section > ." + i).length) {
                     $section = $(data.topPart[i]);
                     $(targetTop).parent().after($section);
                     animatedOpenSection($section);
                 }
-                targetTop = ".top.sections.ui > .section > ." + i;
+                targetTop = ".top.sections > .section > ." + i;
             }
 
             for (var i in data.bottomPart) {
-                if (!$(".bottom.sections.ui > .section > ." + i).length) {
+                if (!$(".bottom.sections > .section > ." + i).length) {
                     $section = $(data.bottomPart[i]);
                     $(targetBottom).parent().after($section);
                     animatedOpenSection($section);
                 }
-                targetBottom = ".bottom.sections.ui > .section > ." + i;
+                targetBottom = ".bottom.sections > .section > ." + i;
             }
 
             callback();
@@ -98,7 +98,7 @@ var website = website || {},
     };
 
     publics.activeEditMode = function () {
-        $(".toggle.checkbox.ui").click(function () {
+        $(".toggle.checkbox").click(function () {
             var $this = $(this);
 
             if (!$this.hasClass("checked")) {
@@ -111,6 +111,57 @@ var website = website || {},
                 $html.removeClass("is-editable");
             }
         });
+    };
+
+    publics.accountLogin = function () {
+        $(".account-login-button").click(function (e) {
+            e.preventDefault();
+
+            $(this).addClass("loading");
+
+            var data = {
+                email: $("#account-login-email").val(),
+                password: $("#account-login-password").val()
+            };
+
+            website.socket.emit('account-login', data);
+        });
+    };
+
+    publics.listeningAccountLogin = function () {
+        website.socket.on('account-login', function (data) {
+            if (data.authSuccess) {
+                location.reload();
+            } else {
+                $(".account-login-button").removeClass("loading");
+                $(".submit .errors ").show();
+            }
+        });
+    };
+
+    publics.accountLogout = function () {
+        $(".account-logout-button").click(function (e) {
+            if (!website.isEditable) {
+                e.preventDefault();
+
+                $(this).addClass("loading");
+
+                website.socket.emit('account-logout', {});
+            }
+        });
+    };
+
+    publics.listeningAccountLogout = function () {
+        website.socket.on('account-logout', function (data) {
+            location.reload();
+        });
+    };
+
+    publics.init = function () {
+        privates.accountLogin();
+        privates.listeningAccountLogin();
+        privates.accountLogout();
+        privates.listeningAccountLogout();
     };
 
     publics.init = function () {
@@ -179,7 +230,7 @@ var website = website || {},
             });
 
              $("h1").click(function (event) {
-                if ($(this).parents(".open").length > 0) {                
+                if ($(this).parents(".open").length > 0) {
                     event.stopPropagation();
                     $html.trigger("click");
                 }
@@ -188,7 +239,7 @@ var website = website || {},
             $html.click(function () {
                 history.replaceState(null, "", "/");
                 closeSection();
-            }).find(".popup-edit-atlas").click(function() {
+            }).find(".edit-atlas--popup, .members").click(function() {
                 return false;
             });
 
@@ -214,10 +265,11 @@ var website = website || {},
                     $this.find(".content").css("height", halfHeight);
                     $this.find(".scrollable").css("height", halfHeightPadding);
                 }
-            }).click(function (event) {
-                event.stopPropagation();
 
-               openSection($(this), "bottom", "top");
+            }).click(function (event) {
+
+                event.stopPropagation();
+                openSection($(this), "bottom", "top");
             });
 
             $window.resize(function () {
@@ -235,14 +287,19 @@ var website = website || {},
                 }
             });
 
+            publics.accountLogin();
+            publics.listeningAccountLogin();
+            publics.accountLogout();
+            publics.listeningAccountLogout();
+
             publics.generateEmail();
 
             publics.editAtlas(function () {
-                $(".toggle.checkbox.ui").removeClass("checked");
-                $(".toggle.checkbox.ui").find("input").prop("checked", false);  
+                $(".toggle.checkbox").removeClass("checked");
+                $(".toggle.checkbox").find("input").prop("checked", false);
             }, function () {
-                $(".toggle.checkbox.ui").addClass("checked");
-                $(".toggle.checkbox.ui").find("input").prop("checked", true);
+                $(".toggle.checkbox").addClass("checked");
+                $(".toggle.checkbox").find("input").prop("checked", true);
             });
 
             publics.activeEditMode();

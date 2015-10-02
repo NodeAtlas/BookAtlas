@@ -1,4 +1,4 @@
-		<li class="small section ui <%= specific.opened.offers %>" data-url="<%= common.url.offers %>">
+		<li class="small section <%= specific.opened.offers %>" data-url="<%= common.url.offers %>">
 			<section class="about offers content">
 				<h1>
 					<ins class="collapse icon edit"></ins>
@@ -6,30 +6,24 @@
 				</h1>
 
 
-				<div class="vertical scrollable ui">
-					<div class="after panel ui">
+				<div class="vertical scrollable">
+					<div class="after panel">
 						<h2><%- et(common, ['aboutOffers.afterPanel.title', fc]) %></h2>
-						<p class="toggle checkbox ui">
+						<p class="toggle checkbox">
 			          		<input type="radio" name="edit">
 			          		<label><%- et(common, ['aboutOffers.afterPanel.radioButton', fc]) %></label>
 						</p>
-						<p class="horizontal divider ui">
+						<p class="horizontal divider">
 							<%- et(common, ['aboutOffers.afterPanel.separator', fc]) %>
 						</p>
 						<%- eh(common, ['aboutOffers.afterPanel.content', fc]) %>
 					</div>
 
-					<div class="complete ui">
-						<h2><%- et(common, ['aboutOffers.about.title', fc]) %></h2>
-						<%- eh(common, ['aboutOffers.about.content', fc]) %>
+					<div class="complete">
+						<%- eh(common, ['aboutOffers.content', fc]) %>
 					</div>
 
-					<div class="complete ui">
-						<h2><%- et(common, ['aboutOffers.howTo.title', fc]) %></h2>
-						<%- eh(common, ['aboutOffers.howTo.content', fc]) %>
-					</div>
-
-					<nav class="ui return">
+					<nav class="return">
 						<a href="javascript:;" title="<%- ea(common, ['menu.title', fc, 'title']) %>"><%- et(common, ['menu.content', fc]) %></a>
 					</nav>
 				</div>

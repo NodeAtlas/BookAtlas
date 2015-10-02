@@ -4,19 +4,19 @@
 			<p><%= common.javascriptDisable %></p>
 		</noscript>
 
-		<div class="permalink ui">
+		<div class="permalink">
 			<%= common.permalink %> <span><%= urlPath %></span>
 		</div>
 
-		<div class="skiplink ui">
+		<div class="skiplink">
 			<span><%= common.skipLink.title %></span>
 			<ul>
-				<% for (var i = 0; i < common.skipLink.items.length; i++) { %>				
+				<% for (var i = 0; i < common.skipLink.items.length; i++) { %>
 				<li>
 					<a href="<%= urlPath %><%= common.skipLink.items[i].href %>" title="<%= common.skipLink.items[i].title %>"><%= common.skipLink.items[i].content %></a>
 				</li>
-				<% } %>								
+				<% } %>
 			</ul>
 		</div>
 
-		<div class="main ui <%= specific.opened.main %>">
+		<div class="main <%= specific.opened.main %>">

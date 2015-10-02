@@ -4,6 +4,7 @@
 			"javascript/modernizr.js",
 			"javascript/jquery.js",
 			"javascript/jquery/jquery.validate.js",
+			"javascript/jquery/jquery.validate.unobtrusive.js",
 			"javascript/edit-atlas.js",
 			"javascript/prettify.js",
 			"javascript/prettify/run_prettify.js",
@@ -13,9 +14,7 @@
 	"stylesheets": {
 		"stylesheets/common.min.css": [
 			"stylesheets/edit-atlas.css",
-			"stylesheets/common.css",
-			"stylesheets/common-sm.css",
-			"stylesheets/common-md.css"
+			"stylesheets/common.css"
 		]
 	}
 }

@@ -1,33 +1,25 @@
-		<li class="medium section ui <%= specific.opened['front-end'] %>" data-url="<%= common.url['front-end'] %>">
+		<li class="medium section <%= specific.opened['front-end'] %>" data-url="<%= common.url['front-end'] %>">
 			<section class="about front-end content">
 				<h1>
 					<ins class="collapse icon html5"></ins>
 					<span><%- et(common, ['aboutFrontend.title', fc]) %></span>
 				</h1>
 
-				<div class="vertical scrollable ui">
-					<div class="intro ui">
+				<div class="vertical scrollable">
+					<div class="intro">
 						<%- eh(common, ['aboutFrontend.intro', fc]) %>
 					</div>
 
-					<div class="before panel ui">
+					<div class="before panel">
 						<h2><%- et(common, ['aboutFrontend.beforePanel.title', fc]) %></h2>
 						<%- eh(common, ['aboutFrontend.beforePanel.content', fc]) %>
 					</div>
 
-					<div class="complete ui">
-						<%- common.aboutFrontend.content %>
-						<h2><%- et(common, ['aboutFrontend.frontend.title', fc]) %></h2>
-						<%- eh(common, ['aboutFrontend.frontend.content', fc]) %>
-
-						<h2><%- et(common, ['aboutFrontend.birth.title', fc]) %></h2>
-						<%- eh(common, ['aboutFrontend.birth.content', fc]) %>
-
-						<h2><%- et(common, ['aboutFrontend.expert.title', fc]) %></h2>
-						<%- eh(common, ['aboutFrontend.expert.content', fc]) %>
+					<div class="complete">
+						<%- eh(common, ['aboutFrontend.content', fc]) %>
 					</div>
 
-					<nav class="ui return">
+					<nav class="return">
 						<a href="javascript:;" title="<%- ea(common,['menu.title', fc, 'title']) %>"><%- et(common, ['menu.content', fc]) %></a>
 					</nav>
 				</div>

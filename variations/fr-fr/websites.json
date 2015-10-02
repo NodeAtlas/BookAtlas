@@ -1,6 +1,26 @@
 {
-	"titlePage": "Bruno Lesieur (Haeresis), intégrateur web et développeur node.js sur Annecy",
-	"description": "Ce portail web est dédié à la présentation de mes projets et compétences, mais pas que ! Besoin d'un développeur HTML, CSS, JavaScript pour une intégration web ou bien vous ne savez pas à quoi sert un développeur Front-end ou Node.js, vous êtes au bon endroit.",
+    "components": {
+        "content" : [{
+            "path": "top-section.htm"
+        }, {
+            "path": "bottom-section.htm"
+        }, {
+            "path": "section-websites.htm"
+        }, {
+            "path": "presentation.htm",
+            "variation": {
+				"components": {
+					"content" : [{
+			            "path": "header.htm"
+			        }, {
+			            "path": "footer.htm"
+			        }]
+		        }
+            }
+        }]
+    },
+	"titlePage": "Bruno Lesieur est un passionné de FF7 et d'Avatar",
+	"description": "Je suis un grand fan de Final Fantasy VII depuis tout petit et plus rescemment de l'univers d'Avatar. Voici mes sites communautaires !",
 	"opened": {
 		"main": "to top",
 		"bepo": "",

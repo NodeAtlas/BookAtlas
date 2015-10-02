@@ -14,5 +14,6 @@
 	"_demo": "true",
 	"_minified": ".min",
 	"_indexFollow": "noindex, nofollow",
-	"_modeDemo": true
+	"_emailAccountAuth": "bruno.lesieur@gmail.com",
+	"_passwordAccountAuth": "test1234"
 }

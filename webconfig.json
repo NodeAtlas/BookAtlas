@@ -1,5 +1,6 @@
 {
-	"httpPort": 7776,
+	"httpPort": 7775,
+	"enableLess": true,
 	"staticOptions": {
         "maxAge": 0
     },
@@ -9,8 +10,10 @@
  	"pageNotFound": "/page-inexistante/",
  	"bundles": "bundles.json",
  	"languageCode": "fr-fr",
+	"bundles": "bundles.json",
 	"routes": "routes.json",
 	"_minified": "",
 	"_indexFollow": "noindex, nofollow",
-	"_modeDemo": false
+	"_emailAccountAuth": "bruno.lesieur@gmail.com",
+	"_passwordAccountAuth": "bépo"
 }
