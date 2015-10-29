@@ -64,7 +64,7 @@ var website = website || {},
 
             function animatedOpenSection($sectionWrap) {
                 var $section = $sectionWrap.find("section"),
-                    tempHeight = $section.height();
+                    tempHeight = $section;
 
                 $section.css({
                     height: "0"
