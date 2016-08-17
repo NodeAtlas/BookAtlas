@@ -47,6 +47,41 @@
     $COMMONS
 \*------------------------------------*/
 
+.row {
+	margin-left: -8px;
+	margin-right: -8px;
+	&:after {
+		content: "";
+		clear: right;
+		display: block;
+	}
+}
+.column {
+	margin-left: 8px;
+	margin-right: 8px;
+	width: calc(~'50% - 16px');
+	float: right;
+}
+.column:nth-child(2n-1) {
+	clear: right;
+}
+.zoom-image {
+	margin-top: 8px;
+	line-height: 1;
+	font-size: 0;
+	border: 1px solid rgb(224, 224, 224);
+	img {
+		margin-top: 0;
+		max-width: 100%;
+		width: 200%;
+	}
+}
+.small-text {
+	font-size: 0.9em;
+	line-height: 1.2;
+	margin-top: 8px;
+}
+
 .permalink,
 .skiplink {
 	display: none;
@@ -959,6 +994,7 @@ a:hover {
 
 .main.to .sections .section .contact-me h1 img,
 .main.to .sections .section .blog h1 img,
+.main.to .sections .section .book h1 img,
 .main.to .sections .section .nodeatlas h1 img {
 	display: none;
 }
@@ -1497,7 +1533,7 @@ button:hover, input[type=button]:hover, input[type=submit]:hover {
 	}
 }
 
-@media (min-width: 992px) { /*** Responsive start ***/
+@media (min-width: 1000px) { /*** Responsive start ***/
 	.top.sections .small.section h1 {
 		margin-top: 12px;
 	}
@@ -1536,9 +1572,11 @@ button:hover, input[type=button]:hover, input[type=submit]:hover {
 
 	.sections .section .contact-me h1 span,
 	.sections .section .blog h1 span,
+	.sections .section .book h1 span,
 	.sections .section .nodeatlas h1 span,
 	.sections .section .contact-me h1 ins,
 	.sections .section .blog h1 ins,
+	.sections .section .book h1 ins,
 	.sections .section .nodeatlas h1 ins {
 		display: none;
 	}
@@ -1551,6 +1589,10 @@ button:hover, input[type=button]:hover, input[type=submit]:hover {
 	.main.to .sections .section .blog h1 span,
 	.sections .section.open .blog h1 ins,
 	.sections .section.open .blog h1 span,
+	.main.to .sections .section .book h1 ins,
+	.main.to .sections .section .book h1 span,
+	.sections .section.open .book h1 ins,
+	.sections .section.open .book h1 span,
 	.main.to .sections .section .nodeatlas h1 ins,
 	.main.to .sections .section .nodeatlas h1 span,
 	.sections .section.open .nodeatlas h1 ins,
@@ -1559,6 +1601,10 @@ button:hover, input[type=button]:hover, input[type=submit]:hover {
 	}
 
 	.sections .section .blog h1 img {
+		margin: 8px;
+		opacity: 1;
+	}
+	.sections .section .book h1 img {
 		margin: 8px;
 		opacity: 1;
 	}
@@ -1573,6 +1619,7 @@ button:hover, input[type=button]:hover, input[type=submit]:hover {
 
 	.sections .section.open .contact-me h1 img,
 	.sections .section.open .blog h1 img,
+	.sections .section.open .book h1 img,
 	.sections .section.open .nodeatlas h1 img {
 		opacity: 0;
 		width: 0%;
@@ -1584,14 +1631,32 @@ button:hover, input[type=button]:hover, input[type=submit]:hover {
 	.sections .section .contact-me h1 ins,
 	.sections .section .blog h1 span,
 	.sections .section .blog h1 ins,
+	.sections .section .book h1 span,
+	.sections .section .book h1 ins,
 	.sections .section .nodeatlas h1 span,
 	.sections .section .nodeatlas h1 ins {
 		display: inline;
 	}
 	.sections .section .contact-me h1 img,
 	.sections .section .blog h1 img,
+	.sections .section .book h1 img,
 	.sections .section .nodeatlas h1 img {
 		display: none;
+	}
+}
+
+@media (max-width: 1000px) AND (max-height: 500px) {
+	.sections .section .contact-me h1 span,
+	.sections .section .blog h1 span,
+	.sections .section .book h1 span,
+	.sections .section .nodeatlas h1 span {
+		display: none;
+	}
+	.sections .section.open .contact-me h1 span,
+	.sections .section.open .blog h1 span,
+	.sections .section.open .book h1 span,
+	.sections .section.open .nodeatlas h1 span {
+		display: inline-block;
 	}
 }
 
