@@ -3,9 +3,15 @@
 				<h1>
 					<ins class="collapse icon chat"></ins>
 					<span><%- et(common, ['aboutWebsite.title', fc]) %></span>
+					<img src="<%- ea(common, ['aboutWebsite.image.src', fc, 'src']) %>" alt="<%- ea(common, ['aboutWebsite.image.alt', fc, 'alt']) %>">
 				</h1>
 
 				<div class="vertical scrollable">
+					<div class="after panel">
+						<h2><%- et(common, ['aboutNodeAtlas.beforePanel.title', fc]) %></h2>
+						<%- eh(common, ['aboutNodeAtlas.beforePanel.content', fc]) %>
+					</div>
+
 					<div class="complete">
 						<%- eh(common, ['aboutWebsite.content', fc]) %>
 					</div>

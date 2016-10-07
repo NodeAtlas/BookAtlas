@@ -55,15 +55,39 @@
 		clear: right;
 		display: block;
 	}
+	&.left {
+		.column {
+			float: left;
+			@media (min-width: 1200px) {
+				text-align: right;
+			}
+			@media (min-width: 600px) AND (max-height: 499px) {
+				text-align: right;
+			}
+		}
+	}
 }
 .column {
 	margin-left: 8px;
 	margin-right: 8px;
-	width: calc(~'50% - 16px');
+	width: calc(~'100% - 16px');
+	@media (min-width: 1200px) {
+		width: calc(~'50% - 16px');
+	}
+	@media (min-width: 600px) AND (max-height: 499px) {
+		width: calc(~'50% - 16px');
+	}
 	float: right;
 }
-.column:nth-child(2n-1) {
-	clear: right;
+@media (min-width: 1200px) {
+	.column:nth-child(2n-1) {
+		clear: right;
+	}
+}
+@media (min-width: 600px) AND (max-height: 499px) {
+	.column:nth-child(2n-1) {
+		clear: right;
+	}
 }
 .zoom-image {
 	margin-top: 8px;
@@ -74,6 +98,14 @@
 		margin-top: 0;
 		max-width: 100%;
 		width: 200%;
+	}
+}
+.zoom-image.large {
+	@media (min-width: 1200px) {
+		margin-top: 32px;
+	}
+	@media (min-width: 600px) AND (max-height: 499px) {
+		margin-top: 32px;
 	}
 }
 .small-text {
@@ -500,7 +532,7 @@ a:hover {
 	position: relative;
 	width: 17%;
 	margin-left: 0.5%;
-	margin-right: 0.5%;
+	margin-right: 0.5%;-
 	cursor: pointer;
 }
 
@@ -624,6 +656,7 @@ a:hover {
 .main.to.top .sections .section.open .scrollable,
 .main.to.bottom .sections .section.open .scrollable {
 	overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .main.to.top .sections .section.open .scrollable,
@@ -726,6 +759,10 @@ a:hover {
 	background-color: rgba(224,224,224,.4);
 	width: 100%;
 	overflow: hidden;
+	cursor: pointer;
+}
+.sections .open .content {
+	cursor: default;
 }
 
 .sections .huge.section .content {
@@ -770,7 +807,7 @@ a:hover {
 	width: 100%;
 }
 
-@media (max-width: 323px), (max-height: 500px) {
+@media (max-width: 100px), (max-height: 500px) {
 	.main.to.top,
 	.main.to.bottom {
 		background-color: transparent;
@@ -995,6 +1032,7 @@ a:hover {
 .main.to .sections .section .contact-me h1 img,
 .main.to .sections .section .blog h1 img,
 .main.to .sections .section .book h1 img,
+.main.to .sections .section .websites h1 img,
 .main.to .sections .section .nodeatlas h1 img {
 	display: none;
 }
@@ -1003,6 +1041,8 @@ a:hover {
 	left: -100px;
 }
 
+.websites .after.panel,
+.games .before.panel,
 .nodeatlas .before.panel {
 	top: 136px;
 }
@@ -1024,17 +1064,20 @@ a:hover {
 	.main.to.bottom .sections .section.open .bepo .scrollable,
 	.main.to.bottom .sections .section.open .offers .scrollable,
 	.main.to.bottom .sections .section.open .blog .scrollable,
+	.main.to.top .sections .section.open .websites .scrollable,
 	.main.to.top .sections .section.open .about-me .scrollable {
 		margin-right: 108px;
 	}
 
 	.main.to.bottom .sections .section.open .front-end .scrollable,
+	.main.to.top .sections .section.open .games .scrollable,
 	.main.to.top .sections .section.open .skills .scrollable {
 		margin-left: 108px;
 	}
 
 	.section.open .front-end .before.panel,
 	.section.open .skills .before.panel,
+	.section.open .games .before.panel,
 	.section.open .nodeatlas .before.panel {
 		left: 8px;
 		opacity: 1;
@@ -1043,20 +1086,23 @@ a:hover {
 	.section.open .offers .after.panel,
 	.section.open .bepo .after.panel,
 	.section.open .blog .after.panel,
+	.section.open .websites .after.panel,
 	.section.open .about-me .after.panel {
 		right: 8px;
 		opacity: 1;
 	}
 }
 
-@media (max-width: 323px), (max-height: 500px) {
+@media (max-width: 100px), (max-height: 500px) {
 	.nodeatlas iframe {
 		padding-right: 0;
 	}
 
 	.nodeatlas .before.panel,
 	.skills .before.panel,
-	.about-me .after.panel {
+	.games .before.panel,
+	.about-me .after.panel,
+	.websites .after.panel {
 		top: 16px;
 	}
 }
@@ -1574,9 +1620,11 @@ button:hover, input[type=button]:hover, input[type=submit]:hover {
 	.sections .section .blog h1 span,
 	.sections .section .book h1 span,
 	.sections .section .nodeatlas h1 span,
+	.sections .section .websites h1 span,
 	.sections .section .contact-me h1 ins,
 	.sections .section .blog h1 ins,
 	.sections .section .book h1 ins,
+	.sections .section .websites h1 ins,
 	.sections .section .nodeatlas h1 ins {
 		display: none;
 	}
@@ -1593,6 +1641,10 @@ button:hover, input[type=button]:hover, input[type=submit]:hover {
 	.main.to .sections .section .book h1 span,
 	.sections .section.open .book h1 ins,
 	.sections .section.open .book h1 span,
+	.main.to .sections .section .websites h1 ins,
+	.main.to .sections .section .websites h1 span,
+	.sections .section.open .websites h1 ins,
+	.sections .section.open .websites h1 span,
 	.main.to .sections .section .nodeatlas h1 ins,
 	.main.to .sections .section .nodeatlas h1 span,
 	.sections .section.open .nodeatlas h1 ins,
@@ -1600,15 +1652,13 @@ button:hover, input[type=button]:hover, input[type=submit]:hover {
 		display: inline;
 	}
 
-	.sections .section .blog h1 img {
-		margin: 8px;
-		opacity: 1;
-	}
+	.sections .section .blog h1 img,
 	.sections .section .book h1 img {
 		margin: 8px;
 		opacity: 1;
 	}
-	.sections .section .nodeatlas h1 img {
+	.sections .section .nodeatlas h1 img,
+	.sections .section .websites h1 img {
 		margin: -24px;
 		opacity: 1;
 	}
@@ -1620,19 +1670,22 @@ button:hover, input[type=button]:hover, input[type=submit]:hover {
 	.sections .section.open .contact-me h1 img,
 	.sections .section.open .blog h1 img,
 	.sections .section.open .book h1 img,
+	.sections .section.open .websites h1 img,
 	.sections .section.open .nodeatlas h1 img {
 		opacity: 0;
 		width: 0%;
 	}
 }
 
-@media (max-width: 323px), (max-height: 500px) {
+@media (max-width: 100px), (max-height: 500px) {
 	.sections .section .contact-me h1 span,
 	.sections .section .contact-me h1 ins,
 	.sections .section .blog h1 span,
 	.sections .section .blog h1 ins,
 	.sections .section .book h1 span,
 	.sections .section .book h1 ins,
+	.sections .section .websites h1 span,
+	.sections .section .websites h1 ins,
 	.sections .section .nodeatlas h1 span,
 	.sections .section .nodeatlas h1 ins {
 		display: inline;
@@ -1640,6 +1693,7 @@ button:hover, input[type=button]:hover, input[type=submit]:hover {
 	.sections .section .contact-me h1 img,
 	.sections .section .blog h1 img,
 	.sections .section .book h1 img,
+	.sections .section .websites h1 img,
 	.sections .section .nodeatlas h1 img {
 		display: none;
 	}
@@ -1649,18 +1703,20 @@ button:hover, input[type=button]:hover, input[type=submit]:hover {
 	.sections .section .contact-me h1 span,
 	.sections .section .blog h1 span,
 	.sections .section .book h1 span,
+	.sections .section .websites h1 span,
 	.sections .section .nodeatlas h1 span {
 		display: none;
 	}
 	.sections .section.open .contact-me h1 span,
 	.sections .section.open .blog h1 span,
 	.sections .section.open .book h1 span,
+	.sections .section.open .websites h1 span,
 	.sections .section.open .nodeatlas h1 span {
 		display: inline-block;
 	}
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
 	.nodeatlas iframe {
 		padding-left: 184px;
 	}
@@ -1668,11 +1724,13 @@ button:hover, input[type=button]:hover, input[type=submit]:hover {
 	.main.to.bottom .sections .section.open .bepo .scrollable,
 	.main.to.bottom .sections .section.open .offers .scrollable,
 	.main.to.bottom .sections .section.open .blog .scrollable,
+	.main.to.top .sections .section.open .websites .scrollable,
 	.main.to.top .sections .section.open .about-me .scrollable {
 		margin-right: 188px;
 	}
 
 	.main.to.bottom .sections .section.open .front-end .scrollable,
+	.main.to.top .sections .section.open .games .scrollable,
 	.main.to.top .sections .section.open .skills .scrollable {
 		margin-left: 188px;
 	}
@@ -1680,10 +1738,26 @@ button:hover, input[type=button]:hover, input[type=submit]:hover {
 	.before.panel {
 		left: -180px;
 		width: 164px;
+
+		h3 {
+			margin-top: 16px;
+			margin-bottom: 0;
+		}
+		ul {
+			margin-top: 8px;
+		}
 	}
 
 	.after.panel {
 		right: -180px;
 		width: 164px;
+
+		h3 {
+			margin-top: 16px;
+			margin-bottom: 0;
+		}
+		ul {
+			margin-top: 8px;
+		}
 	}
 }
