@@ -200,9 +200,11 @@ var website = website || {},
                 $main.removeClass("to bottom");
             }
 
-            function openSection($currentSection, current, other) {
+            function openSection($currentSection, current, other, notPushed) {
                 if (!$html.hasClass("is-editable")) {
-                    history.replaceState($currentSection.data("url"), "", "/" + $currentSection.data("url") + "/");
+                    if (!notPushed) {
+                        history.pushState($currentSection.data("url"), "", "/" + $currentSection.data("url") + "/");
+                    }
 
                     $topSection.removeClass("open").removeClass("start");
                     $bottomSection.removeClass("open").removeClass("start");
@@ -237,7 +239,7 @@ var website = website || {},
             });
 
             $html.click(function () {
-                history.replaceState(null, "", "/");
+                history.pushState("", "", "/");
                 closeSection();
             }).find(".edit-atlas--popup, .members").click(function() {
                 return false;
@@ -251,10 +253,10 @@ var website = website || {},
                     $this.find(".content").css("height", halfHeight);
                     $this.find(".scrollable").css("height", halfHeightPadding);
                 }
-            }).click(function (event) {
+            }).click(function (event, notPushed) {
                 event.stopPropagation();
 
-                openSection($(this), "top", "bottom");
+                openSection($(this), "top", "bottom", notPushed);
             });
 
             $bottomSection.each(function () {
@@ -266,10 +268,10 @@ var website = website || {},
                     $this.find(".scrollable").css("height", halfHeightPadding);
                 }
 
-            }).click(function (event) {
+            }).click(function (event, notPushed) {
 
                 event.stopPropagation();
-                openSection($(this), "bottom", "top");
+                openSection($(this), "bottom", "top", notPushed);
             });
 
             $window.resize(function () {
@@ -284,6 +286,14 @@ var website = website || {},
                     $main.css("top", halfHeight);
                     $topSection.filter(".open").find(".content").css("height", halfHeight);
                     $topSection.filter(".open").find(".scrollable").css("height", halfHeightPadding);
+                }
+            });
+
+            window.addEventListener("popstate", function (e) {
+                if (e.state) {
+                    $(".section[data-url=" + e.state + "]").trigger("click", true);
+                } else {
+                    history.back();
                 }
             });
 
