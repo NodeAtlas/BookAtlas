@@ -10,7 +10,7 @@
  	"pageNotFound": "/page-inexistante/",
  	"bundles": "bundles.json",
  	"languageCode": "fr-fr",
-	"bundles": "bundles.json",
+	"optimizations": "optimizations.json",
 	"routes": "routes.json",
 	"_minified": "",
 	"_indexFollow": "noindex, nofollow",

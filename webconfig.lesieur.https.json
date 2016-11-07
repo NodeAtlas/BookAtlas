@@ -10,6 +10,7 @@
  	"controllersRelativePath": "controllers",
   	"pageNotFound": "/page-inexistante/",
   	"bundles": "bundles.json",
+	"optimizations": "optimizations.json",
 	"routes": "routes.json",
 	"_demo": "true",
 	"_minified": ".min",

@@ -228,18 +228,36 @@ var website = website || {},
 
             $(".return a").click(function (event) {
                 event.stopPropagation();
+
+                $body.addClass("from-end");
+                setTimeout(function () {
+                    $body.removeClass().addClass("index");
+                }, 1000);
+
                 $html.trigger("click");
             });
 
              $("h1").click(function (event) {
                 if ($(this).parents(".open").length > 0) {
                     event.stopPropagation();
+
+                $body.addClass("from-end");
+                setTimeout(function () {
+                    $body.removeClass().addClass("index");
+                }, 1000);
+
                     $html.trigger("click");
                 }
             });
 
             $html.click(function () {
                 history.pushState("", "", "/");
+
+                $body.addClass("from-end");
+                setTimeout(function () {
+                    $body.removeClass().addClass("index");
+                }, 1000);
+
                 closeSection();
             }).find(".edit-atlas--popup, .members").click(function() {
                 return false;
@@ -254,9 +272,23 @@ var website = website || {},
                     $this.find(".scrollable").css("height", halfHeightPadding);
                 }
             }).click(function (event, notPushed) {
+               	var $this = $(this),
+               		currentSection = $this.find(".content")[0].classList.value.replace(/content/g, "").trim();
                 event.stopPropagation();
 
-                openSection($(this), "top", "bottom", notPushed);
+                if ($body.hasClass("index")) {
+                    $body.removeClass().addClass(currentSection);
+                } else {                
+                    $body.addClass("speed-2").addClass("from-end");
+                    setTimeout(function () {
+                        $body.removeClass().addClass(currentSection);
+                        setTimeout(function () {
+                            $body.removeClass("speed-2");
+                        }, 500);
+                    }, 500);
+                }
+
+                openSection($this, "top", "bottom", notPushed);
             });
 
             $bottomSection.each(function () {
@@ -269,9 +301,23 @@ var website = website || {},
                 }
 
             }).click(function (event, notPushed) {
-
+                var $this = $(this),
+                    currentSection = $this.find(".content")[0].classList.value.replace(/content/g, "").trim();
                 event.stopPropagation();
-                openSection($(this), "bottom", "top", notPushed);
+
+                if ($body.hasClass("index")) {
+                    $body.removeClass().addClass(currentSection);
+                } else {                
+                    $body.addClass("speed-2").addClass("from-end");
+                    setTimeout(function () {
+                        $body.removeClass().addClass(currentSection);
+                        setTimeout(function () {
+                            $body.removeClass("speed-2");
+                        }, 500);
+                    }, 500);
+                }
+
+                openSection($this, "bottom", "top", notPushed);
             });
 
             $window.resize(function () {

@@ -375,6 +375,123 @@
 	        animation-delay: 5s;
 }
 
+.background-image {
+    opacity: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+	background-position: center center;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	-webkit-transition: opacity 1s ease;
+	        transition: opacity 1s ease;
+}
+
+.background-image .left,
+.background-image .right {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+	-webkit-transition: width 1s ease;
+	        transition: width 1s ease;
+    background-image: linear-gradient(#fff 1px, transparent 1px);
+	background-size: 100% 2px;
+}
+.background-image .left {
+    left: 0;
+}
+.background-image .right {
+    right: 0;
+}
+
+.about-me .background-image .left,
+.about-me .background-image .right,
+.nodeatlas .background-image .left,
+.nodeatlas .background-image .right,
+.games .background-image .left,
+.games .background-image .right,
+.blog .background-image .left,
+.blog .background-image .right,
+.book .background-image .left,
+.book .background-image .right,
+.offers .background-image .left,
+.offers .background-image .right,
+.skills .background-image .left,
+.skills .background-image .right,
+.website .background-image .left,
+.website .background-image .right,
+.contact-me .background-image .left,
+.contact-me .background-image .right,
+.front-end .background-image .left,
+.front-end .background-image .right,
+.websites .background-image .left,
+.websites .background-image .right,
+.bepo .background-image .left,
+.bepo .background-image .right {
+  width: 0;
+}
+.from-end .background-image .left,
+.from-end .background-image .right {
+  width: 50%;
+}
+.speed-2 .background-image {
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+.front-end .background-image {
+  background-image: url('../media/images/animate-front-end.jpg');
+  opacity: .5;
+}
+.about-me .background-image {
+  background-image: url('../media/images/animate-about-me.jpg');
+  opacity: .5;
+}
+.websites .background-image {
+  background-image: url('../media/images/animate-websites.jpg');
+  opacity: .5;
+}
+.book .background-image {
+  background-image: url('../media/images/animate-book.jpg');
+  opacity: .5;
+}
+.nodeatlas .background-image {
+  background-image: url('../media/images/animate-nodeatlas.jpg');
+  opacity: .5;
+}
+.games .background-image {
+  background-image: url('../media/images/animate-games.jpg');
+  opacity: .5;
+}
+.blog .background-image {
+  background-image: url('../media/images/animate-blog.jpg');
+  opacity: .5;
+}
+.contact-me .background-image {
+  background-image: url('../media/images/animate-contact-me.jpg');
+  opacity: .5;
+}
+.website .background-image {
+  background-image: url('../media/images/animate-website.jpg');
+  opacity: .5;
+}
+.offers .background-image {
+  background-image: url('../media/images/animate-offers.jpg');
+  opacity: .5;
+}
+.skills .background-image {
+  background-image: url('../media/images/animate-skills.jpg');
+  opacity: .5;
+}
+.bepo .background-image {
+  background-image: url('../media/images/animate-bepo.jpg');
+  opacity: .5;
+}
+.from-end .background-image {
+  opacity: 0;
+}
+
 @-webkit-keyframes highlight {
     0% {
       border: solid 1px rgba(0, 128, 0, 0);
@@ -537,7 +654,7 @@ a:hover {
 }
 
 .sections .section:hover .content {
-	background-color: #FFF;
+	background-color: rgba(255, 255, 255, 0.9);
 	-moz-box-shadow: 0px 0px 10px 2px rgb(224,224,224);
 	     box-shadow: 0px 0px 10px 2px rgb(224,224,224);
 }
@@ -648,7 +765,7 @@ a:hover {
 
 .main.to.top .sections .section.open .content,
 .main.to.bottom .sections .section.open .content {
-	background-color: #FFF;
+	background-color: rgba(255, 255, 255, 0.9);
 	-moz-box-shadow: 0px 0px 10px 2px rgb(224,224,224);
 	     box-shadow: 0px 0px 10px 2px rgb(224,224,224);
 }
@@ -840,7 +957,7 @@ a:hover {
 		top: 0;
 		left: 0;
 		padding: 8px;
-		background-color: #FFF;
+		text-shadow: 1px 1px 1px #FFF, -1px 1px 1px #FFF, 1px -1px 1px #FFF, -1px -1px 1px #FFF;
 		-webkit-border-radius: 8px;
 		        border-radius: 8px;
 	}
