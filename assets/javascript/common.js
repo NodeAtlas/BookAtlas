@@ -52,6 +52,10 @@ var website = website || {},
         });
     };
 
+    publics.generateAddress = function () {
+        $(".add7").text("66");
+    };
+
     privates.loadSections = function(callback) {
         publics.socket.emit("load-sections", {
             lang: $html.attr('lang'),
@@ -157,6 +161,64 @@ var website = website || {},
         });
     };
 
+    publics.sendMessage = function () {
+        var $detail = $(".contact--detail"),
+            $name = $(".contact--name"),
+            $email = $(".contact--email"),
+            $validation = $(".contact--validation"),
+            $anonyme = $(".contact--tip--anonyme"),
+            $reply = $(".contact--tip--reply"),
+            $detailInput = $("#contact-detail"),
+            $nameInput = $("#contact-name"),
+            $emailInput = $("#contact-email"),
+            $validationInput = $("#contact-validation"),
+            regex = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
+
+        $detailInput.on("keyup", function () {
+            if ($detailInput.val().length === 0) {
+                $name.addClass("contact-disabled");
+                $email.addClass("contact-disabled");
+                $validation.addClass("contact-disabled");
+            } else {
+                $name.removeClass("contact-disabled");
+                if ($nameInput.val().length !== 0) {
+                    $email.removeClass("contact-disabled");
+                }
+                $validation.removeClass("contact-disabled");
+            }
+        });
+
+        $nameInput.on("keyup", function () {
+            if ($nameInput.val().length === 0) {
+                $email.addClass("contact-disabled");
+                $anonyme.removeClass("contact-tip-disabled");
+                $reply.removeClass("contact-tip-disabled");
+            } else {
+                $email.removeClass("contact-disabled");
+                $anonyme.addClass("contact-tip-disabled");
+                if ($emailInput.val().length !== 0) { 
+                    $reply.addClass("contact-tip-disabled");
+                }
+            }
+        });
+
+        $emailInput.on("keyup", function () {
+            if ($emailInput.val().length === 0) {
+                $email.removeClass("filled");
+            } else {
+                $email.addClass("filled");
+            }
+
+            if (!regex.test($emailInput.val())) {
+                $email.removeClass("good");
+                $reply.removeClass("contact-tip-disabled");
+            } else {
+                $email.addClass("good");
+                $reply.addClass("contact-tip-disabled");
+            }
+        });
+    };
+
     publics.init = function () {
         privates.accountLogin();
         privates.listeningAccountLogin();
@@ -198,6 +260,22 @@ var website = website || {},
 
                 $main.removeClass("to top");
                 $main.removeClass("to bottom");
+            }
+
+            function openBackground($this, currentSection) {
+                if (!$this.hasClass("open")) {
+                    if ($body.hasClass("index")) {
+                        $body.removeClass().addClass(currentSection);
+                    } else {                
+                        $body.addClass("speed-2").addClass("from-end");
+                        setTimeout(function () {
+                            $body.removeClass().addClass(currentSection);
+                            setTimeout(function () {
+                                $body.removeClass("speed-2");
+                            }, 500);
+                        }, 500);
+                    }
+                }
             }
 
             function openSection($currentSection, current, other, notPushed) {
@@ -276,17 +354,7 @@ var website = website || {},
                		currentSection = $this.find(".content")[0].classList.value.replace(/content/g, "").trim();
                 event.stopPropagation();
 
-                if ($body.hasClass("index")) {
-                    $body.removeClass().addClass(currentSection);
-                } else {                
-                    $body.addClass("speed-2").addClass("from-end");
-                    setTimeout(function () {
-                        $body.removeClass().addClass(currentSection);
-                        setTimeout(function () {
-                            $body.removeClass("speed-2");
-                        }, 500);
-                    }, 500);
-                }
+                openBackground($this, currentSection);
 
                 openSection($this, "top", "bottom", notPushed);
             });
@@ -305,17 +373,7 @@ var website = website || {},
                     currentSection = $this.find(".content")[0].classList.value.replace(/content/g, "").trim();
                 event.stopPropagation();
 
-                if ($body.hasClass("index")) {
-                    $body.removeClass().addClass(currentSection);
-                } else {                
-                    $body.addClass("speed-2").addClass("from-end");
-                    setTimeout(function () {
-                        $body.removeClass().addClass(currentSection);
-                        setTimeout(function () {
-                            $body.removeClass("speed-2");
-                        }, 500);
-                    }, 500);
-                }
+                openBackground($this, currentSection);
 
                 openSection($this, "bottom", "top", notPushed);
             });
@@ -347,8 +405,10 @@ var website = website || {},
             publics.listeningAccountLogin();
             publics.accountLogout();
             publics.listeningAccountLogout();
+            publics.sendMessage();
 
             publics.generateEmail();
+            publics.generateAddress();
 
             publics.editAtlas(function () {
                 $(".toggle.checkbox").removeClass("checked");

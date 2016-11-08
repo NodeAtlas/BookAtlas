@@ -700,6 +700,7 @@ a:hover {
   }
   .main.to.top .bottom.sections .small.section.open h1,
   .main.to.top .bottom.sections .medium.section.open h1,
+  .main.to.top .bottom.sections .huge.section.open h1,
   .main.to.top .bottom.sections .large.section.open h1 {
     margin-top: 12px;
   }
@@ -1212,6 +1213,7 @@ a:hover {
 .toggle.checkbox.checked ins {
   display: none;
 }
+.field textarea:focus,
 .field input:focus {
   color: rgba(0, 0, 0, 0.85);
   border-color: rgba(39, 41, 43, 0.3);
@@ -1227,6 +1229,7 @@ a:hover {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.field textarea,
 .field input {
   width: 100%;
   vertical-align: top;
@@ -1234,6 +1237,7 @@ a:hover {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.field textarea,
 .field input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1250,6 +1254,73 @@ a:hover {
   -webkit-transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   margin: 0 0 16px;
+}
+.contact-me ins {
+  text-decoration: none;
+}
+.contact button,
+.contact--tip--anonyme,
+.contact textarea,
+.contact input {
+  font-size: 1.6rem;
+  font-family: Arial;
+}
+.contact--tip--reply {
+  font-size: 1.0rem;
+}
+.field textarea {
+  min-height: 200px;
+}
+.contact--validation {
+  display: block;
+}
+.contact--validation,
+.contact--email,
+.contact--name {
+  -webkit-transition: height 1s ease;
+  -moz-transition: height 1s ease;
+  -ms-transition: height 1s ease;
+  -o-transition: height 1s ease;
+  transition: height 1s ease;
+}
+.contact--email input {
+  -webkit-transition: color 1s ease, border-color 1s ease, box-shadow 1s ease;
+  -moz-transition: color 1s ease, border-color 1s ease, box-shadow 1s ease;
+  -ms-transition: color 1s ease, border-color 1s ease, box-shadow 1s ease;
+  -o-transition: color 1s ease, border-color 1s ease, box-shadow 1s ease;
+  transition: color 1s ease, border-color 1s ease, box-shadow 1s ease;
+}
+.contact--email,
+.contact--name {
+  height: 82px;
+  overflow-y: hidden;
+}
+.contact--validation {
+  height: 58px;
+  overflow-y: hidden;
+}
+.contact-tip-disabled {
+  display: none;
+}
+.contact-disabled {
+  height: 0;
+  overflow-y: hidden;
+}
+.contact--email.filled input,
+.contact--email.filled input:focus {
+  border-color: #c9302c;
+  color: #c9302c;
+}
+.contact--email.filled input:focus {
+  box-shadow: 1px 0 0 0 rgba(201, 48, 44, 0.6) inset;
+}
+.contact--email.filled.good input,
+.contact--email.filled.good input:focus {
+  border-color: #449d44;
+  color: #449d44;
+}
+.contact--email.filled.good input:focus {
+  box-shadow: 1px 0 0 0 rgba(68, 168, 68, 0.6) inset;
 }
 button,
 input[type=button],

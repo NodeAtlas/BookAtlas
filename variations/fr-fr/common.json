@@ -139,7 +139,12 @@
             "alt": "Me contacter",
             "src": "./media/images/contact-me.png"
         },
-        "content": "<p>Si vous souhaitez me contacter par email, vous pouvez le faire via mon adresse personnelle <a class=\"link generate-email\" href=\"javascript:;\">en la générant en cliquant ici</a>.</p><p>Formulaire et carte pour bientôt...</p>"
+        "content": "<h2>Formulaire de contact</h2>\n<p>Si vous souhaitez me contacter par email sans communiquer le votre ou si vous voulez être sûr d'obtenir une réponse, vous pouvez remplir le formulaire ci-dessous.</p>",
+        "address": "<h2>Adresse Postale</h2><p>M. Bruno Lesieur<br><ins class=\"add7\"></ins> avenue de Genève<br>74000 Annecy<br>France</p>",
+        "detailTitle": "Que souhaitez-vous me dire ?",
+        "nameTitle": "À qui ais-je l'honneur ?",
+        "emailTitle": "À quel email dois-je répondre ?",
+        "validationTitle": "Envoyer<span class=\"contact--tip--reply\"><span class=\"contact--tip--anonyme contact-tip-disabled\"> Anonymement</span><br>(je ne pourrais pas vous répondre)</span>"
     },
     "aboutMe": {
         "title": "À propos",

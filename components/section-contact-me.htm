@@ -2,16 +2,34 @@
 			<section class="contact-me content">
 				<h1>
 					<ins class="collapse icon mail"></ins>
-					<span><%- common.contactMe.title %></span>
+					<span><%- et(common, ['contactMe.title', fc]) %></span>
 					<img src="<%- ea(common, ['contactMe.image.src', fc, 'src']) %>" alt="<%- ea(common, ['contactMe.image.alt', fc, 'alt']) %>">
 				</h1>
 
 				<div class="vertical scrollable">
 					<div class="complete">
-						<%- eh(common, ['contactMe.content', fc, 'website.generateEmail()']) %>
-					</div>
+						<%- eh(common, ['contactMe.content', fc]) %><br>
 
-					<form class="contact form" action="" method="post"></form>
+						<div class="contact form">
+							<div class="contact--detail field">
+								<label for="contact-detail"><%- eh(common, ['contactMe.detailTitle', fc]) %></label>
+								<textarea id="contact-detail" name="detail" placeholder="Bonjour Bruno, ..."></textarea>
+							</div>
+							<div class="contact--name field contact-disabled">
+								<label for="contact-name"><%- eh(common, ['contactMe.nameTitle', fc]) %></label>
+								<input type="text" id="contact-name" name="name" placeholder="Envoi Anonyme">
+							</div>
+							<div class="contact--email field contact-disabled">
+								<label for="contact-email"><%- eh(common, ['contactMe.emailTitle', fc]) %></label>
+								<input type="email" id="contact-email" name="email" placeholder="me@repondre.ici">
+							</div>
+							<div class="contact--validation field contact-disabled">
+								<label><button id="contact-valitadion" name="valitadion"><%- eh(common, ['contactMe.validationTitle', fc]) %></button></label>
+							</div>
+						</div>
+
+						<%- eh(common, ['contactMe.address', fc, 'website.generateAddress()']) %>
+					</div>
 
 					<nav class="return">
 						<a href="javascript:;" title="<%- ea(common, ['menu.title', fc, 'title']) %>"><%- et(common, ['menu.content', fc]) %></a>
