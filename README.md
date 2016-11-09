@@ -14,7 +14,7 @@ BookAtlas est un exemple de site web Node.js développé avec [NodeAtlas](http:/
 
 Il peut vous servir d'inspiration pour créer vos propres sites !
 
-Pour mieux comprendre l'architecture JavaScript du site, [vous pouvez lire cet article](http://blog.lesieur.name/structurer-le-javascript-de-son-site-avec-ou-sans-framework/).
+Pour mieux comprendre l'architecture JavaScript du site, [vous pouvez lire cet article](https://blog.lesieur.name/structurer-le-javascript-de-son-site-avec-ou-sans-framework/).
 
 
 
@@ -48,7 +48,7 @@ Le site sera accessible ici :
 
 ## Exemple en ligne ##
 
-Vous pouvez voir fonctionner ce repository à l'adresse : [http://www.lesieur.name/](http://www.lesieur.name/).
+Vous pouvez voir fonctionner ce repository à l'adresse : [https://www.lesieur.name/](https://www.lesieur.name/).
 
 
 -----
@@ -62,7 +62,7 @@ BookAtlas is an example of Node.js website running with [NodeAtlas](http://haere
 
 It used as inspiration to create your own website!
 
-To better understand the JavaScript site architecture, [you can read this article](http://blog.lesieur.name/structurer-le-javascript-de-son-site-avec-ou-sans-framework/) (Fr).
+To better understand the JavaScript site architecture, [you can read this article](https://blog.lesieur.name/structurer-le-javascript-de-son-site-avec-ou-sans-framework/) (Fr).
 
 
 
@@ -96,4 +96,4 @@ The website will be to:
 
 ### Online Example ###
 
-You can see this repository running at: [http://www.lesieur.name/](http://www.lesieur.name/) (Fr).
+You can see this repository running at: [https://www.lesieur.name/](https://www.lesieur.name/) (Fr).
