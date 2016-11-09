@@ -1,6 +1,6 @@
 {
   "name": "book-atlas",
-  "version": "0.22.0",
+  "version": "0.23.0",
   "author": "Bruno Lesieur <bruno.lesieur@gmail.com>",
   "description": "Exemple de développement de site Node.js.",
   "private": false,
@@ -8,16 +8,14 @@
     "type": "git",
     "url": "https://github.com/Haeresis/BookAtlas.git"
   },
-  "license": {
-    "type": "GPLv2",
-    "url": "https://github.com/Haeresis/BookAtlas/LICENSE"
-  },
+  "license": "GPL-2.0",
   "bugs": {
     "url": "https://github.com/Haeresis/BookAtlas/issues"
   },
   "dependencies": {
-    "cookie": "0.1.x",
-    "socket.io": "1.2.x"
+    "cookie": "0.3.x",
+    "socket.io": "1.5.x",
+    "nodemailer": "2.6.x"
   },
   "engines": {
     "node": ">=0.10.10"

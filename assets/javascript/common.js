@@ -166,12 +166,16 @@ var website = website || {},
             $name = $(".contact--name"),
             $email = $(".contact--email"),
             $validation = $(".contact--validation"),
+            $isAnonyme = $(".contact-success .is-anonyme"),
+            $contact = $(".contact"),
+            $success = $(".contact-success"),
+            $back = $(".contact-success--back"),
             $anonyme = $(".contact--tip--anonyme"),
             $reply = $(".contact--tip--reply"),
             $detailInput = $("#contact-detail"),
             $nameInput = $("#contact-name"),
             $emailInput = $("#contact-email"),
-            $validationInput = $("#contact-validation"),
+            $validationInput = $("#contact-valitadion"),
             regex = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
 
         $detailInput.on("keyup", function () {
@@ -216,6 +220,30 @@ var website = website || {},
                 $email.addClass("good");
                 $reply.addClass("contact-tip-disabled");
             }
+        });
+
+        $validationInput.on("click", function () {
+            website.socket.emit('send-email', {
+                detail: $detailInput.val(),
+                name: $nameInput.val(),
+                email: regex.test($emailInput.val()) ? $emailInput.val() : undefined
+            });
+        });
+
+        $back.click(function (e) {
+            e.preventDefault();
+            $contact.addClass("is-displayed");
+            $success.removeClass("is-displayed");
+        });
+
+        website.socket.on('send-email', function () {
+            $detailInput.val("");
+            $name.addClass("contact-disabled");
+            $email.addClass("contact-disabled");
+            $validation.addClass("contact-disabled");
+            $contact.removeClass("is-displayed");
+            $success.addClass("is-displayed");
+            (regex.test($emailInput.val())) ? $isAnonyme.removeClass("is-displayed") : $isAnonyme.addClass("is-displayed");
         });
     };
 

@@ -11,10 +11,13 @@ website.components = {};
 	website.components.componentAtlas = require('../components/controllers/component-atlas');
 
 	publics.loadModules = function () {
-		var NA = this;
+		var NA = this,
+			path = NA.modules.path;
 
 		NA.modules.cookie = require('cookie');
 		NA.modules.socketio = require('socket.io');
+		NA.modules.nodemailer = require('nodemailer');
+		NA.modules.common = require(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, 'fr-fr/common.json'));
 	};
 
 	publics.setConfigurations = function (next) {
@@ -31,6 +34,8 @@ website.components = {};
 
 	publics.asynchrones = function (params) {
 		var NA = this,
+			nodemailer = NA.modules.nodemailer,
+			common = NA.modules.common,
 			socketio = params.socketio;
 
 		socketio.sockets.on('connection', function (socket) {
@@ -103,18 +108,42 @@ website.components = {};
 		        data.bottomPart.skills = NA.newRender("section-skills.htm", currentVariation);
 		        data.bottomPart['contact-me'] = NA.newRender("section-contact-me.htm", currentVariation);
 		        data.bottomPart['about-me'] = NA.newRender("section-about-me.htm", currentVariation);
-	        	/*var aboutVariation = {};
-		        aboutVariation = NA.addSpecificVariation("about-me.json", dataEmit.lang, aboutVariation);
-		        currentVariation._components = currentVariation.specific.components;
-		        currentVariation.specific.components = aboutVariation.specific.components;
-		        data.bottomPart['about-me'] = website.components.componentAtlas.includeComponent.call(NA, currentVariation.specific.components.content[2], 'specific.components.content[2]', currentVariation);
-		        currentVariation.specific.components = currentVariation._components;
-		        currentVariation._components = undefined;*/
 		        data.bottomPart.nodeatlas = NA.newRender("section-nodeatlas.htm", currentVariation);
 		        data.bottomPart.games = NA.newRender("section-games.htm", currentVariation);
 
 		        /* Load Components */
 				socket.emit('load-sections', data);
+			});
+
+			socket.on('send-email', function (data) {
+				// Prepare email.
+				var transporter = nodemailer.createTransport('smtps://' + NA.webconfig._smtpLoginAuth + ':' + NA.webconfig._smtpPasswordAuth + '@in-v3.mailjet.com'),
+					mailOptions = {
+					    from: common.email.from,
+					    to: common.email.to,
+						replyTo: common.email.replyTo.anonyme,
+					    subject: common.email.subject.anonyme,
+					    text: data.detail
+					};
+
+				if (data.name) {
+					mailOptions.subject = data.name + " " + common.email.subject.auth;
+				}
+				if (data.name && data.email) {
+					mailOptions.replyTo = '"' + data.name + '" <' + data.email + '>';
+					mailOptions.subject = data.name + ' ' + common.email.subject.reply + ' (' + data.email + ')';
+				}
+
+				// Send mail with defined transport object.
+				transporter.sendMail(mailOptions, function(error) {
+				    if (error) {
+				        return socket.emit('send-email', error);
+				    }
+
+			        /* Inform client. */
+					socket.emit('send-email');
+				});
+
 			});
 		});
 	};

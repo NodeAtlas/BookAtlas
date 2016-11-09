@@ -14,6 +14,18 @@
             }
         ]
     },
+    "email": {
+        "from": "\"Lesieur.name\" <postmaster@lesieur.name>",
+        "to": "bruno.lesieur@gmail.com",
+        "subject": {
+            "anonyme": "Une personne souhaite te contacter depuis www.lesieur.name",
+            "auth": "souhaite te contacter depuis www.lesieur.name",
+            "reply": "souhaite te contacter depuis www.lesieur.name"
+        },
+        "replyTo": {
+            "anonyme": "\"Anonyme\" <no-reply@lesieur.name>"
+        }
+    },
     "placename": "Annecy, Haute-Savoie, France",
     "javascriptDisable": "Votre JavaScript est désactivé aussi toutes les fonctionalités de ce site ne seront pas disponibles.",
     "permalink": "Permalien :",
@@ -141,10 +153,21 @@
         },
         "content": "<h2>Formulaire de contact</h2>\n<p>Si vous souhaitez me contacter par email sans communiquer le votre ou si vous voulez être sûr d'obtenir une réponse, vous pouvez remplir le formulaire ci-dessous.</p>",
         "address": "<h2>Adresse Postale</h2><p>M. Bruno Lesieur<br><ins class=\"add7\"></ins> avenue de Genève<br>74000 Annecy<br>France</p>",
-        "detailTitle": "Que souhaitez-vous me dire ?",
-        "nameTitle": "À qui ais-je l'honneur ?",
-        "emailTitle": "À quel email dois-je répondre ?",
-        "validationTitle": "Envoyer<span class=\"contact--tip--reply\"><span class=\"contact--tip--anonyme contact-tip-disabled\"> Anonymement</span><br>(je ne pourrais pas vous répondre)</span>"
+        "detail": {
+            "title": "Que souhaitez-vous me dire ?",
+            "placeholder": "Bonjour Bruno, ..."
+        },
+        "name": {
+            "title": "À qui ais-je l'honneur ?",
+            "placeholder": "Envoi Anonyme"
+        },
+        "email": {
+            "title": "À quel email dois-je répondre ?",
+            "placeholder": "me@repondre.ici"
+        },
+        "validation": {
+            "title": "Envoyer<span class=\"contact--tip--reply\"><span class=\"contact--tip--anonyme\"> Anonymement</span><br>(je ne pourrais pas vous répondre)</span>"
+        }
     },
     "aboutMe": {
         "title": "À propos",

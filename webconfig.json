@@ -15,5 +15,7 @@
 	"_minified": "",
 	"_indexFollow": "noindex, nofollow",
 	"_emailAccountAuth": "bruno.lesieur@gmail.com",
-	"_passwordAccountAuth": "bépo"
+	"_passwordAccountAuth": "bépo",
+	"_smtpLoginAuth": "",
+	"_smtpPasswordAuth": ""
 }

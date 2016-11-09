@@ -1258,6 +1258,12 @@ a:hover {
 .contact-me ins {
   text-decoration: none;
 }
+.contact {
+  display: none;
+}
+.contact.is-displayed {
+  display: block;
+}
 .contact button,
 .contact--tip--anonyme,
 .contact textarea,
@@ -1296,7 +1302,7 @@ a:hover {
   overflow-y: hidden;
 }
 .contact--validation {
-  height: 58px;
+  height: 59px;
   overflow-y: hidden;
 }
 .contact-tip-disabled {
@@ -1321,6 +1327,24 @@ a:hover {
 }
 .contact--email.filled.good input:focus {
   box-shadow: 1px 0 0 0 rgba(68, 168, 68, 0.6) inset;
+}
+.contact-success {
+  display: none;
+  border: 1px solid #449d44;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  color: #449D44;
+  text-align: center;
+  padding-bottom: 16px;
+}
+.contact-success.is-displayed {
+  display: block;
+}
+.contact-success .is-anonyme {
+  display: none;
+}
+.contact-success .is-anonyme.is-displayed {
+  display: inline;
 }
 button,
 input[type=button],
