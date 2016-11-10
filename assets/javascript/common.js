@@ -119,16 +119,24 @@ var website = website || {},
 
     publics.accountLogin = function () {
         $(".account-login-button").click(function (e) {
+            var script = document.createElement("script");
             e.preventDefault();
 
             $(this).addClass("loading");
 
-            var data = {
-                email: $("#account-login-email").val(),
-                password: $("#account-login-password").val()
-            };
+            script.type = "text/javascript";
+            script.setAttribute("class", "jshashes");
+            script.addEventListener("load", function() {
+                var data = {
+                    email: $("#account-login-email").val(),
+                    password: new Hashes.SHA1().hex($("#account-login-password").val())
+                };
 
-            website.socket.emit('account-login', data);
+                website.socket.emit('account-login', data);
+            });
+            script.src = "javascript/hashes.min.js";
+            $(".jshashes").remove();
+            document.getElementsByTagName("head")[0].appendChild(script);
         });
     };
 

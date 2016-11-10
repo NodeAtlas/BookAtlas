@@ -17,13 +17,22 @@ website.components = {};
 		NA.modules.cookie = require('cookie');
 		NA.modules.socketio = require('socket.io');
 		NA.modules.nodemailer = require('nodemailer');
+		NA.modules.jshashes = require('jshashes');
 		NA.modules.common = require(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, 'fr-fr/common.json'));
 	};
 
 	publics.setConfigurations = function (next) {
 		var NA = this,
+			route = NA.webconfig.routes,
 			socketio = NA.modules.socketio,
 			params = {};
+
+	    route["/javascript/hashes.min.js"] = {
+	        "template": "../node_modules/jshashes/hashes.min.js",
+	        "headers": {
+	        	"Content-Type": "text/javascript; charset=utf-8"
+	        }
+	    };
 
 		website.components.socketio.initialisation.call(NA, socketio, function (socketio) {
 			params.socketio = socketio;

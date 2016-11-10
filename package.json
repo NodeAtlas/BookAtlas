@@ -1,6 +1,6 @@
 {
   "name": "book-atlas",
-  "version": "0.23.0",
+  "version": "0.24.0",
   "author": "Bruno Lesieur <bruno.lesieur@gmail.com>",
   "description": "Exemple de développement de site Node.js.",
   "private": false,
@@ -15,7 +15,8 @@
   "dependencies": {
     "cookie": "0.3.x",
     "socket.io": "1.5.x",
-    "nodemailer": "2.6.x"
+    "nodemailer": "2.6.x",
+    "jshashes": "1.0.x"
   },
   "engines": {
     "node": ">=0.10.10"

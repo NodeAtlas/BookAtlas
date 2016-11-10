@@ -13,6 +13,7 @@
 	},
 	"stylesheets": {
 		"stylesheets/common.min.css": [
+			"stylesheets/lato.css",
 			"stylesheets/edit-atlas.css",
 			"stylesheets/common.css"
 		]
