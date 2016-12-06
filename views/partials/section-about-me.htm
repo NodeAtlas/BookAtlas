@@ -1,0 +1,27 @@
+		<li class="large section <?= specific.opened['about-me'] ?>" data-url="<?= common.url['about-me'] ?>">
+			<section class="about-me content">
+				<h1>
+					<ins class="collapse icon user"></ins>
+					<span><?- et(common, ['aboutMe.title', fc]) ?></span>
+				</h1>
+
+				<div class="vertical scrollable">
+					<div class="intro">
+						<?- eh(common, ['aboutMe.intro', fc]) ?>
+					</div>
+
+					<div class="after panel">
+						<h2><?- et(common, ['aboutMe.afterPanel.title', fc]) ?></h2>
+						<?- eh(common, ['aboutMe.afterPanel.content', fc]) ?>
+					</div>
+
+					<div class="complete">
+						<?- eh(common, ['aboutMe.content', fc, 'website.generateEmail()']) ?>
+					</div>
+
+					<nav class="return">
+						<a href="javascript:;" title="<?- ea(common, ['menu.title', fc, 'title']) ?>"><?- et(common, ['menu.content', fc]) ?></a>
+					</nav>
+				</div>
+			</section>
+		</li>

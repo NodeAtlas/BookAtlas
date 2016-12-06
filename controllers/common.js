@@ -6,11 +6,11 @@ website.components = {};
 (function (publics) {
 	"use strict";
 
-	website.components.socketio = require('../components/controllers/socket-io');
-	website.components.editAtlas = require('../components/controllers/edit-atlas');
-	website.components.componentAtlas = require('../components/controllers/component-atlas');
+	website.components.socketio = require('./modules/socket-io');
+	website.components.editAtlas = require('./modules/edit-atlas');
+	website.components.componentAtlas = require('./modules/component-atlas');
 
-	publics.loadModules = function () {
+	publics.setModules = function () {
 		var NA = this,
 			path = NA.modules.path;
 
@@ -18,7 +18,7 @@ website.components = {};
 		NA.modules.socketio = require('socket.io');
 		NA.modules.nodemailer = require('nodemailer');
 		NA.modules.jshashes = require('jshashes');
-		NA.modules.common = require(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, 'fr-fr/common.json'));
+		NA.modules.common = require(path.join(NA.serverPath, NA.webconfig.variationsRelativePath, 'fr-fr/common.json'));
 	};
 
 	publics.setConfigurations = function (next) {
@@ -101,24 +101,24 @@ website.components = {};
 
 				/* Asynchrone Top Components */
 		        data.topPart = {};
-		        data.topPart.offers = NA.newRender("section-offers.htm", currentVariation);
-		        data.topPart.offers = NA.newRender("section-offers.htm", currentVariation);
-		        data.topPart.bepo = NA.newRender("section-bepo.htm", currentVariation);
-		        data.topPart.book = NA.newRender("section-book.htm", currentVariation);
-		        data.topPart.website = NA.newRender("section-website.htm", currentVariation);
-		        data.topPart.blog = NA.newRender("section-blog.htm", currentVariation);
-		        data.topPart["front-end"] = NA.newRender("section-front-end.htm", currentVariation);
-		        data.topPart["unknown-top"] = NA.newRender("section-unknown-top.htm", currentVariation);
+		        data.topPart.offers = NA.newRender("partials/section-offers.htm", currentVariation);
+		        data.topPart.offers = NA.newRender("partials/section-offers.htm", currentVariation);
+		        data.topPart.bepo = NA.newRender("partials/section-bepo.htm", currentVariation);
+		        data.topPart.book = NA.newRender("partials/section-book.htm", currentVariation);
+		        data.topPart.website = NA.newRender("partials/section-website.htm", currentVariation);
+		        data.topPart.blog = NA.newRender("partials/section-blog.htm", currentVariation);
+		        data.topPart["front-end"] = NA.newRender("partials/section-front-end.htm", currentVariation);
+		        data.topPart["unknown-top"] = NA.newRender("partials/section-unknown-top.htm", currentVariation);
 
 				/* Asynchrone Top Components */
 				data.bottomPart = {};
-		        data.bottomPart["unknown-bottom"] = NA.newRender("section-unknown-bottom.htm", currentVariation);
-		        data.bottomPart.websites = NA.newRender("section-websites.htm", currentVariation);
-		        data.bottomPart.skills = NA.newRender("section-skills.htm", currentVariation);
-		        data.bottomPart['contact-me'] = NA.newRender("section-contact-me.htm", currentVariation);
-		        data.bottomPart['about-me'] = NA.newRender("section-about-me.htm", currentVariation);
-		        data.bottomPart.nodeatlas = NA.newRender("section-nodeatlas.htm", currentVariation);
-		        data.bottomPart.games = NA.newRender("section-games.htm", currentVariation);
+		        data.bottomPart["unknown-bottom"] = NA.newRender("partials/section-unknown-bottom.htm", currentVariation);
+		        data.bottomPart.websites = NA.newRender("partials/section-websites.htm", currentVariation);
+		        data.bottomPart.skills = NA.newRender("partials/section-skills.htm", currentVariation);
+		        data.bottomPart['contact-me'] = NA.newRender("partials/section-contact-me.htm", currentVariation);
+		        data.bottomPart['about-me'] = NA.newRender("partials/section-about-me.htm", currentVariation);
+		        data.bottomPart.nodeatlas = NA.newRender("partials/section-nodeatlas.htm", currentVariation);
+		        data.bottomPart.games = NA.newRender("partials/section-games.htm", currentVariation);
 
 		        /* Load Components */
 				socket.emit('load-sections', data);
@@ -175,6 +175,6 @@ website.components = {};
 
 }(website));
 
-exports.loadModules = website.loadModules;
+exports.setModules = website.setModules;
 exports.setConfigurations = website.setConfigurations;
 exports.changeVariation = website.changeVariation;

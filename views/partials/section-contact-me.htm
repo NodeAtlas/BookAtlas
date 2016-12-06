@@ -1,0 +1,43 @@
+		<li class="huge section <?= specific.opened['contact-me'] ?>" data-url="<?= common.url['contact-me'] ?>">
+			<section class="contact-me content">
+				<h1>
+					<ins class="collapse icon mail"></ins>
+					<span><?- et(common, ['contactMe.title', fc]) ?></span>
+					<img src="<?- ea(common, ['contactMe.image.src', fc, 'src']) ?>" alt="<?- ea(common, ['contactMe.image.alt', fc, 'alt']) ?>">
+				</h1>
+
+				<div class="vertical scrollable">
+					<div class="complete">
+						<?- eh(common, ['contactMe.content', fc]) ?><br>
+
+						<div class="contact-success">
+							<p><strong>Votre message a bien été envoyé.</strong><br>Je le consulterai dans les plus brefs délais<span class="is-anonyme"> cependant je ne serai pas en mesure de vous répondre car vous ne m'avez pas laissé d'email</span>.</p>
+							<p class="contact-success--back"><strong><a href="">Envoyer un nouveau message</a></strong></p>
+						</div>
+						<div class="contact form is-displayed">
+							<div class="contact--detail field">
+								<label for="contact-detail"><?- eh(common, ['contactMe.detail.title', fc]) ?></label>
+								<textarea id="contact-detail" name="detail" placeholder="<?- ea(common, ['contactMe.detail.placeholder', fc, 'placeholder']) ?>"></textarea>
+							</div>
+							<div class="contact--name field contact-disabled">
+								<label for="contact-name"><?- eh(common, ['contactMe.name.title', fc]) ?></label>
+								<input type="text" id="contact-name" name="name" placeholder="<?- ea(common, ['contactMe.name.placeholder', fc, 'placeholder']) ?>">
+							</div>
+							<div class="contact--email field contact-disabled">
+								<label for="contact-email"><?- eh(common, ['contactMe.email.title', fc]) ?></label>
+								<input type="email" id="contact-email" name="email" placeholder="<?- ea(common, ['contactMe.email.placeholder', fc, 'placeholder']) ?>">
+							</div>
+							<div class="contact--validation field contact-disabled">
+								<label><button id="contact-valitadion" name="valitadion"><?- eh(common, ['contactMe.validation.title', fc]) ?></button></label>
+							</div>
+						</div>
+
+						<?- eh(common, ['contactMe.address', fc, 'website.generateAddress()']) ?>
+					</div>
+
+					<nav class="return">
+						<a href="javascript:;" title="<?- ea(common, ['menu.title', fc, 'title']) ?>"><?- et(common, ['menu.content', fc]) ?></a>
+					</nav>
+				</div>
+			</section>
+		</li>

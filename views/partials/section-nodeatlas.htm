@@ -1,0 +1,24 @@
+		<li class="medium section <?= specific.opened.nodeatlas ?>" data-url="<?= common.url.nodeatlas ?>">
+			<section class="about nodeatlas content">
+				<h1>
+					<ins class="collapse icon github"></ins>
+					<span><?- et(common, ['aboutNodeAtlas.title', fc]) ?></span>
+					<img src="<?- ea(common, ['aboutNodeAtlas.image.src', fc, 'src']) ?>" alt="<?- ea(common, ['aboutNodeAtlas.image.alt', fc, 'alt']) ?>">
+				</h1>
+
+				<div class="vertical scrollable">
+					<div class="after panel">
+						<h2><?- et(common, ['aboutNodeAtlas.afterPanel.title', fc]) ?></h2>
+						<?- eh(common, ['aboutNodeAtlas.afterPanel.content', fc]) ?>
+					</div>
+
+					<div class="complete iframe">
+						<?- eh(common, ['aboutNodeAtlas.content', fc]) ?>
+					</div>
+
+					<nav class="return">
+						<a href="javascript:;" title="<?- ea(common, ['menu.title', fc, 'title']) ?>"><?- et(common, ['menu.content', fc]) ?></a>
+					</nav>
+				</div>
+			</section>
+		</li>

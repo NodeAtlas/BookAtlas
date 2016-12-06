@@ -1,0 +1,22 @@
+		<li class="huge section start <?= specific.opened.website ?>" data-url="<?= common.url.website ?>">
+			<section class="about website content">
+				<h1>
+					<ins class="collapse icon home"></ins>
+					<span><?- et(common, ['aboutSite.title', fc]) ?></span>
+				</h1>
+
+				<div class="vertical scrollable">
+					<div class="intro">
+						<?- eh(common, ['aboutSite.intro', fc]) ?>
+					</div>
+
+					<div class="complete">
+						<?- eh(common, ['aboutSite.content', fc, 'website.generateEmail()']) ?>
+					</div>
+
+					<nav class="return">
+						<a href="javascript:;" title="<?- ea(common, ['menu.title', fc, 'title']) ?>"><?- et(common, ['menu.content', fc]) ?></a>
+					</nav>
+				</div>
+			</section>
+		</li>

@@ -298,13 +298,13 @@ var website = {};
 
         function changeOnBackEnd(file) {
             if (typeof activateDemo === 'undefined' || activateDemo) {
-                fs.writeFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, file), JSON.stringify(object, undefined, "    "));
+                fs.writeFileSync(path.join(NA.serverPath, NA.webconfig.variationsRelativePath, file), JSON.stringify(object, undefined, "    "));
             }
         }
 
         NA.forEach(files, function (file) {
             try {
-                object = require(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, file));
+                object = require(path.join(NA.serverPath, NA.webconfig.variationsRelativePath, file));
                 if (object) {
                     for (var i = 0, l = files[file].length; i < l; i++) {
                         changeOnFrontEnd(file, i);
@@ -332,8 +332,8 @@ var website = {};
 
         try {
             if (typeof activateDemo === 'undefined' || activateDemo) {
-                fs.writeFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, options.fileCommon), JSON.stringify(objectCommon, undefined, "    "));
-                fs.writeFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, options.fileSpecific), JSON.stringify(objectSpecific, undefined, "    "));
+                fs.writeFileSync(path.join(NA.serverPath, NA.webconfig.variationsRelativePath, options.fileCommon), JSON.stringify(objectCommon, undefined, "    "));
+                fs.writeFileSync(path.join(NA.serverPath, NA.webconfig.variationsRelativePath, options.fileSpecific), JSON.stringify(objectSpecific, undefined, "    "));
                 socket.emit('update-block', {
                     status: true
                 });
@@ -357,7 +357,7 @@ var website = {};
             path = NA.modules.path;
 
         try {
-            object = require(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, options.file));
+            object = require(path.join(NA.serverPath, NA.webconfig.variationsRelativePath, options.file));
             if (object) {
                 key = options.path.split('.').slice(1).join('.');
 
@@ -384,8 +384,8 @@ var website = {};
             path = NA.modules.path;
 
         try {
-            objectCommon = fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, options.fileCommon), 'utf-8');
-            objectSpecific = fs.readFileSync(path.join(NA.websitePhysicalPath, NA.webconfig.variationsRelativePath, options.fileSpecific), 'utf-8');
+            objectCommon = fs.readFileSync(path.join(NA.serverPath, NA.webconfig.variationsRelativePath, options.fileCommon), 'utf-8');
+            objectSpecific = fs.readFileSync(path.join(NA.serverPath, NA.webconfig.variationsRelativePath, options.fileSpecific), 'utf-8');
             socket.emit('source-block', {
                 fileCommon: objectCommon,
                 fileSpecific: objectSpecific

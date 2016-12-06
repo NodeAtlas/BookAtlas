@@ -1,14 +1,14 @@
 {
     "components": {
         "content" : [{
-            "path": "presentation.htm",
+            "path": "partials/presentation.htm",
             "variation": {
 	            "componentName": "members",
 				"components": {
 					"content" : [{
-			            "path": "header.htm"
+			            "path": "partials/header.htm"
 			        }, {
-			            "path": "footer.htm",
+			            "path": "partials/footer.htm",
 			            "variation": {
 			            	"members": "true"
 			            }

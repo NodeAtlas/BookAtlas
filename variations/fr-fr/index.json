@@ -2,21 +2,21 @@
     "components": {
         "content": [
             {
-                "path": "top-section.htm"
+                "path": "partials/top-section.htm"
             },
             {
-                "path": "bottom-section.htm"
+                "path": "partials/bottom-section.htm"
             },
             {
-                "path": "presentation.htm",
+                "path": "partials/presentation.htm",
                 "variation": {
                     "components": {
                         "content": [
                             {
-                                "path": "header.htm"
+                                "path": "partials/header.htm"
                             },
                             {
-                                "path": "footer.htm"
+                                "path": "partials/footer.htm"
                             }
                         ]
                     }

@@ -2,15 +2,15 @@
     "components": {
         "head": [
             {
-                "path": "master-head.htm"
+                "path": "partials/master-head.htm"
             },
             {
-                "path": "master-content.htm"
+                "path": "partials/master-content.htm"
             }
         ],
         "foot": [
             {
-                "path": "master-foot.htm"
+                "path": "partials/master-foot.htm"
             }
         ]
     },

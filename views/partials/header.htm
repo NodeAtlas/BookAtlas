@@ -1,0 +1,11 @@
+		<header class="header" role="banner">
+			<h1>
+				<a href="<?- ea(common, ['logo.href', fc, 'href']) ?>" title="<?- ea(common, ['logo.title', fc, 'title']) ?>">
+					<? if (typeof component !== 'undefined' && component.error === 'true') { ?>
+					<?- et(common, ['error404', fc]) ?> ?>
+					<? } else { ?>
+					<?- et(common, ['logo.content', fc]) ?>
+					<? } ?>
+				</a>
+			</h1>
+		</header>

@@ -106,7 +106,7 @@ var website = {};
             ejs = NA.modules.ejs;
 
         dom = ejs.render(
-            '<%- include("' + component.path + '", { component: ' + JSON.stringify(component.variation) + ', path: "' + path + '" }) %>',
+            '<?- include("' + component.path + '", { component: ' + JSON.stringify(component.variation) + ', path: "' + path + '" }) ?>',
             variation
         );
 
@@ -148,7 +148,7 @@ var website = {};
                     }
 
                     dom = ejs.render(
-                        '<%- include("' + currentComponents[placeholder][i].path + '", { component: ' + currentVariation + ', path : "' + currentPath + '" }) %>',
+                        '<?- include("' + currentComponents[placeholder][i].path + '", { component: ' + currentVariation + ', path : "' + currentPath + '" }) ?>',
                         variation
                     );
 

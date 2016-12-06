@@ -1,17 +1,17 @@
 {
     "components": {
         "content" : [{
-            "path": "presentation.htm",
+            "path": "partials/presentation.htm",
             "variation": {
 	            "componentName": "error",
 				"components": {
 					"content" : [{
-			            "path": "header.htm",
+			            "path": "partials/header.htm",
 			            "variation": {
 			            	"error": "true"
 			            }
 			        }, {
-			            "path": "footer.htm"
+			            "path": "partials/footer.htm"
 			        }]
 		        }
             }
