@@ -1,9 +1,6 @@
 {
 	"httpPort": 7775,
 	"enableLess": true,
-	"staticOptions": {
-        "maxAge": 0
-    },
  	"commonVariation": "common.json",
  	"commonController": "common.js",
  	"controllersRelativePath": "controllers",

@@ -2,9 +2,6 @@
 	"httpPort": 7775,
 	"enableLess": true,
 	"httpSecure": "security/server",
-	"staticOptions": {
-        "maxAge": 0
-    },
  	"commonVariation": "common.json",
  	"commonController": "common.js",
  	"controllersRelativePath": "controllers",
