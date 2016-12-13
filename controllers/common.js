@@ -29,12 +29,10 @@ website.components = {};
 	        }
 	    };
 
-		website.setSocket.call(NA);
-
 		next();
 	};
 
-	publics.setSocket = function () {
+	publics.setSockets = function () {
 		var NA = this,
 			io = NA.io,
 			nodemailer = NA.modules.nodemailer,
@@ -168,6 +166,7 @@ website.components = {};
 
 }(website));
 
+exports.setSockets = website.setSockets;
 exports.setModules = website.setModules;
 exports.setConfigurations = website.setConfigurations;
 exports.changeVariation = website.changeVariation;
