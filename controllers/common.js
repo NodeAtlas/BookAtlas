@@ -6,7 +6,6 @@ website.components = {};
 (function (publics) {
 	"use strict";
 
-	website.components.socketio = require('./modules/socket-io');
 	website.components.editAtlas = require('./modules/edit-atlas');
 	website.components.componentAtlas = require('./modules/component-atlas');
 
@@ -14,8 +13,6 @@ website.components = {};
 		var NA = this,
 			path = NA.modules.path;
 
-		NA.modules.cookie = require('cookie');
-		NA.modules.socketio = require('socket.io');
 		NA.modules.nodemailer = require('nodemailer');
 		NA.modules.jshashes = require('jshashes');
 		NA.modules.common = require(path.join(NA.serverPath, NA.webconfig.variationsRelativePath, 'fr-fr/common.json'));
@@ -23,31 +20,27 @@ website.components = {};
 
 	publics.setConfigurations = function (next) {
 		var NA = this,
-			route = NA.webconfig.routes,
-			socketio = NA.modules.socketio,
-			params = {};
+			route = NA.webconfig.routes;
 
 	    route["/javascript/hashes.min.js"] = {
-	        "template": "../node_modules/jshashes/hashes.min.js",
+	        "view": "../node_modules/jshashes/hashes.min.js",
 	        "headers": {
 	        	"Content-Type": "text/javascript; charset=utf-8"
 	        }
 	    };
 
-		website.components.socketio.initialisation.call(NA, socketio, function (socketio) {
-			params.socketio = socketio;
-			website.asynchrones.call(NA, params);
-			next();
-		});
+		website.setSocket.call(NA);
+
+		next();
 	};
 
-	publics.asynchrones = function (params) {
+	publics.setSocket = function () {
 		var NA = this,
+			io = NA.io,
 			nodemailer = NA.modules.nodemailer,
-			common = NA.modules.common,
-			socketio = params.socketio;
+			common = NA.modules.common;
 
-		socketio.sockets.on('connection', function (socket) {
+		io.sockets.on('connection', function (socket) {
 			var session = socket.request.session,
 				activeDemo = true;
 
