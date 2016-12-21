@@ -215,11 +215,11 @@ var website = {};
      * @param {Object} variation     Add function into variation for an Client-Side utilization.
      * @param {boolean} activateFront [description]
      */
-    publics.setFilters = function (variation, activateFront) {
+    publics.setFilters = function (variations, activateFront) {
         var NA = this;
 
         /* Manage editText() or et() functions. */
-        variation.et = variation.editText = function (object, arr) {
+        variations.et = variations.editText = function (object, arr) {
             return publics.prepareTags({
                 NA: NA,
                 activateFront: activateFront,
@@ -228,14 +228,14 @@ var website = {};
                 pathProperty: arr[0],
                 sourceFunction: arr[2],
                 property: undefined,
-                languageCode: variation.languageCode,
+                languageCode: variations.languageCode,
                 markup: "span",
                 type: "text"
             });
         };
 
         /* Manage editHtml() or eh() functions. */
-        variation.eh = variation.editHtml = function (object, arr) {
+        variations.eh = variations.editHtml = function (object, arr) {
             return publics.prepareTags({
                 NA: NA,
                 activateFront: activateFront,
@@ -244,27 +244,27 @@ var website = {};
                 pathProperty: arr[0],
                 sourceFunction: arr[2],
                 property: undefined,
-                languageCode: variation.languageCode,
+                languageCode: variations.languageCode,
                 markup: "div",
                 type: "html"
             });
         };
 
         /* Manage editAttr() or ea() functions. */
-        variation.ea = variation.editAttr = function (object, arr) {
+        variations.ea = variations.editAttr = function (object, arr) {
             return publics.prepareTags({
                 NA: NA,
                 activateFront: activateFront,
                 object: object,
                 auth: arr[1],
                 pathProperty: arr[0],
-                languageCode: variation.languageCode,
+                languageCode: variations.languageCode,
                 sourceFunction: arr[3],
                 property: arr[2]
             });
         };
 
-        return variation;
+        return variations;
     };
 
     /**

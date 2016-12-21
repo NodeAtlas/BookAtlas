@@ -6,11 +6,7 @@ var website = website || {},
 (function (publics) {
 
     var privates = {},
-        optionsSocket,
         evaluation = eval;
-
-    optionsSocket = ($body.data('subpath') !== '') ? { path: '/' + $body.data('subpath') + (($body.data('subpath')) ? "/" : "") + 'socket.io' } : undefined;
-    publics.socket = io.connect(($body.data('subpath') !== '') ? $body.data('hostname') : undefined, optionsSocket);
 
     privates.keys = {};
     privates.ctrl = {};
@@ -337,7 +333,7 @@ var website = website || {},
             publics.goToBlock($clone.find(".edit-atlas--info .as-link"));
             if ($editedObject.data('edit-source')) {
                 $clone.find("textarea").hide();
-                publics.socket.emit('source-variation', {
+                NA.socket.emit('source-variation', {
                     path: $editedObject.data('edit-path'),
                     file: $editedObject.data('edit-file')
                 });
@@ -404,7 +400,7 @@ var website = website || {},
             publics.goToBlock($clone.find(".edit-atlas--info .as-link"));
             if ($editedObject.data('edit-source')) {
                 $clone.find("input").hide();
-                publics.socket.emit('source-variation', {
+                NA.socket.emit('source-variation', {
                     path: $editedObject.data('edit-path'),
                     file: $editedObject.data('edit-file')
                 });
@@ -479,7 +475,7 @@ var website = website || {},
                         publics.goToBlock($clone.find(".edit-atlas--info .as-link"));
                         if ($editedObject.data('edit-attr-source-' + name)) {
                             $clone.find("input").hide();
-                            publics.socket.emit('source-variation', {
+                            NA.socket.emit('source-variation', {
                                 path: $editedObject.data('edit-attr-path-' + name),
                                 file: $editedObject.data('edit-attr-file-' + name)
                             });
@@ -637,15 +633,15 @@ var website = website || {},
     };
 
     publics.sendContent = function (options) {
-        publics.socket.emit('update-variation', options);
+        NA.socket.emit('update-variation', options);
     };
 
     publics.sendBlock = function (options) {
-        publics.socket.emit('update-block', options);
+        NA.socket.emit('update-block', options);
     };
 
     publics.sourceContent = function () {
-        publics.socket.on('source-variation', function (data) {
+        NA.socket.on('source-variation', function (data) {
             var $label = $(".edit-atlas ." + privates.cleanPath(data.path)),
                 $area = $label.next();
             $label.attr("data-cancel", data.value);
@@ -656,14 +652,14 @@ var website = website || {},
     };
 
     publics.sourceBlock = function () {
-        publics.socket.on('source-block', function (data) {
+        NA.socket.on('source-block', function (data) {
             $(".edit-atlas--variations--common textarea").val(data.fileCommon);
             $(".edit-atlas--variations--specific textarea").val(data.fileSpecific);
         });
     };
 
     publics.broadcastContent = function () {
-        publics.socket.on('update-variation', function (data) {
+        NA.socket.on('update-variation', function (data) {
             var $this;
             if (data.type === 'html' || data.type === 'text') {
                 $('[data-edit-path=' + privates.cleanPath(data.path) + ']').html(data.value);
@@ -682,7 +678,7 @@ var website = website || {},
     };
 
     publics.broadcastBlock = function () {
-        publics.socket.on('update-block', function (data) {
+        NA.socket.on('update-block', function (data) {
             if (data.status) {
                 location.reload();
             }
@@ -744,7 +740,7 @@ var website = website || {},
     publics.goToBlock = function ($source) {
         $source.click(function () {
             $(".edit-atlas").addClass("is-block");
-            publics.socket.emit('source-block', {
+            NA.socket.emit('source-block', {
                 fileCommon: $(".edit-atlas--variations").attr("data-variation-common"),
                 fileSpecific: $(".edit-atlas--variations").attr("data-variation-specific")
             });

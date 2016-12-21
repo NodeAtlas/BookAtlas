@@ -1,5 +1,5 @@
 	</head>
-	<body class="<?= currentRouteParameters.variation.replace(/\.json/,'') ?>" data-variation='<?= currentRouteParameters.variation.replace(/\.json/,'') ?>' data-hostname='<?= webconfig.urlRoot ?>' data-subpath='<?= webconfig.urlRelativeSubPath.slice(1) ?>'>
+	<body class="<?= routeParameters.variation.replace(/\.json/,'') ?>" data-variation='<?= routeParameters.variation.replace(/\.json/,'') ?>'>
 		<noscript>
 			<p><?= common.javascriptDisable ?></p>
 		</noscript>

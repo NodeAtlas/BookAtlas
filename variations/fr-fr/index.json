@@ -9,7 +9,7 @@
             },
             {
                 "path": "partials/presentation.htm",
-                "variation": {
+                "variations": {
                     "components": {
                         "content": [
                             {

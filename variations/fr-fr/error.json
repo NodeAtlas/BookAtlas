@@ -2,12 +2,12 @@
     "components": {
         "content" : [{
             "path": "partials/presentation.htm",
-            "variation": {
+            "variations": {
 	            "componentName": "error",
 				"components": {
 					"content" : [{
 			            "path": "partials/header.htm",
-			            "variation": {
+			            "variations": {
 			            	"error": "true"
 			            }
 			        }, {

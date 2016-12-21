@@ -33,12 +33,7 @@ var website = website || {},
 (function (publics) {
     "use strict";
 
-    var privates = {},
-        optionsSocket;
-
-    optionsSocket = ($body.data('subpath') !== '') ? { path: '/' + $body.data('subpath') + (($body.data('subpath')) ? "/" : "") + 'socket.io' } : undefined;
-
-    publics.socket = io.connect(($body.data('subpath') !== '') ? $body.data('hostname') : undefined, optionsSocket);
+    var privates = {};
 
     publics.generateEmail = function () {
         $(".generate-email").click(function () {
@@ -57,11 +52,11 @@ var website = website || {},
     };
 
     privates.loadSections = function(callback) {
-        publics.socket.emit("load-sections", {
+        NA.socket.emit("load-sections", {
             lang: $html.attr('lang'),
             variation: $body.data('variation')
         });
-        publics.socket.on("load-sections", function (data) {
+        NA.socket.on("load-sections", function (data) {
             var targetTop = ".top.sections > .return > a",
                 targetBottom = ".bottom.sections > .return > a",
                 $section;
@@ -132,7 +127,7 @@ var website = website || {},
                     password: new Hashes.SHA1().hex($("#account-login-password").val())
                 };
 
-                website.socket.emit('account-login', data);
+                NA.socket.emit('account-login', data);
             });
             script.src = "javascript/hashes.min.js";
             $(".jshashes").remove();
@@ -141,7 +136,7 @@ var website = website || {},
     };
 
     publics.listeningAccountLogin = function () {
-        website.socket.on('account-login', function (data) {
+        NA.socket.on('account-login', function (data) {
             if (data.authSuccess) {
                 location.reload();
             } else {
@@ -158,13 +153,13 @@ var website = website || {},
 
                 $(this).addClass("loading");
 
-                website.socket.emit('account-logout', {});
+                NA.socket.emit('account-logout', {});
             }
         });
     };
 
     publics.listeningAccountLogout = function () {
-        website.socket.on('account-logout', function (data) {
+        NA.socket.on('account-logout', function (data) {
             location.reload();
         });
     };
@@ -231,7 +226,7 @@ var website = website || {},
         });
 
         $validationInput.on("click", function () {
-            website.socket.emit('send-email', {
+            NA.socket.emit('send-email', {
                 detail: $detailInput.val(),
                 name: $nameInput.val(),
                 email: regex.test($emailInput.val()) ? $emailInput.val() : undefined
@@ -244,7 +239,7 @@ var website = website || {},
             $success.removeClass("is-displayed");
         });
 
-        website.socket.on('send-email', function () {
+        NA.socket.on('send-email', function () {
             $detailInput.val("");
             $name.addClass("contact-disabled");
             $email.addClass("contact-disabled");

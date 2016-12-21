@@ -148,20 +148,20 @@ website.components = {};
 		});
 	};
 
-	publics.changeVariation = function (params, mainCallback) {
+	publics.changeVariations = function (params, mainCallback) {
 		var NA = this,
-			variation = params.variation,
+			variations = params.variations,
 			session = params.request.session;
 
-		variation.session = session;
+		variations.session = session;
 
-		variation.fs = ((variation.languageCode) ? variation.languageCode + "/": "") + variation.currentRouteParameters.variation;
-		variation.fc = ((variation.languageCode) ? variation.languageCode + "/": "") + variation.webconfig.commonVariation;
+		variations.fs = ((variations.languageCode) ? variations.languageCode + "/": "") + variations.routeParameters.variation;
+		variations.fc = ((variations.languageCode) ? variations.languageCode + "/": "") + variations.webconfig.commonVariation;
 
-		variation = website.components.editAtlas.setFilters.call(NA, variation);
-		variation = website.components.componentAtlas.includeComponents.call(NA, variation, "components", "mainTag", "componentName");
+		variations = website.components.editAtlas.setFilters.call(NA, variations);
+		variations = website.components.componentAtlas.includeComponents.call(NA, variations, "components", "mainTag", "componentName");
 
-		mainCallback(variation);
+		mainCallback(variations);
 	};
 
 }(website));
@@ -169,4 +169,4 @@ website.components = {};
 exports.setSockets = website.setSockets;
 exports.setModules = website.setModules;
 exports.setConfigurations = website.setConfigurations;
-exports.changeVariation = website.changeVariation;
+exports.changeVariations = website.changeVariations;

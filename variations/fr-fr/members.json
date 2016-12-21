@@ -2,14 +2,14 @@
     "components": {
         "content" : [{
             "path": "partials/presentation.htm",
-            "variation": {
+            "variations": {
 	            "componentName": "members",
 				"components": {
 					"content" : [{
 			            "path": "partials/header.htm"
 			        }, {
 			            "path": "partials/footer.htm",
-			            "variation": {
+			            "variations": {
 			            	"members": "true"
 			            }
 			        }]

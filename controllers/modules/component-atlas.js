@@ -46,24 +46,24 @@ var website = {};
     };
 
     publics.changeSemantic = function (component, activateSemantic, activateComponentName, dom) {
-        if (typeof activateSemantic === 'string' && component.variation && component.variation[activateSemantic]) {
-            if (component.variation[activateSemantic] === "div" ||
-               component.variation[activateSemantic] === "header"  ||
-               component.variation[activateSemantic] === "footer")
+        if (typeof activateSemantic === 'string' && component.variations && component.variations[activateSemantic]) {
+            if (component.variations[activateSemantic] === "div" ||
+               component.variations[activateSemantic] === "header"  ||
+               component.variations[activateSemantic] === "footer")
             {
                 dom = publics.changeHeaders(dom);
             } else {
                 dom = publics.ignoreHeaders(dom);
             }
 
-            dom = publics.changeSection(dom, component.variation[activateSemantic]);
+            dom = publics.changeSection(dom, component.variations[activateSemantic]);
         } else {
             dom = publics.ignoreHeaders(dom);
         }
 
         if (typeof activateComponentName === 'string') {
-            if (component.variation && component.variation[activateComponentName]) {
-                dom = publics.changeComponentName(dom, component.variation[activateComponentName]);
+            if (component.variations && component.variations[activateComponentName]) {
+                dom = publics.changeComponentName(dom, component.variations[activateComponentName]);
             } else {
                 dom = publics.changeComponentName(dom, undefined);
             }
@@ -80,11 +80,11 @@ var website = {};
         return dom;
     };
 
-    publics.setCurrentComponents = function (component, componentVariation, currentComponents, variation) {
+    publics.setCurrentComponents = function (component, componentVariation, currentComponents, variations) {
         if (component) {
             currentComponents = component[componentVariation];
             if (typeof component === 'string') {
-                currentComponents = variation[component][componentVariation];
+                currentComponents = variations[component][componentVariation];
             }
         }
 
@@ -100,14 +100,14 @@ var website = {};
         }
     };
 
-    publics.includeComponent = function (component, path, variation) {
+    publics.includeComponent = function (component, path, variations) {
         var NA = this,
             dom = "",
             ejs = NA.modules.ejs;
 
         dom = ejs.render(
-            '<?- include("' + component.path + '", { component: ' + JSON.stringify(component.variation) + ', path: "' + path + '" }) ?>',
-            variation
+            '<?- include("' + component.path + '", { component: ' + JSON.stringify(component.variations) + ', path: "' + path + '" }) ?>',
+            variations
         );
 
         dom = publics.changeSemantic(component, privates.activateSemantic, privates.activateComponentName, dom);
@@ -115,13 +115,13 @@ var website = {};
         return dom;
     };
 
-    publics.includeComponents = function (variation, componentVariation, activateSemantic, activateComponentName) {
+    publics.includeComponents = function (variations, componentVariation, activateSemantic, activateComponentName) {
         var NA = this,
             ejs = NA.modules.ejs;
 
-        variation.ic = variation.includeComponents = function (placeholder, component, path) {
+        variations.ic = variations.includeComponents = function (placeholder, component, path) {
             var render = "",
-                currentComponents = variation.specific[componentVariation],
+                currentComponents = variations.specific[componentVariation],
                 currentVariation,
                 currentPath,
                 dom = "";
@@ -133,23 +133,23 @@ var website = {};
                 componentVariation = "components";
             }
 
-            currentComponents = publics.setCurrentComponents(component, componentVariation, currentComponents, variation);
+            currentComponents = publics.setCurrentComponents(component, componentVariation, currentComponents, variations);
 
             publics.placeholderNoEmpty(currentComponents, placeholder, function () {
                 for (var i = 0; i < currentComponents[placeholder].length; i++) {
 
-                    currentVariation = 'specific["' + componentVariation + '"]["' + placeholder + '"][' + i + '].variation';
-                    currentPath = ((path) ? path : "") + componentVariation + "." + placeholder + "[" + i + "].variation.";
+                    currentVariation = 'specific["' + componentVariation + '"]["' + placeholder + '"][' + i + '].variations';
+                    currentPath = ((path) ? path : "") + componentVariation + "." + placeholder + "[" + i + "].variations.";
 
                     if (component && typeof component === 'string') {
-                        currentVariation = component + '["' + componentVariation + '"]["' + placeholder + '"][' + i + '].variation';
+                        currentVariation = component + '["' + componentVariation + '"]["' + placeholder + '"][' + i + '].variations';
                     } else if (component && typeof component !== 'string') {
-                        currentVariation = JSON.stringify(currentComponents[placeholder][i].variation);
+                        currentVariation = JSON.stringify(currentComponents[placeholder][i].variations);
                     }
 
                     dom = ejs.render(
                         '<?- include("' + currentComponents[placeholder][i].path + '", { component: ' + currentVariation + ', path : "' + currentPath + '" }) ?>',
-                        variation
+                        variations
                     );
 
                     dom = publics.changeSemantic(currentComponents[placeholder][i], activateSemantic, activateComponentName, dom);
@@ -161,9 +161,9 @@ var website = {};
             return render;
         };
 
-        variation.component = {};
+        variations.component = {};
 
-        return variation;
+        return variations;
     };
 
 }(website));
