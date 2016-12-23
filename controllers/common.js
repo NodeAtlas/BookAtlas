@@ -92,24 +92,24 @@ website.components = {};
 
 				/* Asynchrone Top Components */
 		        data.topPart = {};
-		        data.topPart.offers = NA.render("partials/section-offers.htm", locals);
-		        data.topPart.offers = NA.render("partials/section-offers.htm", locals);
-		        data.topPart.bepo = NA.render("partials/section-bepo.htm", locals);
-		        data.topPart.book = NA.render("partials/section-book.htm", locals);
-		        data.topPart.website = NA.render("partials/section-website.htm", locals);
-		        data.topPart.blog = NA.render("partials/section-blog.htm", locals);
-		        data.topPart["front-end"] = NA.render("partials/section-front-end.htm", locals);
-		        data.topPart["unknown-top"] = NA.render("partials/section-unknown-top.htm", locals);
+		        data.topPart.offers = NA.view("partials/section-offers.htm", locals);
+		        data.topPart.offers = NA.view("partials/section-offers.htm", locals);
+		        data.topPart.bepo = NA.view("partials/section-bepo.htm", locals);
+		        data.topPart.book = NA.view("partials/section-book.htm", locals);
+		        data.topPart.website = NA.view("partials/section-website.htm", locals);
+		        data.topPart.blog = NA.view("partials/section-blog.htm", locals);
+		        data.topPart["front-end"] = NA.view("partials/section-front-end.htm", locals);
+		        data.topPart["unknown-top"] = NA.view("partials/section-unknown-top.htm", locals);
 
 				/* Asynchrone Top Components */
 				data.bottomPart = {};
-		        data.bottomPart["unknown-bottom"] = NA.render("partials/section-unknown-bottom.htm", locals);
-		        data.bottomPart.websites = NA.render("partials/section-websites.htm", locals);
-		        data.bottomPart.skills = NA.render("partials/section-skills.htm", locals);
-		        data.bottomPart['contact-me'] = NA.render("partials/section-contact-me.htm", locals);
-		        data.bottomPart['about-me'] = NA.render("partials/section-about-me.htm", locals);
-		        data.bottomPart.nodeatlas = NA.render("partials/section-nodeatlas.htm", locals);
-		        data.bottomPart.games = NA.render("partials/section-games.htm", locals);
+		        data.bottomPart["unknown-bottom"] = NA.view("partials/section-unknown-bottom.htm", locals);
+		        data.bottomPart.websites = NA.view("partials/section-websites.htm", locals);
+		        data.bottomPart.skills = NA.view("partials/section-skills.htm", locals);
+		        data.bottomPart['contact-me'] = NA.view("partials/section-contact-me.htm", locals);
+		        data.bottomPart['about-me'] = NA.view("partials/section-about-me.htm", locals);
+		        data.bottomPart.nodeatlas = NA.view("partials/section-nodeatlas.htm", locals);
+		        data.bottomPart.games = NA.view("partials/section-games.htm", locals);
 
 		        /* Load Components */
 				socket.emit('load-sections', data);
