@@ -1,9 +1,9 @@
 {
 	"httpPort": 7775,
-	"enableLess": true,
+	"less": true,
 	"httpSecure": "security/server",
- 	"commonVariation": "common.json",
- 	"commonController": "common.js",
+ 	"variation": "common.json",
+ 	"controller": "common.js",
  	"controllersRelativePath": "controllers",
  	"pageNotFound": "/page-inexistante/",
  	"bundles": "bundles.json",

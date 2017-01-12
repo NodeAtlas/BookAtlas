@@ -35,9 +35,9 @@
 		<section class="edit-atlas--block">
 			<div class="edit-atlas--close"><input type="button" class="edit-atlas--close--button" value="<?- ea(common, ['editableArea.close', fc, 'value']) ?>"></div>
 			<h1><?- et(common, ['editableArea.title', fc]) ?></h1>
-			<div class="edit-atlas--variations" data-variation-common="<?- ((languageCode) ? languageCode + '/' : '') + webconfig.commonVariation ?>" data-variation-specific="<?- ((languageCode) ? languageCode + '/' : '') + routeParameters.variation ?>">
+			<div class="edit-atlas--variations" data-variation-common="<?- ((languageCode) ? languageCode + '/' : '') + webconfig.variation ?>" data-variation-specific="<?- ((languageCode) ? languageCode + '/' : '') + routeParameters.variation ?>">
 				<div class="edit-atlas--variations--common">
-					<span class="edit-atlas--variations--common--title">Fichier <span class="edit-atlas--variations--common--file"><?- ((languageCode) ? languageCode + '/' : '') + webconfig.commonVariation ?></span></span>
+					<span class="edit-atlas--variations--common--title">Fichier <span class="edit-atlas--variations--common--file"><?- ((languageCode) ? languageCode + '/' : '') + webconfig.variation ?></span></span>
 					<textarea cols="30" rows="12"></textarea>
 				</div>
 				<div class="edit-atlas--variations--specific">

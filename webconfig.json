@@ -1,8 +1,8 @@
 {
 	"httpPort": 7775,
-	"enableLess": true,
- 	"commonVariation": "common.json",
- 	"commonController": "common.js",
+	"less": true,
+ 	"variation": "common.json",
+ 	"controller": "common.js",
  	"controllersRelativePath": "controllers",
  	"pageNotFound": "/page-inexistante/",
  	"languageCode": "fr-fr",

@@ -87,7 +87,7 @@ website.components = {};
 		        /* Asynchrone addon for editAtlas render */
 				locals.languageCode = dataEmit.lang;
 				locals.fs = dataEmit.lang + "/" + dataEmit.variation + ".json";
-				locals.fc = dataEmit.lang + "/" + NA.webconfig.commonVariation;
+				locals.fc = dataEmit.lang + "/" + NA.webconfig.variation;
 				locals = website.components.editAtlas.setFilters.call(NA, locals);
 
 				/* Asynchrone Top Components */
@@ -155,7 +155,7 @@ website.components = {};
 		locals.session = session;
 
 		locals.fs = ((locals.languageCode) ? locals.languageCode + "/": "") + locals.routeParameters.variation;
-		locals.fc = ((locals.languageCode) ? locals.languageCode + "/": "") + locals.webconfig.commonVariation;
+		locals.fc = ((locals.languageCode) ? locals.languageCode + "/": "") + locals.webconfig.variation;
 
 		locals = website.components.editAtlas.setFilters.call(NA, locals);
 		locals = website.components.componentAtlas.includeComponents.call(NA, locals, "components", "mainTag", "componentName");

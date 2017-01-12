@@ -173,14 +173,14 @@ var website = {};
         file = auth;
         if (typeof object === 'string' && pathProperty.split(".")[0] === "common") {
             /* But if the file come from `common`, set the common variation. */
-            file = NA.webconfig.commonVariation;
+            file = NA.webconfig.variation;
         } else if (typeof object !== 'string') {
         /*----------------------*/
 
             /* Find value of object or return "" */
             object = website.getLookup(object, pathProperty) || "";
             languageCode = (params.languageCode) ? params.languageCode : "";
-            if (file === NA.modules.path.join(languageCode, NA.webconfig.commonVariation).replace(/\\/g, "/")) {
+            if (file === NA.modules.path.join(languageCode, NA.webconfig.variation).replace(/\\/g, "/")) {
                 /* set path to common property or... */
                 pathProperty = 'common.' + pathProperty;
             } else {
