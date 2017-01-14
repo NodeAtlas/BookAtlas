@@ -129,7 +129,7 @@ var website = website || {},
 
                 NA.socket.emit('account-login', data);
             });
-            script.src = "javascript/hashes.min.js";
+            script.src = "javascripts/hashes.min.js";
             $(".jshashes").remove();
             document.getElementsByTagName("head")[0].appendChild(script);
         });

@@ -1,15 +1,15 @@
 {
-	"javascript": {
-		"javascript/common.min.js": [
+	"javascripts": {
+		"javascripts/common.min.js": [
 			"node-atlas/socket.io.js",
-			"javascript/modernizr.js",
-			"javascript/jquery.js",
-			"javascript/jquery/jquery.validate.js",
-			"javascript/jquery/jquery.validate.unobtrusive.js",
-			"javascript/edit-atlas.js",
-			"javascript/prettify.js",
-			"javascript/prettify/run_prettify.js",
-			"javascript/common.js"
+			"javascripts/modernizr.js",
+			"javascripts/jquery.js",
+			"javascripts/jquery/jquery.validate.js",
+			"javascripts/jquery/jquery.validate.unobtrusive.js",
+			"javascripts/edit-atlas.js",
+			"javascripts/prettify.js",
+			"javascripts/prettify/run_prettify.js",
+			"javascripts/common.js"
 		]
 	},
 	"stylesheets": {

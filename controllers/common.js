@@ -22,7 +22,7 @@ website.components = {};
 		var NA = this,
 			route = NA.webconfig.routes;
 
-	    route["/javascript/hashes.min.js"] = {
+	    route["/javascripts/hashes.min.js"] = {
 	        "view": "../node_modules/jshashes/hashes.min.js",
 	        "headers": {
 	        	"Content-Type": "text/javascript; charset=utf-8"
