@@ -1,6 +1,7 @@
 {
 	"javascripts": {
 		"javascripts/common.min.js": [
+			"javascripts/socket.io.js",
 			"node-atlas/socket.io.js",
 			"javascripts/modernizr.js",
 			"javascripts/jquery.js",
